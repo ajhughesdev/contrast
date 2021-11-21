@@ -26,3 +26,17 @@ table {
 textarea {
     white-space: revert;
 }
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/Archivo-VariableFont_wdth\,wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+}
+
+:root {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+}
+
+/*# sourceMappingURL=main.css.map */
