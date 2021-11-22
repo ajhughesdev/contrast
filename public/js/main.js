@@ -1,81 +1,64 @@
-const btnFonts = document.getElementById('btnFonts');
-btnFonts.addEventListener('click', toggleFonts);
 
-function toggleFonts() {
-  if (fonts.style.display === "none") {
-    fonts.style.display = "grid";
-  } else {
-    fonts.style.display = "none"
-  }
-}
+  document.getElementById('button1').addEventListener('click', loadFonts);
 
-fetchFontData();
+  function loadFonts() {
+    document.getElementById('users').style.display = "none";
+    document.getElementById('user').style.display = "grid";
+    var xhr = new XMLHttpRequest();
 
-function fetchFontData() {
-  fetch("../public/resources/fonts/fonts.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw Error("ERROR");
+    xhr.open('GET', 'resources/fonts/fonts.json', true);
+
+    xhr.onload = function () {
+      if (this.status = 200) {
+        var font = JSON.parse(this.responseText);
+
+        var output = '';
+        for (var i in font) {
+          output += `<div class="fonts">
+                    <img src="resources/fonts/${font[i].Icon}" alt="${font[i].Title} link" />
+                    <h3>${font[i].Title}</h3>
+                    <p>${font[i].Description}</p>
+                    <a href="${font[i].Link}">Visit Resource →</a>
+                    </div>
+          `;
+
+        }
+
+        document.getElementById('user').innerHTML = output;
       }
-      return response.json();
-    })
-    .then((data) => {
-      const html = data
-        .map(font => {
-          return `
-          <div class="fonts">
-          <img src="../public/resources/fonts/${font.Icon}" alt="${font.Title} link" />
-          <h3>${font.Title}</h3>
-          <p>${font.Description}</p>
-          <a href="${font.Link}" target="_blank" rel="no referrer noopener">Visit Resource →</a>
-          </div>`
-        })
-        .join("");
-      document
-        .querySelector('#fonts')
-        .insertAdjacentHTML('afterbegin', html);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-};
+    }
+    xhr.send();
 
-const btnMockups = document.getElementById('btnMockups');
-btnMockups.addEventListener('click', toggleMockups);
+    document.getElementById('button2').addEventListener('click', loadMockups);
 
-function toggleMockups() {
-  if (mockups.style.display === "grid") {
-    mockups.style.display = "none";
-  } else {
-    mockups.style.display = "grid"
-  }
-}
+    function loadMockups() {
+      document.getElementById('users').style.display = "grid";
+      document.getElementById('user').style.display = "none";
 
-function fetchMockupData() {
-  fetch("../public/resources/mockups/mockups.json")
-    .then((response) => {
-      if (!response.ok) {
-        throw Error("ERROR");
+      var xhr2 = new XMLHttpRequest();
+      xhr2.open('GET', 'resources/mockups/mockups.json', true);
+
+      xhr2.onload = function () {
+        if (this.status = 200) {
+          var mockup = JSON.parse(this.responseText);
+
+          var output2 = '';
+          for (var i in mockup) {
+            output2 += `<div class="mockups">
+                    <img src="resources/mockups/${mockup[i].Icon}" alt="${mockup[i].Title} link" />
+                    <h3>${mockup[i].Title}</h3>
+                    <p>${mockup[i].Description}</p>
+                    <a href="${mockup[i].Link}">Visit Resource →</a>
+                    </div>
+          `;
+
+          }
+
+          document.getElementById('users').innerHTML = output2;
+        }
       }
-      return response.json();
-    })
-    .then((data) => {
-      const html = data
-        .map(mockup => {
-          return `
-          <div class="mockups">
-          <img src="../public/resources/mockups/${mockup.Icon}" alt="${mockup.Title} link" />
-          <h3>${mockup.Title}</h3>
-          <p>${mockup.Description}</p>
-          <a href="${mockup.Link}" target="_blank" rel="no referrer noopener">Visit Resource →</a>
-          </div>`
-        })
-        .join("");
-      document
-        .querySelector('#mockup')
-        .insertAdjacentHTML('afterbegin', html);
-    })
-  // .catch(error => {
-  //   console.log(error);
-  // });
-};
+      xhr2.send();
+    }
+
+
+  }

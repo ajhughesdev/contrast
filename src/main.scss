@@ -15,9 +15,9 @@
   font-size: 16px;
 }
 
-// .hidden {
-//   display: none;
-// }
+#text {
+  color: black;
+}
 
 p {
   line-height: 1.5;
@@ -27,6 +27,7 @@ p {
 .fonts,
 .mockups,
 .illustrations,
-.icons  {
+.icons {
   @include card;
+
 }

@@ -39,9 +39,9 @@ textarea {
   font-size: 16px;
 }
 
-/* .hidden {*/
-/*   display: none;*/
-/* }*/
+#text {
+  color: black;
+}
 
 p {
   line-height: 1.5;
@@ -51,13 +51,14 @@ p {
 .fonts,
 .mockups,
 .illustrations,
-.icons  {
+.icons {
   margin: 10px 20px;
   padding: 0 2.25rem;
   display: grid;
   grid-template-rows: repeat(6, auto);
   font-size: 1.125rem;
   border: 1px solid #e0e0e0;
+
 }
 
 
