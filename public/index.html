@@ -8,9 +8,19 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<body>
+<html>
 
-  <script src="js/main.js" defer async></script>
+<button id="btnFonts" type="button">Fonts</button>
+<button id="btnMockups" type="button">Mockups</button>
+
+<section class="resources">
+  <div id="fonts" class="active" style="display:grid"></div>
+  <div id="mockups" class="hidden" style="display:grid"></div>
+  <div id="illustrations" class="hidden"></div>
+  <div id="icons" class="hidden"></div>
+</section>
+
+<script src="js/main.js" type="module" async defer></script>
 </body>
 
 </html>

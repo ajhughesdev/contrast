@@ -39,4 +39,55 @@ textarea {
   font-size: 16px;
 }
 
+/* .hidden {*/
+/*   display: none;*/
+/* }*/
+
+p {
+  line-height: 1.5;
+}
+
+
+.fonts,
+.mockups,
+.illustrations,
+.icons  {
+  margin: 10px 20px;
+  padding: 0 2.25rem;
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  font-size: 1.125rem;
+  border: 1px solid #e0e0e0;
+}
+
+
+.fonts img, .mockups img, .illustrations img, .icons img {
+    margin-top: 2.25rem;
+  }
+
+
+.fonts h3, .mockups h3, .illustrations h3, .icons h3 {
+    color: #000000;
+    font-weight: 700;
+    margin-top: 1rem;
+  }
+
+
+.fonts p, .mockups p, .illustrations p, .icons p {
+    color: #595959;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 1rem;
+
+  }
+
+
+.fonts a, .mockups a, .illustrations a, .icons a {
+    font-weight: 700;
+    text-decoration: underline;
+    -webkit-text-decoration: underline solid 2px;
+            text-decoration: underline solid 2px;
+    margin: 1.5rem 0 2.25rem;
+    line-height: calc(20 / 18);
+  }
 /*# sourceMappingURL=main.css.map */

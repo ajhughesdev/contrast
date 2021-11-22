@@ -14,3 +14,19 @@
   font-family: 'Archivo', sans-serif;
   font-size: 16px;
 }
+
+// .hidden {
+//   display: none;
+// }
+
+p {
+  line-height: 1.5;
+}
+
+
+.fonts,
+.mockups,
+.illustrations,
+.icons  {
+  @include card;
+}
