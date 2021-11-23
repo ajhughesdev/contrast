@@ -4,6 +4,8 @@ loadFonts();
 function loadFonts() {
   document.getElementById('users').style.display = "none";
   document.getElementById('user').style.display = "grid";
+  document.getElementById('userss').style.display = "none";
+  document.getElementById('usersss').style.display = "none";
 
   var xhr = new XMLHttpRequest();
 
@@ -35,6 +37,8 @@ function loadFonts() {
   function loadMockups() {
     document.getElementById('users').style.display = "grid";
     document.getElementById('user').style.display = "none";
+    document.getElementById('userss').style.display = "none";
+    document.getElementById('usersss').style.display = "none";
 
     var xhr2 = new XMLHttpRequest();
     xhr2.open('GET', 'resources/mockups/mockups.json', true);
@@ -70,6 +74,7 @@ document.getElementById('button3').addEventListener('click', loadIllustrations);
 function loadIllustrations() {
   document.getElementById('users').style.display = "none";
   document.getElementById('user').style.display = "none";
+  document.getElementById('usersss').style.display = "none";
   document.getElementById('userss').style.display = "grid";
 
   var xhr3 = new XMLHttpRequest();
