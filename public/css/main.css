@@ -91,4 +91,9 @@ p {
     margin: 1.5rem 0 2.25rem;
     line-height: calc(20 / 18);
   }
+
+
+.fonts a:hover, .mockups a:hover, .illustrations a:hover, .icons a:hover {
+    cursor: pointer;
+  }
 /*# sourceMappingURL=main.css.map */
