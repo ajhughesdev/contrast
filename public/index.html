@@ -8,24 +8,49 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
-<html>
-<button id="button1">FONTS</button>
-<button id="button2">MOCKUPS</button>
-<button id="button3">ILLUSTRATIONS</button>
-<button id="button4">ICONS</button>
+<body>
+  <main>
+    <section class="hero">
+      <header class="navbar">
+        <img src="img/Contrast Logo.svg" alt="Contrast logo" />
+        <img src="img/Hamburger Menu.svg" alt="navigation menu" />
+      </header>
+      <h1>Design resources for developers.</h1>
+      <p class="hero">Explore a collection of 3400+ curated design resources, both free and paid, developers can use to
+        create landing pages quicker.</p>
+      <button type="button" class="mainCTA">Submit Resource</button>
+      <p class="used-by">Used by individuals in:</p>
+      <div class="logos">
+        <img src="img/Google Logo.svg" alt="Google link" />
+        <img src="img/Discord Logo.svg" alt="Discord link" />
+        <img src="img/Slack Logo.svg" alt="Slack link" />
+        <img src="img/Twitter Logo.svg" alt="Twitter link" />
+      </div>
+    </section>
+    <section class="resources">
+      <nav class="selection-bar">
+        <div class="selection">
+          <button id="fonts" class="active" type="button">Fonts</button>
+          <button id="mockups" type="button">Mockups</button>
+          <button id="illustrations" type="button">Illustrations</button>
+          <button id="icons" type="button">Icons</button>
+        </div>
+        <div class="sort-dropdown">
+          <p class="sort">Sort by</p>
+          <img src="img/caret.svg" alt="" class="caret" />
+        </div>
+      </nav>
 
-<br>
-<br>
-<br>
-
-<div id="user" style="display: grid"></div>
-
-<div id="users" style="display: none"></div>
-<div id="userss" style="display: none"></div>
-<div id="usersss" style="display: none"></div>
-
-
-<script src="js/main.js" async defer></script>
+      <!-- fetched JSON data -->
+      <div class="json-arrays">
+        <div id="fontArray" style="display: grid"></div>
+        <div id="mockupArray" style="display: none"></div>
+        <div id="illustrationArray" style="display: none"></div>
+        <div id="iconArray" style="display: none"></div>
+      </div>
+      <!-- end of data -->
+  </main>
+  <script src="js/main.js" async defer></script>
 </body>
 
 </html>

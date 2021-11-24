@@ -1,11 +1,11 @@
-document.getElementById('button1').addEventListener('click', loadFonts);
 loadFonts();
+document.getElementById('fonts').addEventListener('click', loadFonts);
 
 function loadFonts() {
-  document.getElementById('users').style.display = "none";
-  document.getElementById('user').style.display = "grid";
-  document.getElementById('userss').style.display = "none";
-  document.getElementById('usersss').style.display = "none";
+  document.getElementById('mockupArray').style.display = "none";
+  document.getElementById('fontArray').style.display = "grid";
+  document.getElementById('illustrationArray').style.display = "none";
+  document.getElementById('iconArray').style.display = "none";
 
   var xhr = new XMLHttpRequest();
 
@@ -18,7 +18,7 @@ function loadFonts() {
       var output = '';
       for (var i in font) {
         output += `<div class="fonts">
-                    <img src="resources/fonts/${font[i].Icon}" alt="${font[i].Title} link" />
+                    <img src="resources/fonts/${font[i].Icon}" alt="resource link" />
                     <h3>${font[i].Title}</h3>
                     <p>${font[i].Description}</p>
                     <a href="${font[i].Link}">Visit Resource →</a>
@@ -27,18 +27,18 @@ function loadFonts() {
 
       }
 
-      document.getElementById('user').innerHTML = output;
+      document.getElementById('fontArray').innerHTML = output;
     }
   }
   xhr.send();
 
-  document.getElementById('button2').addEventListener('click', loadMockups);
+  document.getElementById('mockups').addEventListener('click', loadMockups);
 
   function loadMockups() {
-    document.getElementById('users').style.display = "grid";
-    document.getElementById('user').style.display = "none";
-    document.getElementById('userss').style.display = "none";
-    document.getElementById('usersss').style.display = "none";
+    document.getElementById('mockupArray').style.display = "grid";
+    document.getElementById('fontArray').style.display = "none";
+    document.getElementById('illustrationArray').style.display = "none";
+    document.getElementById('iconArray').style.display = "none";
 
     var xhr2 = new XMLHttpRequest();
     xhr2.open('GET', 'resources/mockups/mockups.json', true);
@@ -59,7 +59,7 @@ function loadFonts() {
 
         }
 
-        document.getElementById('users').innerHTML = output2;
+        document.getElementById('mockupArray').innerHTML = output2;
       }
     }
     xhr2.send();
@@ -69,13 +69,13 @@ function loadFonts() {
 }
 
 
-document.getElementById('button3').addEventListener('click', loadIllustrations);
+document.getElementById('illustrations').addEventListener('click', loadIllustrations);
 
 function loadIllustrations() {
-  document.getElementById('users').style.display = "none";
-  document.getElementById('user').style.display = "none";
-  document.getElementById('usersss').style.display = "none";
-  document.getElementById('userss').style.display = "grid";
+  document.getElementById('mockupArray').style.display = "none";
+  document.getElementById('fontArray').style.display = "none";
+  document.getElementById('iconArray').style.display = "none";
+  document.getElementById('illustrationArray').style.display = "grid";
 
   var xhr3 = new XMLHttpRequest();
   xhr3.open('GET', 'resources/illustrations/illustrations.json', true);
@@ -96,20 +96,20 @@ function loadIllustrations() {
 
       }
 
-      document.getElementById('userss').innerHTML = output3;
+      document.getElementById('illustrationArray').innerHTML = output3;
     }
   }
   xhr3.send();
 }
 
 
-document.getElementById('button4').addEventListener('click', loadIcons);
+document.getElementById('icons').addEventListener('click', loadIcons);
 
 function loadIcons() {
-  document.getElementById('users').style.display = "none";
-  document.getElementById('user').style.display = "none";
-  document.getElementById('userss').style.display = "none";
-  document.getElementById('usersss').style.display = "grid";
+  document.getElementById('mockupArray').style.display = "none";
+  document.getElementById('fontArray').style.display = "none";
+  document.getElementById('illustrationArray').style.display = "none";
+  document.getElementById('iconArray').style.display = "grid";
 
   var xhr4 = new XMLHttpRequest();
   xhr4.open('GET', 'resources/icons/icons.json', true);
@@ -130,7 +130,7 @@ function loadIcons() {
 
       }
 
-      document.getElementById('usersss').innerHTML = output4;
+      document.getElementById('iconArray').innerHTML = output4;
     }
   }
   xhr4.send();
