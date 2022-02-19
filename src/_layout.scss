@@ -1,9 +1,0 @@
-$breakpoint: ('mobile': 25.875rem,
-  'tablet': 48rem,
-  'desktop': 90rem);
-
-@mixin respond($bp) {
-  @media (min-width: map-get($breakpoint, $bp)) {
-    @content;
-  }
-}
