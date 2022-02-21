@@ -20,7 +20,7 @@ fetch(url)
       desc.innerHTML = `${resource.Description}`;
       link.innerHTML = `Visit Resource →`;
 
-      icon.setAttribute('src', '../api/fonts/' + `${resource.Icon}`);
+      icon.setAttribute('src', 'https://ajhughesdev.github.io/contrast/api/fonts/' + `${resource.Icon}`);
       icon.setAttribute('alt', 'logo');
       link.setAttribute('href', `${resource.Link}`);
 
