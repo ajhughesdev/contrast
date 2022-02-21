@@ -16,9 +16,9 @@
 html {
   scroll-behavior: smooth;
   max-width: 71.25rem;
-  margin: 2.5rem auto -1.625rem;
+  margin: 2.5rem auto 0;
   font-family: "Archivo", sans-serif;
-  /* overflow: scroll; */
+  background-color: hsl(0 0% 100%);
 }
 
 input[type="search"i]::-webkit-search-cancel-button {
@@ -31,7 +31,7 @@ button {
 }
 
 body {
-  background: hsl(0, 0%, 100%) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='467' viewBox='0 0 469 467' width='469' class='hero-illustration'%3E%3Cg fill-opacity='.3'%3E%3Ccircle cx='224.5' cy='173.5' fill='%236b7fd7' opacity='.5' r='173.5' /%3E%3Ccircle cx='147' cy='320' fill='%2337ff8b' opacity='.5' r='147' /%3E%3Ccircle cx='335' cy='257' fill='%23feea00' opacity='.5' r='134' /%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 106px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='467' viewBox='0 0 469 467' width='469' class='hero-illustration'%3E%3Cg fill-opacity='.3'%3E%3Ccircle cx='224.5' cy='173.5' fill='%236b7fd7' opacity='.5' r='173.5' /%3E%3Ccircle cx='147' cy='320' fill='%2337ff8b' opacity='.5' r='147' /%3E%3Ccircle cx='335' cy='257' fill='%23feea00' opacity='.5' r='134' /%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 106px;
 }
 
 header {
