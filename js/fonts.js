@@ -1,6 +1,6 @@
 const ul = document.getElementById('resource-grid');
 const list = document.createDocumentFragment();
-const url = '../api/fonts/fonts.json';
+const url = 'https://ajhughesdev.github.io/contrast/api/fonts/fonts.json';
 
 fetch(url)
   .then((response) => {
