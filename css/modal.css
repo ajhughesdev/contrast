@@ -1,0 +1,39 @@
+@import 'reset.css';
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 250ms, opacity 250ms 0s, transform 250ms;
+}
+
+.modal-content {
+  position: absolute;
+  top: 14.75rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0 0%100%);
+  padding: 2.25rem;
+  width: 37.875rem;
+  border-radius: .3125rem;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 250ms 0s, transform 250ms;
+}
+
+header.submit-resource {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
