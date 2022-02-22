@@ -9,18 +9,28 @@
 </head>
 
 <body>
-  <div class="modal">
-    <div class="modal-content">
-      <header class="submit-resource">
-        <h2 class="modal-h2">Submit Resource</h2>
-        <svg fill="none" viewBox="0 0 24 24" width="24" class="close-button">
-          <circle cx="12" cy="12" r="12" fill="#EFF0F3" />
-          <path stroke="#A7AAB3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M14.5 9 9 14.5M9 9l5.5 5.5" /></svg>
-      </header>
-      <form action=""></form>
+  <dialog id="modal">
+    <div class="dialog-content">
+      <form action="#" method="dialog">
+        <header class="submit-resource">
+          <h1>Submit Resource</h2>
+            <button value="cancel" id="close-button">
+              <svg fill="none" viewBox="0 0 24 24" width="24">
+                <circle cx="12" cy="12" r="12" fill="#EFF0F3" />
+                <path stroke="#A7AAB3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M14.5 9 9 14.5M9 9l5.5 5.5" /></svg>
+            </button>
+        </header>
+        <ul>
+          <li>
+            <label for="resource-name" id="name">Resource Name <span>*</span></label>
+            <input type="text" id="name" name="resource_name" placeholder="UI8"></linput>
+          </li>
+          <li><button value="submit">Submit Resource</button> </li>
+        </ul>
+      </form>
     </div>
-  </div>
+  </dialog> 
   <header>
     <nav>
       <ul>
@@ -34,20 +44,21 @@
               </g>
             </svg>
           </a></li>
-        <li><a href="#resourcegrid">Browse</a></li>
+        <li><a href="#">Browse</a></li>
         <li><a href="#">Sponsor</a></li>
         <li><a href="#">Templates</a></li>
         <li><input class="nosubmit" type="search" placeholder="Search resources" name="search" /></li>
-        <li><button type="button" class="main-cta trigger">Submit Resource</button></li>
+        <li><button type="button" class="main-cta" id="header-button">Submit Resource</button></li>
       </ul>
     </nav>
   </header>
   <main>
     <section id="hero" class="hero-section">
       <h1>Design resources for developers.</h1>
-      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to create
+      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to
+        create
         landing pages quicker.</p>
-      <button type="button" class="main-cta hero-btn trigger">Submit Resource</button>
+      <button type="button" class="main-cta hero-btn" id="hero-button">Submit Resource</button>
       <div class="logos">
         <p>Used by individuals in:</p>
         <svg fill="none" height="24" viewBox="0 0 24 24" width="24">
@@ -128,7 +139,8 @@
           </g>
         </svg>
       </a>
-      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to create
+      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to
+        create
         landing
         pages quicker.</p>
     </div>

@@ -1,20 +1,13 @@
-const modal = document.querySelector('.modal');
-const trigger = document.querySelectorAll('.trigger');
+const dialog = document.getElementById('modal');
+const dialogContent = document.querySelector('.dialog-content');
+const h1 = document.querySelector('.modal-h1');
+const modalOpenBtn = document.querySelectorAll('#header-button, #hero-button');
 const closeBtn = document.querySelector('.close-button')
 
-function toggleModal() {
-  modal.classList.toggle('show-modal');
-}
-
-function windowOnClick(event) {
-  if (event.target === modal) {
-    toggleModal();
-  }
-}
-
-trigger.forEach((btn) => {
-  btn.addEventListener('click', toggleModal);
+modalOpenBtn.forEach(btn => {
+  btn.addEventListener('click', () => {
+    dialog.showModal();
+  })
 })
 
-closeBtn.addEventListener('click', toggleModal);
-window.top.addEventListener('click', windowOnClick);
+closeBtn.addEventListener('close', function onClose() {});
