@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx postcss css/*.css --use autoprefixer -d build/css/"
+    "build": "npx postcss css/*.css -d build/css/ --no-map"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,8 @@
   "devDependencies": {
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
-    "postcss-cli": "^9.1.0"
+    "postcss-cli": "^9.1.0",
+    "postcss-preset-env": "^7.4.1"
   },
   "browserslist": [
     "defaults"
