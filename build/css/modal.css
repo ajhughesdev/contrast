@@ -39,3 +39,35 @@ dialog header {
   flex-direction: row;
   justify-content: space-between;
 }
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  
+  li {
+    display: flex;
+    flex-direction: column; 
+  }
+}
+
+
+dialog label {
+  width: 100%;
+}
+
+dialog label[for="desc"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+dialog span {
+  color: hsl(0, 86%, 51%);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+dialog textarea {
+  width: 100%;
+  display: block;
+}
