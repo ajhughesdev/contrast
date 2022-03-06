@@ -1,44 +1,10 @@
-dialog {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 450ms ease;
-}
 
-.open {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s;
-}
-
-dialog::-webkit-backdrop {
-  background-color: hsla(0, 0%, 0%, 0.2);
-}
-
-dialog::backdrop {
-  background-color: hsla(0, 0%, 0%, 0.2);
-}
-
-.dialog-content {
-  position: absolute;
-  top: 23.75rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: hsl(0 0%100%);
-  padding: 2.25rem;
-  width: 37.875rem;
-  border-radius: .3125rem;
-}
 
 dialog h1 {
   font-size: 1.5rem;
   line-height: 26px;
   font-weight: 700;
+  color: hsl(0, 0%, 0%);
 }
 
 dialog header {
@@ -46,11 +12,6 @@ dialog header {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: unset;
-}
-
-dialog form {
-  display: flex;
-  flex-direction: column;
 }
 
 dialog li {
@@ -61,7 +22,10 @@ dialog li {
 
 dialog label {
   width: 100%;
+  display: flex;
+  gap: 3px;
   padding-top: 2.25rem;
+  color: hsl(0, 0%, 35%);
 }
 
 dialog label[for="desc"] {
@@ -76,7 +40,37 @@ dialog span {
   font-size: 1.125rem;
 }
 
-dialog textarea {
+dialog [id="desc"] {
+  font-family: "Archivo", sans-serif;
   width: 100%;
-  display: block;
+  background-color: hsl(0, 0%, 97%);
+  padding: 1.125rem .625rem 1.125rem 1.5rem;
+  line-height: 1.5;
+  /* outline: none; */
+  border-radius: .3125rem;
+  /* align-items: flex-start; */
+  font-size: 1.125rem;
 }
+
+dialog [id="desc"]:placeholder {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 67%);
+}
+
+dialog input {
+  padding: 18px 24px;
+  background-color: #F7F7F7;
+  border-radius: .3125rem;
+}
+
+dialog select {
+  background-color: #ffffff;
+  border: 1px #E0E0E0 solid;
+  border-radius: .3125rem;
+}
+
+dialog button.main-cta {
+  max-width: 12.25rem;
+  margin-top: 2.25rem;
+}
+

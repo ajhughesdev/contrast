@@ -8,19 +8,23 @@
   font-stretch: 62% 125%;
 }
 
+dialog::-webkit-backdrop {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+
 dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.2);
 }
 
 html {
   scroll-behavior: smooth;
-  max-width: 71.25rem;
-  margin: 2.5rem auto 0;
+  max-width: 41.75rem;
+  margin: 2.5rem auto 5rem;
   font-family: "Archivo", sans-serif;
   background-color: hsl(0 0% 100%);
 }
 
-input[type="search"i]::-webkit-search-cancel-button {
+input[type="search"]::-webkit-search-cancel-button {
   display: none;
 }
 
@@ -35,32 +39,17 @@ button {
   transition-delay: 0s;
 }
 
-.hamburger {
+.screen-nav {
   display: none;
 }
 
-body {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='467' viewBox='0 0 469 467' width='469' class='hero-illustration'%3E%3Cg fill-opacity='.3'%3E%3Ccircle cx='224.5' cy='173.5' fill='%236b7fd7' opacity='.5' r='173.5' /%3E%3Ccircle cx='147' cy='320' fill='%2337ff8b' opacity='.5' r='147' /%3E%3Ccircle cx='335' cy='257' fill='%23feea00' opacity='.5' r='134' /%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 106px;
-}
-
 header {
-  margin-bottom: 4.9375rem;
+  margin-bottom: 3.125rem;
 }
 
-nav {
+nav ul {
   display: flex;
   justify-content: space-between;
-}
-
-header ul,
-#resources ul:not([id="resource-grid"]) {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  display: grid;
-  margin-right: 2.25rem;
 }
 
 nav a:not([href="/"]),
@@ -87,6 +76,18 @@ input[type="search"] {
   max-width: 15.25rem;
 }
 
+input::-moz-placeholder {
+  color: hsl(249 4% 64%);
+  font-size: 1.125rem;
+  line-height: 20px;
+}
+
+input:-ms-input-placeholder {
+  color: hsl(249 4% 64%);
+  font-size: 1.125rem;
+  line-height: 20px;
+}
+
 input::placeholder {
   color: hsl(249 4% 64%);
   font-size: 1.125rem;
@@ -109,27 +110,25 @@ button.main-cta {
 
 .hero-section {
   display: grid;
-  grid-template-columns: 35.8125rem;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
 }
 
 h1 {
   font-size: 3.5rem;
   line-height: 61px;
   font-weight: 700;
-  color: hsl(0 0% 35%);
+  color: hsl(163, 11%, 12%);
 }
 
 .hero-btn {
   max-width: 12.25rem;
-  margin-top: 1rem;
 }
 
 p {
   color: hsl(0 0% 35%);
   font-size: 1.125rem;
   line-height: 1.5;
-  padding: .5rem 4.0625rem 0 0;
+  padding: .5rem 0 1rem;
   font-stretch: 105%;
 }
 
@@ -162,7 +161,16 @@ button svg {
 }
 
 section nav {
-  margin-top: 6.875rem;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+.selection-bar ul {
+  max-width: 34.25rem;
+  display: flex;
+  align-items: center;
+  overflow-y: scroll;
 }
 
 .selection-bar li {
@@ -179,7 +187,7 @@ section nav {
 
 .resource-grid-cell {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.875rem;
   margin-top: 3.375rem;
 }

@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contrast - Design resources for developers.</title>
-  <link rel="stylesheet" href="./build/css/landingpage.screen.css" media="screen" />
+  <link rel="stylesheet" href="./build/css/landingpage.screen.css" media="screen and (min-width: 48.0625rem)" />
+  <link rel="stylesheet" href="./build/css/landingpage.tablet.css" media="screen and (max-width: 48rem)" />
 </head>
 
 <body>
@@ -26,14 +27,14 @@
             <label for="name">
               Resource Name <span>*</span>
             </label>
-            <input type="text" id="name" name="resource_name" placeholder="UI8" row="1" />
+            <input type="text" id="name" name="resource_name" placeholder="UI8" />
           </li>
           <li>
             <label for="desc">
               <div>Resource Description <span>*</span></div>
               <div>(Max. 150 char.)</div>
             </label>
-            <textarea id="desc" name="resource_desc" row="3"
+            <textarea type="text" id="desc" name="resource_desc" rows="3"
               placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."></textarea>
           </li>
           <li>
@@ -47,10 +48,24 @@
               Resource Icon Link <span>*</span>
             </label>
             <input type="url" id="icon-link" name="resource_icon_url"
-              placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642........." />
+              placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642.........." />
+          </li>
+          <li class="select-label">
+            <label for="resources-cat">Resource Category <span>*</span></label>
+
+            <select class="select-inner" name="resources" id="resources-cat">
+              <option value="mockups" selected>Mockups</option>
+              <option value="fonts">Fonts</option>
+              <option value="illustrations">Illustrations</option>
+              <option value="icons">Icons</option>
+              <option value="books">Books</option>
+              <option value="inspiration">Inspiration</option>
+            </select>
+
+
           </li>
           <li>
-            <button value="submit">Submit Resource</button>
+            <button value="submit" class="main-cta">Submit Resource</button>
           </li>
         </ul>
       </form>
@@ -69,11 +84,15 @@
               </g>
             </svg>
           </a></li>
-        <li><a href="#">Browse</a></li>
-        <li><a href="#">Sponsor</a></li>
-        <li><a href="#">Templates</a></li>
-        <li><input class="nosubmit" type="search" placeholder="Search resources" name="search" /></li>
-        <li><button type="button" class="main-cta" id="header-button">Submit Resource</button></li>
+        <li><svg width="24" height="20" viewBox="0 0 24 20" class="hamburger" fill="none">
+            <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black" />
+          </svg>
+        </li>
+        <li class="screen-nav"><a href="#browse">Browse</a></li>
+        <li class="screen-nav"><a href="#">Sponsor</a></li>
+        <li class="screen-nav"><a href="#">Templates</a></li>
+        <li class="screen-nav"><input class="nosubmit" type="search" placeholder="Search resources" name="search" /></li>
+        <li class="screen-nav"><button type="button" class="main-cta" id="header-button">Submit Resource</button></li>
       </ul>
     </nav>
   </header>
@@ -138,7 +157,7 @@
     <section id="resources">
       <nav class="selection-bar">
         <ul>
-          <li class="active">Fonts</li>
+          <li id="fonts" class="active">Fonts</li>
           <li id="mockups">Mockups</li>
           <li>Illustrations</li>
           <li>Icons</li>
@@ -204,7 +223,6 @@
     </ul>
   </footer>
   <script src="js/fonts.js"></script>
-  <script src="js/mockups.js"></script>
   <script src="js/modal.js"></script>
 </body>
 
