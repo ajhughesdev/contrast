@@ -4,12 +4,18 @@ specifiers:
   autoprefixer: ^10.4.2
   postcss: ^8.4.6
   postcss-cli: ^9.1.0
+  postcss-nested: ^5.0.6
+  postcss-nesting: ^10.1.3
   postcss-preset-env: ^7.4.1
+
+dependencies:
+  postcss-nested: 5.0.6_postcss@8.4.6
 
 devDependencies:
   autoprefixer: 10.4.2_postcss@8.4.6
   postcss: 8.4.6
   postcss-cli: 9.1.0_postcss@8.4.6
+  postcss-nesting: 10.1.3_postcss@8.4.6
   postcss-preset-env: 7.4.1_postcss@8.4.6
 
 packages:
@@ -265,7 +271,6 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: true
 
   /dependency-graph/0.11.0:
     resolution: {integrity: sha512-JeMq7fEshyepOWDfcfHK06N3MhyPhz++vtqWhMT5O9A3K42rdsEDpfdVqjaqaAhsw6a+ZqeDvQVtD0hFHQWrzg==}
@@ -699,11 +704,21 @@ packages:
       postcss: 8.4.6
     dev: true
 
-  /postcss-nesting/10.1.2_postcss@8.4.6:
-    resolution: {integrity: sha512-dJGmgmsvpzKoVMtDMQQG/T6FSqs6kDtUDirIfl4KnjMCiY9/ETX8jdKyCd20swSRAbUYkaBKV20pxkzxoOXLqQ==}
+  /postcss-nested/5.0.6_postcss@8.4.6:
+    resolution: {integrity: sha512-rKqm2Fk0KbA8Vt3AdGN0FB9OBOMDVajMG6ZCf/GoHgdxUJ4sBFp0A/uMIRm+MJUdo33YXEtjqIz8u7DAp8B7DA==}
+    engines: {node: '>=12.0'}
+    peerDependencies:
+      postcss: ^8.2.14
+    dependencies:
+      postcss: 8.4.6
+      postcss-selector-parser: 6.0.9
+    dev: false
+
+  /postcss-nesting/10.1.3_postcss@8.4.6:
+    resolution: {integrity: sha512-wUC+/YCik4wH3StsbC5fBG1s2Z3ZV74vjGqBFYtmYKlVxoio5TYGM06AiaKkQPPlkXWn72HKfS7Cw5PYxnoXSw==}
     engines: {node: ^12 || ^14 || >=16}
     peerDependencies:
-      postcss: ^8.3
+      postcss: ^8.4
     dependencies:
       postcss: 8.4.6
       postcss-selector-parser: 6.0.9
@@ -782,7 +797,7 @@ packages:
       postcss-lab-function: 4.1.1_postcss@8.4.6
       postcss-logical: 5.0.4_postcss@8.4.6
       postcss-media-minmax: 5.0.0_postcss@8.4.6
-      postcss-nesting: 10.1.2_postcss@8.4.6
+      postcss-nesting: 10.1.3_postcss@8.4.6
       postcss-opacity-percentage: 1.1.2
       postcss-overflow-shorthand: 3.0.3_postcss@8.4.6
       postcss-page-break: 3.0.4_postcss@8.4.6
@@ -836,7 +851,6 @@ packages:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
-    dev: true
 
   /postcss-value-parser/4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
@@ -933,7 +947,6 @@ packages:
 
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
-    dev: true
 
   /wrap-ansi/7.0.0:
     resolution: {integrity: sha512-YVGIj2kamLSTxw6NsZjoBxfSwsn0ycdesmc4p+Q21c5zPuZ1pl+NfxVdxPtdHvmNVOQ6XSYG4AUtyt/Fi7D16Q==}

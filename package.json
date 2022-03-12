@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx postcss css/*.css --use autoprefixer -d build/css/ --no-map  --watch"
+    "dev": "npx postcss css/*.css -d build/css/ --no-map  --watch"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,13 @@
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.6",
     "postcss-cli": "^9.1.0",
+    "postcss-nesting": "^10.1.3",
     "postcss-preset-env": "^7.4.1"
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "postcss-nested": "^5.0.6"
+  }
 }
