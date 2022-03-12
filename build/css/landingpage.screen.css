@@ -18,8 +18,8 @@ dialog::backdrop {
 
 html {
  scroll-behavior: smooth;
- /* max-width: 71.25rem; */
- margin: 2.5rem 9.375rem 0;
+ max-width: 71.25rem;
+ margin: 2.5rem auto 0;
  font-family: "Archivo", sans-serif;
  background-color: hsl(0 0% 100%);
 }

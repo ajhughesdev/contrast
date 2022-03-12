@@ -14,10 +14,10 @@ dialog::backdrop {
 
 html {
  scroll-behavior: smooth;
- /* max-width: 41.75rem; */
- margin: 2.5rem 2.5rem 5rem;
  font-family: "Archivo", sans-serif;
+ /* padding: 2.5rem 2.5rem 5rem; */
  background-color: hsl(0 0% 100%);
+ /* max-width: 41.75rem; */
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -40,6 +40,7 @@ button {
 }
 
 header {
+ padding: 2.5rem 2.5rem 0;
  margin-bottom: 3.125rem;
 }
 
@@ -91,6 +92,7 @@ button.main-cta {
 }
 
 .hero-section {
+ padding: 0 2.5rem 0;
  display: grid;
  grid-template-rows: repeat(3, auto);
 }
@@ -128,6 +130,7 @@ h2 {
  font-weight: 700;
  line-height: 20px;
  padding: 1rem 0;
+ color: hsl(0, 0%, 0%);
 }
 
 button svg {
@@ -135,9 +138,8 @@ button svg {
 }
 
 .selection-bar {
- /* border: 1px red solid; */
  align-items: center;
- padding-top: 5rem;
+ padding: 5rem 2.5rem 0;
 }
 
 .selection-bar ul {
@@ -187,8 +189,12 @@ button.sort-by {
 .resource-grid-cell {
  display: grid;
  grid-template-columns: repeat(2, 1fr);
- gap: 1.875rem;
+ gap: 1.25rem;
  margin-top: 3.375rem;
+}
+
+#resource-grid {
+ padding: 0 2.5rem 0;
 }
 
 .resource-grid-cell li {
@@ -200,17 +206,23 @@ button.sort-by {
  border: .0625rem solid hsl(0 0% 88%);
 }
 
-.resource-grid-cell p,
+.resource-grid-cell li img {
+ height: 1.625rem;
+}
+
+/* .resource-grid-cell p,
 .signup p {
  padding: unset;
-}
+ color: hsl(0, 0%, 35%);
+} */
 
 .resource-grid-cell a {
  font-weight: 700;
  text-decoration: underline;
  font-size: 1.125rem;
- line-height: 1.25rem;
+ line-height: 20px;
  margin-top: 1.5rem;
+ color: hsl(0, 0%, 0%);
 }
 
 .peeps {
@@ -218,28 +230,30 @@ button.sort-by {
 }
 
 .signup {
- margin: 5rem auto;
- background: hsl(258 83% 45%) url('../../peeps.svg') no-repeat;
- background-size: 519px;
- background-position-y: 22px;
- background-position-x: calc(100% - 27px);
- border-radius: .3125rem;
- padding: 5rem 594px 5rem 3.75rem;
+ height: 48rem;
+ margin-top: 5rem;
+ background: hsl(258, 83%, 45%) url("../../peeps.svg") no-repeat;
+ background-size: 32.4375rem;
+ background-position-y: 100%;
+ background-position-x: 50%;
+ padding: 3.5rem 2.5rem 0;
 }
 
 .signup p {
  color: #CEC3F9;
  padding-top: 8px;
- width: 32.1875rem;
+ /* width: 32.1875rem; */
  font-stretch: 100%;
+ /* grid-area: ; */
 }
 
 h3 {
+ grid-area: 1 / 2 / 2 / 3;
  font-size: 1.625rem;
  color: hsl(0 0% 100%);
  line-height: 34px;
  font-weight: 700;
- width: 33.375rem;
+ /* width: 33.375rem; */
 }
 
 input[type="email"] {
@@ -247,7 +261,9 @@ input[type="email"] {
  padding: 1.125rem 5.875rem 1.125rem 1.5rem;
  border-radius: .3125rem;
  margin: 1rem 1rem 0 0;
- width: 17.375rem;
+ /* grid-area: 3 / 2 /  */
+ /* width: 17.375rem; */
+ display: none;
 }
 
 .signup p:last-of-type {
@@ -262,9 +278,11 @@ button.subscribe {
  font-size: 1.125rem;
  line-height: 20px;
  font-weight: 700;
+ display: none;
 }
 
 footer {
+ padding: 0 2.5rem 0;
  display: grid;
  grid-template-columns: 1fr 1fr;
  margin-bottom: 5rem;
