@@ -207,9 +207,6 @@ button.sort-by {
  grid-template-columns: repeat(2, 1fr);
  gap: 1.25rem;
  margin-top: 3.375rem;
-}
-
-#resource-grid {
  padding: 0 2.5rem 0;
 }
 
@@ -226,12 +223,6 @@ button.sort-by {
  height: 1.625rem;
 }
 
-/* .resource-grid-cell p,
-.signup p {
- padding: unset;
- color: hsl(0, 0%, 35%);
-} */
-
 .resource-grid-cell a {
  font-weight: 700;
  text-decoration: underline;
@@ -241,12 +232,18 @@ button.sort-by {
  color: hsl(0, 0%, 0%);
 }
 
+.resource-grid-cell p,
+.signup p {
+ padding: unset;
+ color: hsl(0, 0%, 35%);
+}
+
 .peeps {
  width: 32.4375rem;
 }
 
 .signup {
- height: 48rem;
+ height: 49.125rem;
  margin-top: 5rem;
  background: hsl(258, 83%, 45%) url("../../peeps.svg") no-repeat;
  background-size: 32.4375rem;
@@ -256,34 +253,28 @@ button.sort-by {
 }
 
 .signup p {
- color: #CEC3F9;
- padding-top: 8px;
- /* width: 32.1875rem; */
+ color: hsl(252, 82%, 87%);
+ padding-top: .5rem;
  font-stretch: 100%;
- /* grid-area: ; */
 }
 
 h3 {
- grid-area: 1 / 2 / 2 / 3;
  font-size: 1.625rem;
  color: hsl(0 0% 100%);
  line-height: 34px;
  font-weight: 700;
- /* width: 33.375rem; */
 }
 
 input[type="email"] {
  background-color: hsl(240 4% 95%);
- padding: 1.125rem 5.875rem 1.125rem 1.5rem;
+ padding: 1.125rem .625rem 1.125rem 1.5rem;
  border-radius: .3125rem;
  margin: 1rem 1rem 0 0;
- /* grid-area: 3 / 2 /  */
- /* width: 17.375rem; */
- display: none;
+ width: 17.375rem;
 }
 
 .signup p:last-of-type {
- padding-top: .75rem;
+ padding: .75rem 0 31.125rem;
 }
 
 button.subscribe {
@@ -294,14 +285,34 @@ button.subscribe {
  font-size: 1.125rem;
  line-height: 20px;
  font-weight: 700;
- display: none;
 }
 
 footer {
- padding: 0 2.5rem 0;
+ padding: 5rem 2.5rem 0;
  display: grid;
- grid-template-columns: 1fr 1fr;
+ grid-template-columns: repeat(4, 1fr);
+ grid-template-rows: 1fr 1fr;
  margin-bottom: 5rem;
+}
+
+.footer-logo {
+ grid-area: 1 / 1 / 2 / 5;
+}
+
+ul.b {
+ grid-area: 2 / 1 / 3 / 2;
+}
+
+ul.c {
+ grid-area: 2 / 2 / 3 / 3;
+}
+
+ul.d {
+ grid-area: 2 / 3 / 3 / 4;
+}
+
+ul.e {
+ grid-area: 2 / 4 / 3 / 5;
 }
 
 .categories {
@@ -309,7 +320,7 @@ footer {
  color: hsl(0 0% 0%);
  font-weight: 700;
  line-height: 20px;
- margin: 0 4rem 1rem 0;
+ margin: 0 auto 1rem 0;
 }
 
 footer ul li:not([class="categories"]) {
