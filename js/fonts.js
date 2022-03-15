@@ -22,7 +22,10 @@ function fetchFonts() {
         desc.innerHTML = `${resource.Description}`;
         link.innerHTML = `Visit Resource →`;
 
-        icon.setAttribute("src", "../api/fonts/" + `${resource.Icon}`);
+        icon.setAttribute(
+          "src",
+          "../api/fonts/" + `${resource.Icon}`
+        );
         icon.setAttribute("alt", "logo");
         link.setAttribute("href", `${resource.Link}`);
 

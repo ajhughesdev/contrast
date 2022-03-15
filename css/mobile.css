@@ -1,0 +1,290 @@
+@import "reset.css";
+
+@font-face {
+  font-family: "Archivo";
+  src: url("../../font/Archivo-VariableFont_wdth\,wght.ttf")
+    format("truetype-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+}
+
+dialog + .backdrop {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+dialog::backdrop {
+  background-color: hsla(0, 0%, 0%, 0.2);
+}
+
+html {
+  font-family: "Archivo", sans-serif;
+  margin: 1.25rem 1.25rem 5rem 1.25rem;
+}
+
+input[type="search"i]::-webkit-search-cancel-button {
+  display: none;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.open {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
+}
+
+.hamburger {
+  display: block;
+}
+
+.screen-nav {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button.main-cta {
+  padding: 1.125rem 1.5rem;
+  background-color: hsl(258 83% 45%);
+  border-radius: 0.3125rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 20px;
+  color: hsl(0, 0%, 100%);
+}
+
+.hero-section {
+  margin: 3.125rem 0 0;
+
+  h1 {
+    font-size: 2.25rem;
+    line-height: 1.25;
+    font-weight: 700;
+    color: hsl(163, 11%, 12%);
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #595959;
+    margin: 0.5rem 0 0;
+  }
+
+  .hero-btn {
+    margin: 1rem 0 0;
+  }
+}
+
+.logos {
+  padding: 3.125rem 0 0;
+  font-stretch: 105%;
+
+  svg {
+    margin: 1.5rem 1.5rem 0 0;
+  }
+}
+
+.selection-bar {
+  padding: 5rem 0 3.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .ul-resources {
+    white-space: nowrap;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* max-width: 71%; */
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 1.125rem;
+    line-height: 20px;
+    color: hsl(0 0% 35%);
+    cursor: pointer;
+    z-index: -1;
+    color: hsl(0 0% 35%);
+    margin: 0 1.5rem 0 0;
+  }
+
+  button.sort-by {
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    border: 0.0625rem solid hsl(0 0% 88%);
+    padding: 0.75rem 1.125rem;
+    border-radius: 0.3125rem;
+    font-size: 1.125rem;
+    line-height: 20px;
+    color: hsl(0 0% 35%);
+    position: relative;
+
+    svg {
+      margin-left: 0.625rem;
+    }
+  }
+}
+
+.active {
+  padding: 0.625rem 1.125rem;
+  background-color: hsl(210 9% 96%);
+  border-radius: 0.3125rem;
+  font-weight: 700;
+  order: 0;
+}
+
+.resource-grid-cell {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+/* 
+dialog {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  margin: auto;
+  border: solid;
+  padding: 1em;
+  background: white;
+  color: black;
+  display: block;
+} */
+/* 
+dialog:not([open]) {
+  display: none;
+}
+
+dialog + .backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+._dialog_overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+dialog.fixed {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+} */
+/* 
+dialog h1 {
+  font-size: 1.5rem;
+  line-height: 26px;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+
+dialog header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: unset;
+}
+
+dialog li {
+  display: flex;
+  flex-direction: column;
+}
+
+dialog label {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+  padding: 2.25rem 0 1rem;
+  color: hsl(0, 0%, 35%);
+}
+
+dialog label[for="desc"] {
+  display: flex;
+  justify-content: space-between;
+}
+
+dialog span {
+  color: hsl(0 86% 51%);
+  font-weight: 400;
+  font-size: 1.125rem;
+}
+
+dialog [id="desc"] {
+  font-family: "Archivo", sans-serif;
+  width: 100%;
+  color: hsl(0, 0%, 67%);
+  background-color: hsl(0, 0%, 97%);
+  padding: 1.125rem 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.3125rem;
+  font-size: 1.125rem;
+}
+
+dialog [id="desc"]:placeholder {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 67%);
+}
+
+dialog input {
+  padding: 18px 24px;
+  background-color: #f7f7f7;
+  border-radius: 0.3125rem;
+}
+
+dialog .select-label {
+  display: block;
+}
+
+dialog .select-inner {
+  padding: 18px 24px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' viewBox='0 0 11 6' fill='none' class='icon-caret'%3E%3Cpath d='M1 0.75L5.5 5.25L10 0.75' stroke='%23595959' /%3E%3C/svg%3E")
+    no-repeat;
+  background-position-x: 31.25rem;
+  background-position-y: 50%;
+  border: 1px #e0e0e0 solid;
+  border-radius: 0.3125rem;
+  color: hsl(0, 0%, 35%);
+}
+
+.select-inner select option {
+  font-size: 1.125rem;
+  font-family: "Archivo", sans-serif;
+  line-height: 1.5;
+}
+
+.select-inner:hover,
+.select-inner:focus,
+.select-inner:active {
+  cursor: pointer;
+}
+
+dialog button.main-cta {
+  max-width: 12.25rem;
+  margin-top: 2.25rem;
+} */
