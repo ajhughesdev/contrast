@@ -233,8 +233,9 @@ h2 {
 }
 
 .resource-grid-cell p {
-  padding: unset;
   color: hsl(0, 0%, 35%);
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .peeps {
