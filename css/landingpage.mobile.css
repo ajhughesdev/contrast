@@ -11,7 +11,8 @@
 
 html {
   font-family: "Archivo", sans-serif;
-  margin: 1.25rem 0 5rem;
+  margin: 1.25rem auto 5rem;
+  max-width: 25.875rem;
 }
 
 a,
@@ -33,7 +34,7 @@ button {
   display: none;
 }
 
-.top-site > nav > ul {
+#top-site > nav > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -324,11 +325,35 @@ dialog h1 {
   color: hsl(0, 0%, 0%);
 }
 
+dialog label:not(.asterisk)::after {
+  content: " *";
+  color: red;
+}
+
+.desc-label {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c c";
+  justify-content: space-between;
+  align-items: center;
+
+  dialog label[for="desc"] {
+    display: flex;
+    grid-area: a;
+  }
+}
+
 dialog header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: unset;
+
+  svg {
+    display: flex;
+    align-self: center;
+  }
 }
 
 dialog li {
@@ -346,13 +371,6 @@ dialog label {
 
 dialog label[for="desc"] {
   display: flex;
-  justify-content: space-between;
-}
-
-dialog span {
-  color: hsl(0 86% 51%);
-  font-weight: 400;
-  font-size: 1.125rem;
 }
 
 dialog [id="desc"] {
@@ -363,6 +381,7 @@ dialog [id="desc"] {
   line-height: 1.5;
   border-radius: 0.3125rem;
   font-size: 1.125rem;
+  grid-area: c;
 }
 
 dialog [id="desc"]:placeholder {

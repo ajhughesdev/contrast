@@ -17,6 +17,8 @@ html {
   scroll-behavior: smooth;
   font-family: "Archivo", sans-serif;
   background-color: hsl(0 0% 100%);
+  max-width: 48rem;
+  margin: 0 auto;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
@@ -38,7 +40,7 @@ button {
   display: none;
 }
 
-.top-site > nav > ul {
+#top-site > nav > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +48,7 @@ button {
   margin-bottom: 3.125rem;
 }
 
-.top-site nav a:not([href="/"]) {
+#top-site nav a:not([href="/"]) {
   font-size: 1.125rem;
   line-height: 20px;
   text-decoration: none;
@@ -333,6 +335,10 @@ footer ul li:not([class="categories"]) {
   margin: 0 0 8px;
 }
 
+dialog label:not(.asterisk)::after {
+  content: " *";
+  color: red;
+}
 
 dialog::backdrop {
   background-color: hsla(0, 0%, 0%, 0.2);
@@ -379,6 +385,11 @@ dialog header {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: unset;
+
+  svg {
+    display: flex;
+    align-self: center;
+  }
 }
 
 dialog li {
@@ -394,11 +405,19 @@ dialog label {
   color: hsl(0, 0%, 35%);
 }
 
-dialog label[for="desc"] {
-  display: flex;
+.desc-label {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c c";
   justify-content: space-between;
-}
+  align-items: center;
 
+  dialog label[for="desc"] {
+    display: flex;
+    grid-area: a;
+  }
+}
 dialog span {
   color: hsl(0 86% 51%);
   font-weight: 400;
@@ -413,6 +432,7 @@ dialog [id="desc"] {
   line-height: 1.5;
   border-radius: 0.3125rem;
   font-size: 1.125rem;
+  grid-area: c;
 }
 
 dialog [id="desc"]:placeholder {

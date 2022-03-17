@@ -41,11 +41,11 @@ body {
     no-repeat 100% 106px;
 }
 
-.top-site {
+#top-site {
   margin-bottom: 4.9375rem;
 }
 
-.top-site > nav > ul {
+#top-site > nav > ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -316,8 +316,8 @@ footer ul li:not([class="categories"]) {
   line-height: 1.5;
 }
 
-dialog label::after {
-  content: "*";
+dialog label:not(.asterisk)::after {
+  content: " *";
   color: red;
 }
 
@@ -366,6 +366,11 @@ dialog header {
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: unset;
+
+  svg {
+    display: flex;
+    align-self: center;
+  }
 }
 
 dialog li {
@@ -381,15 +386,18 @@ dialog label {
   color: hsl(0, 0%, 35%);
 }
 
-dialog label[for="desc"] {
-  display: flex;
+.desc-label {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c c";
   justify-content: space-between;
-}
+  align-items: center;
 
-dialog span {
-  color: hsl(0 86% 51%);
-  font-weight: 400;
-  font-size: 1.125rem;
+  dialog label[for="desc"] {
+    display: flex;
+    grid-area: a;
+  }
 }
 
 dialog [id="desc"] {
@@ -400,6 +408,7 @@ dialog [id="desc"] {
   line-height: 1.5;
   border-radius: 0.3125rem;
   font-size: 1.125rem;
+  grid-area: c;
 }
 
 dialog [id="desc"]:placeholder {

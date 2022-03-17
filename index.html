@@ -7,11 +7,11 @@
   <title>Contrast - Design resources for developers.</title>
   <link rel="stylesheet" href="./build/css/landingpage.screen.css" media="screen and (min-width: 1440px)" />
   <link rel="stylesheet" href="./build/css/landingpage.tablet.css"
-    media="screen and (min-width: 415px) and (max-width: 1439px)" />
-  <link rel="stylesheet" href="./build/css/landingpage.mobile.css" media="screen and (max-width: 414px)" />
+    media="screen and (min-width: 48rem) and (max-width: 1439px)" />
+  <link rel="stylesheet" href="./build/css/landingpage.mobile.css" media="screen and (max-width: 47.9375rem)" />
 </head>
 
-<body>
+<body id="container">
   <dialog id="modal">
     <div class="overlay">
       <div class="dialog-content">
@@ -31,11 +31,9 @@
               <label for="name">Resource Name</label>
               <input type="text" id="name" name="resource_name" placeholder="UI8" />
             </li>
-            <li>
-              <label for="desc">
-                <div>Resource Description *</div>
-                <div>(Max. 150 char.)</div>
-              </label>
+            <li class="desc-label">
+              <label for="desc">Resource Description</label>
+              <label class="asterisk">(Max. 150 char.)</label>
               <textarea type="text" id="desc" name="resource_desc" rows="3"
                 placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."></textarea>
             </li>
@@ -68,7 +66,7 @@
       </div>
     </div>
   </dialog>
-  <header class="top-site">
+  <header id="top-site">
     <nav>
       <ul>
         <li>
@@ -88,7 +86,7 @@
             <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black" />
           </svg>
         </li>
-        <li class="screen-nav"><a href="#browse">Browse</a></li>
+        <li class="screen-nav browse"><a href="#browse">Browse</a></li>
         <li class="screen-nav"><a href="#">Sponsor</a></li>
         <li class="screen-nav"><a href="#">Templates</a></li>
         <li class="screen-nav">
@@ -240,6 +238,7 @@
     </ul>
   </footer>
   <script src="./node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js" module></script>
+  <script src="js/main.js"></script>
   <script src="js/fonts.js"></script>
   <script src="js/dialogModal.js"></script>
 </body>
