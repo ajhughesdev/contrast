@@ -42,3 +42,10 @@ document
         console.log(error);
       });
   });
+
+  
+
+function gridFonts() {
+  document.getElementById("mockups").addEventListener("click", fetchMockups());
+  document.getElementById("fonts").style.display = "none";
+}
