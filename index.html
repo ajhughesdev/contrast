@@ -168,12 +168,12 @@
     <section id="resources">
       <header class="selection-bar">
         <ul class="vertical-align-middle scroll">
-          <li class="resource-item active">Fonts</li>
-          <li class="resource-item">Mockups</li>
-          <li class="resource-item">Illustrations</li>
-          <li class="resource-item">Icons</li>
-          <li class="resource-item">Books</li>
-          <li class="resource-item">Inspiration</li>
+          <li class="resource-item active" id="fonts">Fonts</li>
+          <li class="resource-item" id="mockups">Mockups</li>
+          <li class="resource-item" id="illustrations">Illustrations</li>
+          <li class="resource-item" id="icons">Icons</li>
+          <li class="resource-item" id="books">Books</li>
+          <li class="resource-item" id="inspiration">Inspiration</li>
         </ul>
         <span class="sort-by">Sort by<svg width="11" height="6" viewBox="0 0 11 6" fill="none">
             <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
@@ -181,7 +181,10 @@
         </span>
       </header>
       <!-- JSON DATA -->
-      <ul id="resource-grid"></ul>
+      <ul class="resource-grid" id="font-results"></ul>
+      <ul class="resource-grid" id="mockup-results"></ul>
+      <ul class="resource-grid" id="illustration-results"></ul>
+      <ul class="resource-grid" id="icon-results"></ul>
       <!-- END JSON DATA -->
     </section>
     <section id="newsletter" class="signup">
@@ -238,9 +241,7 @@
       <li><a href="#">Sponsor Resource</a></li>
     </ul>
   </footer>
-  <script src="./node_modules/dialog-polyfill/dist/dialog-polyfill.esm.js" type="module"></script>
-  <script src="js/main.js"></script>
-  <script src="js/fonts.js"></script>
+  <script src="js/main.js" type="module"></script>
   <script src="js/dialogModal.js"></script>
 </body>
 

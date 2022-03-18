@@ -1,11 +1,11 @@
-const fonts = document.getElementById("fonts");
-const fontResults = document.getElementById("font-results");
+const icons = document.getElementById("icons");
+const iconResults = document.getElementById("icon-results");
 
-function fetchFonts() {
-  let ul = document.getElementById("font-results");
+function fetchIcons() {
+  let ul = document.getElementById("icon-results");
   let list = document.createDocumentFragment();
 
-  let url = "../api/fonts/fonts.json";
+  let url = "../api/icons/icons.json";
 
   fetch(url)
     .then((response) => {
@@ -25,7 +25,7 @@ function fetchFonts() {
         desc.innerHTML = `${resource.Description}`;
         link.innerHTML = `Visit Resource →`;
 
-        icon.setAttribute("src", "../api/fonts/" + `${resource.Icon}`);
+        icon.setAttribute("src", "../api/icons/" + `${resource.Icon}`);
         icon.setAttribute("alt", "logo");
         link.setAttribute("href", `${resource.Link}`);
 
@@ -37,7 +37,7 @@ function fetchFonts() {
 
         ul.appendChild(list);
         ul.classList.add("resource-grid-cell");
-        ul.setAttribute("id", "font-results");
+        ul.setAttribute("id", "icon-results");
       });
     })
     .catch(function (error) {
@@ -45,20 +45,20 @@ function fetchFonts() {
     });
 }
 
-function refetchFonts() {
-  if (fonts.classList.contains("active") === false) {
-    fonts.classList.toggle("active");
-    fontResults.style.display = "grid";
+function refetchIcons() {
+  if (icons.classList.contains("active") === false) {
+    icons.classList.toggle("active");
+    iconResults.style.display = "grid";
   } else {
     return;
   }
   document.getElementById("mockups").classList.remove("active");
   document.getElementById("illustrations").classList.remove("active");
-  document.getElementById("icons").classList.remove("active");
+  document.getElementById("fonts").classList.remove("active");
 
   document.getElementById("mockup-results").style.display = "none";
   document.getElementById("illustration-results").style.display = "none";
-  document.getElementById("icon-results").style.display = "none";
+  document.getElementById("font-results").style.display = "none";
 }
 
-export { fetchFonts, refetchFonts };
+export { fetchIcons, refetchIcons };

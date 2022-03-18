@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "reset.css";
 
 @font-face {
@@ -174,10 +175,7 @@ h2 {
 .resource-item {
   padding: 10px 0 10px;
   cursor: pointer;
-
-  &:not(:last-child) {
-    margin: 0 24px 0 0;
-  }
+  margin: 0 24px 0 0;
 }
 
 #resources {
@@ -212,10 +210,9 @@ h2 {
   font-weight: 700;
 }
 
-#resources ul:not([id="resource-grid"]) {
-  display: flex;
+/* #resources ul:not([class="resource-grid"]) {
   align-items: center;
-}
+} */
 
 .resource-grid-cell {
   display: grid;
