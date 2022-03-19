@@ -26,12 +26,13 @@ button {
   transition-delay: 0s;
 }
 
-.hamburger {
-  display: block;
-}
-
 .screen-nav {
   display: none;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
 }
 
 #top-site > nav > ul {
@@ -434,6 +435,7 @@ dialog button.main-cta {
   line-height: 20px;
   padding: 1.1875rem 0 1rem 0;
 }
+
 footer li:not(.categories) {
   font-size: 18px;
   display: block;
