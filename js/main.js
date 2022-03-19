@@ -19,7 +19,7 @@ const iconResults = document.getElementById("icon-results");
 const mockupResults = document.getElementById("mockup-results");
 const illustrationResults = document.getElementById("illustration-results");
 
-const hamburger = document.querySelector(".hamburger");
+// const hamburger = document.querySelector(".hamburger");
 
 // page load
 window.addEventListener("load", fetchFonts());
@@ -32,7 +32,7 @@ illustrationResults.style.display = "none";
 iconResults.style.display = "none";
 
 // mobileNav toggle
-hamburger.addEventListener("click", mobileNav());
+// hamburger.addEventListener("click", mobileNav());
 
 // "Browse" anchor tag
 browse.addEventListener("click", () => {
