@@ -23,7 +23,7 @@ function fetchMockups() {
 
         title.innerHTML = `${resource.Title}`;
         desc.innerHTML = `${resource.Description}`;
-        link.innerHTML = `Visit Resource →`;
+        link.innerHTML = `Visit Resource`;
 
         icon.setAttribute("src", "../api/mockups/" + `${resource.Icon}`);
         icon.setAttribute("alt", "logo");

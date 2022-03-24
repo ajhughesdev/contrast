@@ -19,7 +19,7 @@
 }
 
 html {
-  font-family: "Archivo", "Archivo-fallback",sans-serif;
+  font-family: "Archivo", "Archivo-fallback", sans-serif;
   margin: 1.25rem auto 5rem;
   max-width: 25.875rem;
   font-size: 16px;
@@ -193,6 +193,7 @@ h2 {
   color: hsl(0 0% 35%);
   font-size: 1.125rem;
   line-height: 1.5;
+  font-stretch: 100%;
 }
 
 .resource-grid-cell {
@@ -220,11 +221,10 @@ h2 {
   line-height: 20px;
   margin: 1.5rem 0 0;
   color: hsl(0, 0%, 0%);
-}
 
-.resource-grid-cell p {
-  color: hsl(0, 0%, 35%);
-  font-stretch: 100%;
+  &::after {
+    content: " \2192";
+  }
 }
 
 .signup {

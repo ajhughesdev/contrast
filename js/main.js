@@ -3,23 +3,19 @@ import { fetchMockups, refetchMockups } from "./mockups.js";
 import { fetchIllustrations, refetchIllustrations } from "./illustrations.js";
 import { fetchIcons, refetchIcons } from "./icons.js";
 
-const browse = document.querySelector(".browse");
-const hero = document.getElementById("hero");
-const newsletter = document.getElementById("newsletter");
-const browseBody = document.getElementById("container");
-const browseHeader = document.getElementById("top-site");
-const footer = document.querySelector("footer");
-
-const fonts = document.getElementById("fonts");
-const mockups = document.getElementById("mockups");
-const illustrations = document.getElementById("illustrations");
-const icons = document.getElementById("icons");
-
-const iconResults = document.getElementById("icon-results");
-const mockupResults = document.getElementById("mockup-results");
-const illustrationResults = document.getElementById("illustration-results");
-
-// const hamburger = document.querySelector(".hamburger");
+const browse = document.querySelector(".browse"),
+  hero = document.getElementById("hero"),
+  newsletter = document.getElementById("newsletter"),
+  browseBody = document.getElementById("container"),
+  browseHeader = document.getElementById("top-site"),
+  footer = document.querySelector("footer"),
+  fontsId = document.getElementById("fonts"),
+  mockups = document.getElementById("mockups"),
+  illustrations = document.getElementById("illustrations"),
+  icons = document.getElementById("icons"),
+  iconResults = document.getElementById("icon-results"),
+  mockupResults = document.getElementById("mockup-results"),
+  illustrationResults = document.getElementById("illustration-results");
 
 // page load
 window.addEventListener("load", fetchFonts());
@@ -30,9 +26,6 @@ window.addEventListener("load", fetchIcons());
 mockupResults.style.display = "none";
 illustrationResults.style.display = "none";
 iconResults.style.display = "none";
-
-// mobileNav toggle
-// hamburger.addEventListener("click", mobileNav());
 
 // "Browse" anchor tag
 browse.addEventListener("click", () => {
@@ -49,8 +42,8 @@ mockups.addEventListener("click", () => {
 });
 
 // switch to "Fonts" resources
-fonts.addEventListener("click", () => {
-  refetchFonts();
+fontsId.addEventListener("click", () => {
+  refetchFonts("fonts", "font-results");
 });
 
 // switch to "Illustrations" resources
