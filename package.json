@@ -20,14 +20,18 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "css-has-pseudo": "^3.0.4",
-    "cssnano": "^5.1.4",
+    "cssnano": "^5.1.5",
     "postcss": "^8.4.12",
     "postcss-cli": "^9.1.0",
+    "postcss-import": "^14.1.0",
     "postcss-nested": "^5.0.6",
-    "postcss-nesting": "^10.1.3",
-    "postcss-preset-env": "^7.4.2"
+    "postcss-preset-env": "^7.4.3",
+    "postcss-url": "^10.1.3",
+    "the-new-css-reset": "^1.5.1"
   },
   "browserslist": [
-    "defaults"
+    "> 0.2%",
+    "last 2 versions",
+    "not dead"
   ]
 }

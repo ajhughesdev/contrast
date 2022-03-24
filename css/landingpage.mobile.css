@@ -1,16 +1,25 @@
-@import "reset.css";
+@charset "utf-8";
+@import "../node_modules/the-new-css-reset/css/reset.css";
 
 @font-face {
+  font-display: optional;
   font-family: "Archivo";
-  src: url("../../font/Archivo-VariableFont_wdth\,wght.ttf")
-    format("truetype-variations");
+  src: url("../font/Archivo-VariableFont_wdth,wght.woff2")
+    format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
   font-stretch: 62% 125%;
 }
 
+@font-face {
+  font-family: "Archivo-fallback";
+  size-adjust: 98.47%;
+  ascent-override: 90%;
+  src: local("Arial");
+}
+
 html {
-  font-family: "Archivo", sans-serif;
+  font-family: "Archivo", "Archivo-fallback",sans-serif;
   margin: 1.25rem auto 5rem;
   max-width: 25.875rem;
   font-size: 16px;

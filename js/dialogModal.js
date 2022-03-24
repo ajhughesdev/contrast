@@ -4,14 +4,6 @@ const modalOpenBtn = document.querySelectorAll("#header-button, #hero-button");
 const closeBtn = document.querySelector(".close-button");
 const form = dialog.getElementsByTagName("form[method='dialog']");
 
-dialog.style.position = "fixed";
-dialog.style.top = "0";
-dialog.style.left = "0";
-dialog.style.right = "0";
-dialog.style.width = "100%";
-dialog.style.height = "100%";
-dialog.style.transition = "all 450ms ease";
-
 modalOpenBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     dialog.showModal();

@@ -1,13 +1,21 @@
-@charset "UTF-8";
-@import "reset.css";
+@charset "utf-8";
+@import "../node_modules/the-new-css-reset/css/reset.css";
 
 @font-face {
+  font-display: optional;
   font-family: "Archivo";
-  src: url("../../font/Archivo-VariableFont_wdth\,wght.ttf")
-    format("truetype-variations");
+  src: url("../font/Archivo-VariableFont_wdth,wght.woff2")
+    format("woff2-variations");
   font-style: normal;
   font-weight: 100 900;
   font-stretch: 62% 125%;
+}
+
+@font-face {
+  font-family: "Archivo-fallback";
+  size-adjust: 98.47%;
+  ascent-override: 90%;
+  src: local("Arial");
 }
 
 html {
@@ -100,6 +108,7 @@ button.main-cta {
   font-size: 1.125rem;
   line-height: 20px;
   color: hsl(0, 0%, 100%);
+  max-width: 12.25rem;
 }
 
 .hero-section {
