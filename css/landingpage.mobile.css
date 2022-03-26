@@ -138,6 +138,7 @@ button.main-cta {
   border-radius: 5px;
   padding: 12px 18px;
   cursor: pointer;
+  white-space: nowrap;
 
   svg {
     margin: 0 0 0 0.625rem;
@@ -235,14 +236,14 @@ h2 {
   background-position-y: 100%;
   background-position-x: calc(50% - 0.4381rem);
   padding: 3.5rem 1.25rem 0;
-}
 
-.signup p {
-  color: hsl(252, 82%, 87%);
-  padding-top: 0.5rem;
-  font-stretch: 100%;
-  font-size: 1.125rem;
-  line-height: 1.5;
+  .signup p {
+    color: hsl(252, 82%, 87%);
+    padding-top: 0.5rem;
+    font-stretch: 100%;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
 }
 
 h3 {
@@ -379,10 +380,10 @@ dialog label {
   padding: 2.25rem 0 1rem;
   color: hsl(0, 0%, 35%);
 }
-
+/* 
 dialog label[for="desc"] {
   display: flex;
-}
+} */
 
 dialog [id="desc"] {
   width: 100%;
@@ -395,7 +396,7 @@ dialog [id="desc"] {
   grid-area: c;
 }
 
-dialog [id="desc"]:placeholder {
+dialog input::placeholder {
   font-size: 1.125rem;
   color: hsl(0, 0%, 67%);
 }
@@ -404,9 +405,10 @@ dialog input {
   padding: 18px 24px;
   background-color: #f7f7f7;
   border-radius: 0.3125rem;
+  text-overflow: ellipsis;
 }
 
-dialop .select-label {
+dialog .select-label {
   display: block;
 }
 
@@ -415,14 +417,11 @@ dialog .select-inner {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' viewBox='0 0 11 6' fill='none' class='icon-caret'%3E%3Cpath d='M1 0.75L5.5 5.25L10 0.75' stroke='%23595959' /%3E%3C/svg%3E")
     no-repeat;
   background-position-x: right 24px;
-  background-position-y: top 1.7969rem;
+  background-position-y: top 50%;
   border: 1px #e0e0e0 solid;
   border-radius: 0.3125rem;
   color: hsl(0, 0%, 35%);
   width: 100%;
-}
-
-.select-inner select option {
   font-size: 1.125rem;
   font-family: "Archivo", sans-serif;
   line-height: 1.5;

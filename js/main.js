@@ -1,31 +1,41 @@
-import { fetchFonts, refetchFonts } from "./fonts.js";
-import { fetchMockups, refetchMockups } from "./mockups.js";
-import { fetchIllustrations, refetchIllustrations } from "./illustrations.js";
-import { fetchIcons, refetchIcons } from "./icons.js";
+import { fetchResourceCards, refetchResourceCards } from "./resourceCards.js";
 
-const browse = document.querySelector(".browse"),
-  hero = document.getElementById("hero"),
-  newsletter = document.getElementById("newsletter"),
-  browseBody = document.getElementById("container"),
-  browseHeader = document.getElementById("top-site"),
-  footer = document.querySelector("footer"),
-  fontsId = document.getElementById("fonts"),
-  mockups = document.getElementById("mockups"),
-  illustrations = document.getElementById("illustrations"),
-  icons = document.getElementById("icons"),
-  iconResults = document.getElementById("icon-results"),
-  mockupResults = document.getElementById("mockup-results"),
-  illustrationResults = document.getElementById("illustration-results");
+const browse = document.querySelector(".browse");
+const hero = document.getElementById("hero");
+const newsletter = document.getElementById("newsletter");
+const browseBody = document.getElementById("container");
+const browseHeader = document.getElementById("top-site");
+const footer = document.querySelector("footer");
+const fonts = document.getElementById("fonts");
+const mockups = document.getElementById("mockups");
+const illustrations = document.getElementById("illustrations");
+const icons = document.getElementById("icons");
+const fontsResults = document.getElementById("fonts-results");
+const iconsResults = document.getElementById("icons-results");
+const mockupsResults = document.getElementById("mockups-results");
+const illustrationsResults = document.getElementById("illustrations-results");
 
 // page load
-window.addEventListener("load", fetchFonts());
-window.addEventListener("load", fetchMockups());
-window.addEventListener("load", fetchIllustrations());
-window.addEventListener("load", fetchIcons());
+window.addEventListener("load", () => {
+  let x = "fonts";
+  fetchResourceCards(x);
+});
+window.addEventListener("load", () => {
+  let x = "mockups";
+  fetchResourceCards(x);
+});
+window.addEventListener("load", () => {
+  let x = "illustrations";
+  fetchResourceCards(x);
+});
+window.addEventListener("load", () => {
+  let x = "icons";
+  fetchResourceCards(x);
+});
 
-mockupResults.style.display = "none";
-illustrationResults.style.display = "none";
-iconResults.style.display = "none";
+mockupsResults.style.display = "none";
+illustrationsResults.style.display = "none";
+iconsResults.style.display = "none";
 
 // "Browse" anchor tag
 browse.addEventListener("click", () => {
@@ -38,20 +48,60 @@ browse.addEventListener("click", () => {
 
 // switch to "Mockups" resources
 mockups.addEventListener("click", () => {
-  refetchMockups();
+  let x = "mockups";
+
+  fetchResourceCards(x);
+
+  fonts.classList.remove("active");
+  illustrations.classList.remove("active");
+  icons.classList.remove("active");
+
+  fontsResults.style.display = "none";
+  illustrationsResults.style.display = "none";
+  iconsResults.style.display = "none";
 });
 
 // switch to "Fonts" resources
-fontsId.addEventListener("click", () => {
-  refetchFonts("fonts", "font-results");
+fonts.addEventListener("click", () => {
+  let y = "fonts";
+  refetchResourceCards(y);
+
+  mockups.classList.remove("active");
+  illustrations.classList.remove("active");
+  icons.classList.remove("active");
+
+  mockupsResults.style.display = "none";
+  illustrationsResults.style.display = "none";
+  iconsResults.style.display = "none";
 });
 
 // switch to "Illustrations" resources
 illustrations.addEventListener("click", () => {
-  refetchIllustrations();
+  let y = ["illustrations"];
+
+  refetchResourceCards(y);
+
+  mockups.classList.remove("active");
+  fonts.classList.remove("active");
+  icons.classList.remove("active");
+
+  mockupsResults.style.display = "none";
+  fontsResults.style.display = "none";
+  iconsResults.style.display = "none";
 });
 
 // switch to "Icons" resources
 icons.addEventListener("click", () => {
-  refetchIcons();
+  let y = "icons";
+
+  refetchResourceCards(y);
+
+
+  mockups.classList.remove("active");
+  illustrations.classList.remove("active");
+  fonts.classList.remove("active");
+
+  mockupsResults.style.display = "none";
+  illustrationsResults.style.display = "none";
+  fontsResults.style.display = "none";
 });

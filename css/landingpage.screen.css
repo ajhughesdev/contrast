@@ -254,6 +254,10 @@ h2 {
   font-size: 1.125rem;
   line-height: 1.25rem;
   margin-top: 1.5rem;
+
+  &::after {
+    content: " \2192";
+  }
 }
 
 .signup {

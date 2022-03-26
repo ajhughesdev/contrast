@@ -241,6 +241,10 @@ h2 {
   line-height: 20px;
   margin-top: 1.5rem;
   color: hsl(0, 0%, 0%);
+
+  &::after {
+    content: " \2192";
+  }
 }
 
 .resource-grid-cell p {
@@ -444,7 +448,8 @@ dialog [id="desc"] {
   grid-area: c;
 }
 
-dialog [id="desc"]:placeholder {
+dialog [id="desc"]:placeholder,
+dialog input {
   font-size: 1.125rem;
   color: hsl(0, 0%, 67%);
 }

@@ -1,11 +1,8 @@
-const fonts = document.getElementById("fonts");
-const fontResults = document.getElementById("font-results");
-
-function fetchFonts() {
-  let ul = document.getElementById("font-results");
+function fetchResourceCards(x) {
+  let ul = document.getElementById(`${x}-results`);
   let list = document.createDocumentFragment();
 
-  let url = "../api/fonts/fonts.json";
+  let url = `/api/${x}/${x}.json`;
 
   fetch(url)
     .then((response) => {
@@ -25,8 +22,8 @@ function fetchFonts() {
         desc.innerHTML = `${resource.Description}`;
         link.innerHTML = `Visit Resource`;
 
-        icon.setAttribute("src", "../api/fonts/" + `${resource.Icon}`);
-        icon.setAttribute("alt", "logo");
+        icon.setAttribute("src", `../api/${x}/${resource.Icon}`);
+        icon.setAttribute("alt", `logo`);
         link.setAttribute("href", `${resource.Link}`);
 
         li.appendChild(icon);
@@ -37,28 +34,19 @@ function fetchFonts() {
 
         ul.appendChild(list);
         ul.classList.add("resource-grid-cell");
-        ul.setAttribute("id", "font-results");
+        ul.setAttribute("id", `${x}`);
       });
     })
     .catch(function (error) {
       console.log(error);
     });
 }
-
-function refetchFonts() {
-  if (fonts.classList.contains("active") === false) {
-    fonts.classList.toggle("active");
-    fontResults.style.display = "grid";
+function makeActive(y) {
+  if (document.getElementById(`${y}`).classList.contains("active") === false) {
+    document.getElementById(`${y}`).classList.toggle("active");
+    document.getElementById(`${y}Results`).style.display = "grid";
   } else {
     return;
   }
-  document.getElementById("mockups").classList.remove("active");
-  document.getElementById("illustrations").classList.remove("active");
-  document.getElementById("icons").classList.remove("active");
-
-  document.getElementById("mockup-results").style.display = "none";
-  document.getElementById("illustration-results").style.display = "none";
-  document.getElementById("icon-results").style.display = "none";
 }
-
-export { fetchFonts, refetchFonts };
+export { fetchResourceCards, makeActive };

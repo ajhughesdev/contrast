@@ -1,6 +1,3 @@
-const illustrations = document.getElementById("illustrations");
-const illustrationResults = document.getElementById("illustration-results");
-
 function fetchIllustrations() {
   let ul = document.getElementById("illustration-results");
   let list = document.createDocumentFragment();
@@ -60,5 +57,3 @@ function refetchIllustrations() {
   document.getElementById("font-results").style.display = "none";
   document.getElementById("icon-results").style.display = "none";
 }
-
-export { fetchIllustrations, refetchIllustrations };
