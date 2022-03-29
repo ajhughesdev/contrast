@@ -6,169 +6,165 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="code louisville winter '22 final project" />
   <title>Contrast - Design resources for developers.</title>
-  <link rel="stylesheet" href="build/css/landingpage.screen.css" media="screen and (min-width: 1440px)" />
-  <link rel="stylesheet" href="build/css/landingpage.tablet.css"
-    media="screen and (min-width: 48rem) and (max-width: 1439px)" />
-  <link rel="stylesheet" href="build/css/landingpage.mobile.css" media="screen and (max-width: 47.9375rem)" />
+  <link rel="stylesheet" href="./build/css/main.css" />
 </head>
 
-<body id="container">
-  <dialog id="modal">
-    <div class="overlay">
-      <div class="dialog-content">
-        <form action="#" method="dialog">
-          <header class="submit-resource">
-            <h1>Submit Resource</h1>
-            <button value="cancel">
-              <svg fill="none" viewBox="0 0 24 24" width="24">
-                <circle cx="12" cy="12" r="12" fill="#EFF0F3" />
-                <path stroke="#A7AAB3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M14.5 9 9 14.5M9 9l5.5 5.5" />
-              </svg>
-            </button>
-          </header>
-          <ul>
-            <li>
-              <label for="name">Resource Name</label>
-              <input type="text" id="name" name="resource_name" placeholder="UI8" />
-            </li>
-            <li class="desc-label">
-              <label for="desc">Resource Description</label>
-              <label class="asterisk">(Max. 150 char.)</label>
-              <textarea type="text" id="desc" name="resource_desc" rows="4" maxlength="150"
-                placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."></textarea>
-            </li>
-            <li>
-              <label for="link"> Resource Link</label>
-              <input type="url" id="link" name="resource_url" placeholder="https://ui8.net" />
-            </li>
-            <li>
-              <label for="icon-link"> Resource Icon Link</label>
-              <input type="url" id="icon-link" name="resource_icon_url"
-                placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642.........." />
-            </li>
-            <li class="select-label">
-              <label for="resources-cat">Resource Category</label>
+<body>
+  <header>
+    <nav class="topnav">
+      <a href="#home" class="logo">
+        <img src="./src/assets/contrast-logo.svg" alt="contrast logo" />
+      </a>
+      <div class="accordion-wrapper active" id="parent" data-accordion-wrapper>
+        <div role="navigation" class="accordion-menu">
+          <ul id="myLinks" class="accordion-list">
+            <li class="accordion-item">
+              <a href="#menu-1" class="accordion-link" data-accordion-menu>
+                <span>
+                  Resources
+                </span>
+                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+                  </svg></span>
+              </a>
+              <ul class="accordion-sublist accordion-hidden" id="menu-1">
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Fonts
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Mockups
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Illustrations
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Icons
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Books
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Inspiration
+                  </a>
+                </li>
 
-              <select class="select-inner" name="resources" id="resources-cat">
-                <option value="mockups" selected>Mockups</option>
-                <option value="fonts">Fonts</option>
-                <option value="illustrations">Illustrations</option>
-                <option value="icons">Icons</option>
-                <option value="books">Books</option>
-                <option value="inspiration">Inspiration</option>
-              </select>
+              </ul>
             </li>
-            <li>
-              <button value="submit" class="main-cta">Submit Resource</button>
+
+            <li class="accordion-item">
+              <a href="#menu-2" class="accordion-link" data-accordion-menu>
+                <span>
+                  Company
+                </span>
+                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+                  </svg></span>
+              </a>
+              <ul class="accordion-sublist accordion-hidden" id="menu-2">
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Blog
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="accordion-item">
+              <a href="#menu-3" class="accordion-link" data-accordion-menu>
+                <span>
+                  Support
+                </span>
+                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+                  </svg></span>
+              </a>
+              <ul class="accordion-sublist accordion-hidden" id="menu-3">
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="accordion-item">
+              <a href="#menu-4" class="accordion-link" data-accordion-menu>
+                <span>
+                  Sponsor
+                </span>
+                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+                  </svg></span>
+              </a>
+              <ul class="accordion-sublist accordion-hidden" id="menu-4">
+                <li>
+                  <a href="#" class="accordion-sublink">
+                    Sponsor Resource
+                  </a>
+                </li>
+
+              </ul>
             </li>
           </ul>
-        </form>
+        </div>
       </div>
-    </div>
-  </dialog>
-  <header id="top-site">
-    <nav>
-      <ul>
-        <li>
-          <a href="/">
-            <svg fill="none" height="32" viewBox="0 0 108 32" width="108" class="logo" style="display: block">
-              <g fill="#4d13d1">
-                <path
-                  d="m16-.0000007c-4.2435.00000019-8.31313 1.6857107-11.31371 4.6862907s-4.68629056 7.07021-4.6862907 11.31371c-.00000013 4.2435 1.6857107 8.3131 4.6862907 11.3137s7.07021 4.6863 11.31371 4.6863v-16z" />
-                <path
-                  d="m40.732 22.216c-3.984 0-5.976-2.13-5.976-6.39 0-2.136.522-3.732 1.566-4.788 1.044-1.068 2.514-1.602 4.41-1.602 1.044 0 1.98.18 2.808.54.84.348 1.5.888 1.98 1.62.492.72.738 1.602.738 2.646h-2.682c0-.804-.258-1.434-.774-1.89-.516-.468-1.188-.702-2.016-.702-1.128 0-1.968.336-2.52 1.008s-.828 1.638-.828 2.898v.54c0 2.604 1.116 3.906 3.348 3.906.876 0 1.572-.228 2.088-.684.528-.456.792-1.086.792-1.89h2.592c0 1.056-.24 1.944-.72 2.664-.48.708-1.134 1.242-1.962 1.602-.828.348-1.776.522-2.844.522zm11.7482 0c-1.62 0-2.826-.402-3.618-1.206s-1.188-2.052-1.188-3.744.396-2.94 1.188-3.744 1.998-1.206 3.618-1.206 2.826.402 3.618 1.206c.804.804 1.206 2.052 1.206 3.744s-.402 2.94-1.206 3.744c-.792.804-1.998 1.206-3.618 1.206zm0-2.016c.804 0 1.386-.228 1.746-.684.36-.468.54-1.17.54-2.106v-.288c0-.936-.18-1.632-.54-2.088-.36-.468-.942-.702-1.746-.702s-1.386.234-1.746.702c-.348.456-.522 1.152-.522 2.088v.288c0 .936.174 1.638.522 2.106.36.456.942.684 1.746.684zm6.7919-7.668h2.106l.18 1.242h.126c.768-.972 1.752-1.458 2.952-1.458.972 0 1.734.264 2.286.792.564.528.846 1.374.846 2.538v6.354h-2.466v-5.832c0-.588-.138-1.014-.414-1.278s-.684-.396-1.224-.396c-.552 0-1.014.198-1.386.594-.36.384-.54.864-.54 1.44v5.472h-2.466zm13.5419 9.684c-.888 0-1.524-.24-1.908-.72s-.576-1.086-.576-1.818v-5.13h-1.134v-2.016h1.188l.414-2.664h1.998v2.664h1.638v2.016h-1.638v4.878c0 .516.258.774.774.774h.864v1.728c-.204.072-.462.138-.774.198-.3.06-.582.09-.846.09zm3.4562-9.684h2.106l.198 1.53h.126c.204-.54.468-.966.792-1.278s.75-.468 1.278-.468c.348 0 .66.054.936.162v2.304h-.684c-.804 0-1.386.222-1.746.666-.36.432-.54 1.092-.54 1.98v4.572h-2.466zm9.1741 9.684c-.732 0-1.404-.192-2.016-.576s-.918-1.08-.918-2.088c0-1.212.498-2.07 1.494-2.574.996-.516 2.406-.774 4.23-.774v-.666c0-.42-.096-.744-.288-.972-.18-.228-.528-.342-1.044-.342-.552 0-.948.084-1.188.252-.228.168-.342.366-.342.594v.27h-2.376c-.012-.072-.018-.204-.018-.396 0-.792.348-1.428 1.044-1.908.708-.48 1.644-.72 2.808-.72 1.296 0 2.262.264 2.898.792.648.528.972 1.29.972 2.286v4.176c0 .216.06.378.18.486.12.096.27.144.45.144h.504v1.728c-.384.192-.858.288-1.422.288-.492 0-.906-.108-1.242-.324-.324-.216-.546-.522-.666-.918h-.108c-.348.408-.75.72-1.206.936-.444.204-1.026.306-1.746.306zm.774-1.944c.696 0 1.206-.192 1.53-.576.324-.396.486-.918.486-1.566v-.288c-2.148 0-3.222.48-3.222 1.44 0 .3.096.54.288.72.204.18.51.27.918.27zm10.8299 1.944c-1.32 0-2.358-.27-3.114-.81-.744-.552-1.116-1.284-1.116-2.196l.018-.216h2.394v.126c.012.42.198.726.558.918.372.18.822.27 1.35.27.492 0 .912-.066 1.26-.198s.522-.348.522-.648c0-.336-.18-.588-.54-.756-.348-.168-.9-.336-1.656-.504-.78-.18-1.416-.36-1.908-.54-.492-.192-.918-.486-1.278-.882s-.54-.924-.54-1.584c0-.924.384-1.632 1.152-2.124.78-.504 1.782-.756 3.006-.756 1.14 0 2.082.234 2.826.702.7438.456 1.1158 1.08 1.1158 1.872l-.018.414h-2.3938v-.108c0-.312-.15-.552-.45-.72-.288-.168-.678-.252-1.17-.252s-.882.066-1.17.198-.432.318-.432.558c0 .3.162.522.486.666.336.144.87.288 1.602.432.804.18 1.458.36 1.962.54.5038.18.9418.474 1.3138.882s.558.96.558 1.656c0 2.04-1.4458 3.06-4.3378 3.06zm8.7598 0c-.888 0-1.524-.24-1.908-.72s-.576-1.086-.576-1.818v-5.13h-1.134v-2.016h1.188l.414-2.664h1.998v2.664h1.638v2.016h-1.638v4.878c0 .516.258.774.774.774h.864v1.728c-.204.072-.462.138-.774.198-.3.06-.582.09-.846.09z" />
-              </g>
-            </svg>
-          </a>
-        </li>
-        <li>
-          <svg width="24" height="20" viewBox="0 0 24 20" class="hamburger" fill="none">
-            <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black" />
-          </svg>
-        </li>
-        <li class="screen-nav browse"><a href="#browse">Browse</a></li>
-        <li class="screen-nav"><a href="#">Sponsor</a></li>
-        <li class="screen-nav"><a href="#">Templates</a></li>
-        <li class="screen-nav">
-          <input class="nosubmit" type="search" placeholder="Search resources" name="search" />
-        </li>
-        <li class="screen-nav">
-          <button type="button" class="main-cta" id="header-button">
-            Submit Resource
-          </button>
-        </li>
-      </ul>
+      <span class="hamburger-menu">
+        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" style="display: block;">
+          <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black" />
+        </svg>
+      </span>
     </nav>
   </header>
+
   <main>
-    <section id="hero" class="hero-section">
-      <h1>Design resources for developers.</h1>
-      <p>
-        Explore a collection of 3400+ curated design resources, both free and
-        paid, developers can use to create landing pages quicker.
-      </p>
-      <button type="button" class="main-cta hero-btn" id="hero-button">
-        Submit Resource
-      </button>
-      <div class="logos">
-        <p>Used by individuals in:</p>
-        <div class="logo-svgs">
-          <a href="https://google.com/" target="_blank" ref="nonreferrer noopener"><svg fill="none" height="24"
-              viewBox="0 0 24 24" width="24">
-              <path
-                d="m23.745 12.27c0-.79-.07-1.54-.19-2.27h-11.3v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z"
-                fill="#4285f4" />
-              <path
-                d="m12.255 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13002 0-5.78002-2.11-6.73002-4.96h-3.98v3.09c1.97 3.92 6.02 6.62 10.71002 6.62z"
-                fill="#34a853" />
-              <path
-                d="m5.52501 14.29c-.25-.72-.38001-1.49-.38001-2.29s.14001-1.57.38001-2.29v-3.09h-3.98001c-.819996 1.62-1.289995 3.44-1.289995 5.38s.469999 3.76 1.289995 5.38z"
-                fill="#fbbc05" />
-              <path
-                d="m12.255 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42c-2.07-1.94-4.78-3.13-8.02-3.13-4.69002 0-8.74002 2.7-10.71002 6.62l3.98 3.09c.95-2.85 3.6-4.96 6.73002-4.96z"
-                fill="#ea4335" />
-            </svg>
-          </a>
-          <a href="https://discord.com/" target="_blank" ref="nonreferrer noopener"><svg fill="none" width="31"
-              height="24">
-              <path d="m0 0h31v24h-31z"></path>
-              <path
-                d="m26.2428 2.13722c-1.9758-.90606-4.0946-1.573611-6.3099-1.955944-.0404-.007379-.0807.011061-.1015.047943-.2725.484368-.5743 1.116271-.7857 1.612931-2.3827-.3565-4.7532-.3565-7.087 0-.2114-.5077-.5242-1.128563-.798-1.612931-.0207-.035651-.061-.054091-.1014-.047943-2.21408.381111-4.33287 1.048664-6.30993 1.955944-.01711.00738-.03178.01968-.04152.03565-4.018886 6.00062-5.119827 11.85373-4.579742 17.63433.002443.0282.018328.0553.040323.0725 2.651549 1.9461 5.220029 3.1275 7.740809 3.9106.04034.0123.08308-.0024.10876-.0356.59629-.8138 1.12783-1.6719 1.58357-2.5743.0269-.0529.00123-.1156-.05374-.1365-.84312-.3196-1.64593-.7094-2.41818-1.1519-.06108-.0357-.06597-.123-.00978-.1648.16251-.1217.32506-.2483.48024-.3762.02807-.0233.06719-.0282.1002-.0135 5.07339 2.315 10.56589 2.315 15.57929 0 .0331-.016.0722-.011.1015.0123.1552.1279.3177.2557.4814.3774.0562.0418.0526.1291-.0085.1648-.7723.4511-1.5751.8323-2.4194 1.1507-.055.0209-.0794.0848-.0525.1377.4655.9011.997 1.7592 1.5823 2.5731.0245.0344.0684.0491.1088.0368 2.533-.7831 5.1014-1.9645 7.753-3.9106.0232-.0172.0379-.043.0403-.0713.6464-6.683-1.0826-12.48809-4.5834-17.6343-.0085-.0172-.0232-.0295-.0403-.03688zm-15.8836 14.15018c-1.52743 0-2.78599-1.4015-2.78599-3.1226 0-1.7212 1.23415-3.1226 2.78599-3.1226 1.564 0 2.8104 1.4137 2.7859 3.1226 0 1.7211-1.2341 3.1226-2.7859 3.1226zm10.3007 0c-1.5274 0-2.786-1.4015-2.786-3.1226 0-1.7212 1.2342-3.1226 2.786-3.1226 1.564 0 2.8104 1.4137 2.786 3.1226 0 1.7211-1.222 3.1226-2.786 3.1226z"
-                fill="#5865f2"></path>
-            </svg>
-          </a>
-          <a href="https:/slack.com/" target="_blank" ref="nonreferrer noopener"><svg fill="none" width="24.03"
-              viewBox="-0.02 -0.02 24.05 24.03">
-              <path d="m0 0h24v24h-24z"></path>
-              <path
-                d="m8.7992 0c-1.32668.00097859-2.40039 1.07547-2.39941 2.39951-.00098 1.32404 1.07371 2.39853 2.40039 2.39951h2.40042v-2.39853c.001-1.32404-1.0737-2.39853281-2.4014-2.40049.00099 0 .00099 0 0 0zm0 6.4h-6.39908c-1.32669.00098-2.40137253 1.07547-2.40039198 2.39951-.0019611 1.32399 1.07272198 2.39849 2.39941198 2.40049h6.40006c1.3267-.001 2.4014-1.0755 2.4004-2.39951.001-1.32502-1.0737-2.39951-2.4004-2.40049z"
-                fill="#36c5f0"></path>
-              <path
-                d="m23.9999 8.79951c.001-1.32404-1.0737-2.39853-2.4003-2.39951-1.3267.00098-2.4014 1.07547-2.4004 2.39951v2.40049h2.4004c1.3266-.001 2.4013-1.0755 2.4003-2.40049zm-6.4 0v-6.4c.001-1.32306-1.0727-2.39755281-2.3994-2.39951-1.3267.00097859-2.4014 1.07547-2.4004 2.39951v6.4c-.002 1.32399 1.0727 2.39849 2.3994 2.40049 1.3267-.001 2.4014-1.0755 2.4004-2.40049z"
-                fill="#2eb67d"></path>
-              <path
-                d="m15.1995 24c1.3267-.001 2.4014-1.0755 2.4004-2.3995.001-1.324-1.0737-2.3985-2.4004-2.3995h-2.4004v2.3995c-.001 1.3231 1.0737 2.3975 2.4004 2.3995zm0-6.401h6.4001c1.3266-.001 2.4013-1.0754 2.4004-2.3995.0019-1.324-1.0728-2.3985-2.3995-2.4005h-6.4c-1.3267.001-2.4014 1.0755-2.4004 2.3995-.001 1.3251 1.0727 2.3995 2.3994 2.4005z"
-                fill="#ecb22e"></path>
-              <path
-                d="m-.00006036 15.1995c-.00098056 1.324 1.07370036 2.3985 2.40039036 2.3995 1.32669-.001 2.40137-1.0755 2.40039-2.3995v-2.3995h-2.40039c-1.32669.001-2.40137092 1.0754-2.40039036 2.3995zm6.40006036 0v6.4c-.00196 1.324 1.07273 2.3985 2.39942 2.4005 1.32668-.001 2.40138-1.0755 2.40038-2.3995v-6.3991c.002-1.324-1.0727-2.3985-2.3994-2.4004-1.32767 0-2.40138 1.0744-2.4004 2.3985 0 0 0 .001 0 0z"
-                fill="#e01e5a"></path>
-            </svg>
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="nonreferrer noopener"><svg fill="none" width="30.02"
-              viewBox="0 0 30.02 24.02">
-              <path
-                d="m30 2.84126c-1.1038.48237-2.29.80722-3.535.95365 1.2713-.74938 2.2475-1.93683 2.7062-3.351924-1.1887.694014-2.5062 1.198524-3.9087 1.470464-1.1213-1.177601-2.7225-1.91345-4.4925-1.91345-3.9738 0-6.8937 3.64971-5.9962 7.43847-5.1138-.25225-9.6488-2.66406-12.68505-6.32977-1.6125 2.72313-.83625 6.28547 1.90375 8.08941-1.0075-.03199-1.9575-.30394-2.78625-.758-.0675 2.80679 1.97625 5.43269 4.93625 6.01719-.86625.2314-1.815.2855-2.78.1034.7825 2.4069 3.055 4.1579 5.75 4.2071-2.5875 1.9972-5.8475 2.8893-9.1125 2.5103 2.72375 1.719 5.96 2.7219 9.435 2.7219 11.4275 0 17.8837-9.5008 17.4937-18.02215 1.2025-.85521 2.2463-1.92207 3.0713-3.13659z"
-                fill="#00acee"></path>
-            </svg>
-          </a>
-        </div>
+    <section id="hero">
+      <h1>
+        Design resources for developers.
+      </h1>
+      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to create
+        landing pages quicker.</p>
+      <button type="button" class="cta-button" id="header-button">Submit Resource</button>
+      <p>Used by individuals in:</p>
+      <div class="logo-svgs">
+        <a href="https://google.com/" target="_blank" rel="nonreferrer noopener" style="display: block;">
+          <img src="./src/assets/google.svg" alt="google logo" />
+        </a>
+        <a href="https://discord.com/" target="_blank" rel="nonreferrer noopener"><img src="./src/assets/discord.svg"
+            alt="discord logo" style="display: block;" />
+        </a>
+        <a href="https://slack.com/" target="_blank" rel="nonreferrer noopener">
+          <img src="./src/assets/slack.svg" alt="slack logo" style="display: block;" />
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="nonreferrer noopener">
+          <img src="./src/assets/twitter.svg" alt="twitter logo" style="display: block;" />
+        </a>
       </div>
     </section>
     <section id="resources">
       <header class="selection-bar">
         <ul class="vertical-align-middle scroll">
-          <li class="resource-item active" id="fonts">Fonts</li>
+          <li class="resource-item active-bar" id="fonts">Fonts</li>
           <li class="resource-item" id="mockups">Mockups</li>
           <li class="resource-item" id="illustrations">Illustrations</li>
           <li class="resource-item" id="icons">Icons</li>
@@ -187,62 +183,9 @@
       <ul id="icons-results"></ul>
       <!-- END JSON DATA -->
     </section>
-    <section id="newsletter" class="signup">
-      <h3>Receive design resources every week. Straight to your inbox.</h3>
-      <p>
-        Discover dozens of design resources each week from educational
-        material to illustrations.
-      </p>
-      <form>
-        <input type="email" placeholder="john@example.com" /><button type="button" class="subscribe">
-          Subscribe
-        </button>
-      </form>
-      <p>*No spam, unsubscribe anytime.</p>
-    </section>
   </main>
-  <footer>
-    <div class="footer-logo">
-      <a href="/">
-        <svg fill="none" height="32" viewBox="0 0 108 32" width="108" class="logo">
-          <g fill="#4d13d1">
-            <path
-              d="m16-.0000007c-4.2435.00000019-8.31313 1.6857107-11.31371 4.6862907s-4.68629056 7.07021-4.6862907 11.31371c-.00000013 4.2435 1.6857107 8.3131 4.6862907 11.3137s7.07021 4.6863 11.31371 4.6863v-16z" />
-            <path
-              d="m40.732 22.216c-3.984 0-5.976-2.13-5.976-6.39 0-2.136.522-3.732 1.566-4.788 1.044-1.068 2.514-1.602 4.41-1.602 1.044 0 1.98.18 2.808.54.84.348 1.5.888 1.98 1.62.492.72.738 1.602.738 2.646h-2.682c0-.804-.258-1.434-.774-1.89-.516-.468-1.188-.702-2.016-.702-1.128 0-1.968.336-2.52 1.008s-.828 1.638-.828 2.898v.54c0 2.604 1.116 3.906 3.348 3.906.876 0 1.572-.228 2.088-.684.528-.456.792-1.086.792-1.89h2.592c0 1.056-.24 1.944-.72 2.664-.48.708-1.134 1.242-1.962 1.602-.828.348-1.776.522-2.844.522zm11.7482 0c-1.62 0-2.826-.402-3.618-1.206s-1.188-2.052-1.188-3.744.396-2.94 1.188-3.744 1.998-1.206 3.618-1.206 2.826.402 3.618 1.206c.804.804 1.206 2.052 1.206 3.744s-.402 2.94-1.206 3.744c-.792.804-1.998 1.206-3.618 1.206zm0-2.016c.804 0 1.386-.228 1.746-.684.36-.468.54-1.17.54-2.106v-.288c0-.936-.18-1.632-.54-2.088-.36-.468-.942-.702-1.746-.702s-1.386.234-1.746.702c-.348.456-.522 1.152-.522 2.088v.288c0 .936.174 1.638.522 2.106.36.456.942.684 1.746.684zm6.7919-7.668h2.106l.18 1.242h.126c.768-.972 1.752-1.458 2.952-1.458.972 0 1.734.264 2.286.792.564.528.846 1.374.846 2.538v6.354h-2.466v-5.832c0-.588-.138-1.014-.414-1.278s-.684-.396-1.224-.396c-.552 0-1.014.198-1.386.594-.36.384-.54.864-.54 1.44v5.472h-2.466zm13.5419 9.684c-.888 0-1.524-.24-1.908-.72s-.576-1.086-.576-1.818v-5.13h-1.134v-2.016h1.188l.414-2.664h1.998v2.664h1.638v2.016h-1.638v4.878c0 .516.258.774.774.774h.864v1.728c-.204.072-.462.138-.774.198-.3.06-.582.09-.846.09zm3.4562-9.684h2.106l.198 1.53h.126c.204-.54.468-.966.792-1.278s.75-.468 1.278-.468c.348 0 .66.054.936.162v2.304h-.684c-.804 0-1.386.222-1.746.666-.36.432-.54 1.092-.54 1.98v4.572h-2.466zm9.1741 9.684c-.732 0-1.404-.192-2.016-.576s-.918-1.08-.918-2.088c0-1.212.498-2.07 1.494-2.574.996-.516 2.406-.774 4.23-.774v-.666c0-.42-.096-.744-.288-.972-.18-.228-.528-.342-1.044-.342-.552 0-.948.084-1.188.252-.228.168-.342.366-.342.594v.27h-2.376c-.012-.072-.018-.204-.018-.396 0-.792.348-1.428 1.044-1.908.708-.48 1.644-.72 2.808-.72 1.296 0 2.262.264 2.898.792.648.528.972 1.29.972 2.286v4.176c0 .216.06.378.18.486.12.096.27.144.45.144h.504v1.728c-.384.192-.858.288-1.422.288-.492 0-.906-.108-1.242-.324-.324-.216-.546-.522-.666-.918h-.108c-.348.408-.75.72-1.206.936-.444.204-1.026.306-1.746.306zm.774-1.944c.696 0 1.206-.192 1.53-.576.324-.396.486-.918.486-1.566v-.288c-2.148 0-3.222.48-3.222 1.44 0 .3.096.54.288.72.204.18.51.27.918.27zm10.8299 1.944c-1.32 0-2.358-.27-3.114-.81-.744-.552-1.116-1.284-1.116-2.196l.018-.216h2.394v.126c.012.42.198.726.558.918.372.18.822.27 1.35.27.492 0 .912-.066 1.26-.198s.522-.348.522-.648c0-.336-.18-.588-.54-.756-.348-.168-.9-.336-1.656-.504-.78-.18-1.416-.36-1.908-.54-.492-.192-.918-.486-1.278-.882s-.54-.924-.54-1.584c0-.924.384-1.632 1.152-2.124.78-.504 1.782-.756 3.006-.756 1.14 0 2.082.234 2.826.702.7438.456 1.1158 1.08 1.1158 1.872l-.018.414h-2.3938v-.108c0-.312-.15-.552-.45-.72-.288-.168-.678-.252-1.17-.252s-.882.066-1.17.198-.432.318-.432.558c0 .3.162.522.486.666.336.144.87.288 1.602.432.804.18 1.458.36 1.962.54.5038.18.9418.474 1.3138.882s.558.96.558 1.656c0 2.04-1.4458 3.06-4.3378 3.06zm8.7598 0c-.888 0-1.524-.24-1.908-.72s-.576-1.086-.576-1.818v-5.13h-1.134v-2.016h1.188l.414-2.664h1.998v2.664h1.638v2.016h-1.638v4.878c0 .516.258.774.774.774h.864v1.728c-.204.072-.462.138-.774.198-.3.06-.582.09-.846.09z" />
-          </g>
-        </svg>
-      </a>
-      <p>
-        Explore a collection of 3400+ curated design resources, both free and
-        paid, developers can use to create landing pages quicker.
-      </p>
-    </div>
-    <ul class="b">
-      <li class="categories">Resources</li>
-      <li><a href="#">Fonts</a></li>
-      <li><a href="#">Illustrations</a></li>
-      <li><a href="#">Mockups</a></li>
-      <li><a href="#">Icons</a></li>
-      <li><a href="#">Books</a></li>
-    </ul>
-    <ul class="c">
-      <li class="categories">Company</li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Blog</a></li>
-    </ul>
-    <ul class="d">
-      <li class="categories">Support</li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <ul class="e">
-      <li class="categories">Sponsor</li>
-      <li><a href="#">Sponsor Resource</a></li>
-    </ul>
-  </footer>
-  <script src="js/main.js" type="module"></script>
-  <script src="js/dialogModal.js"></script>
+
+  <script src="./src/js/main.js" type="module"></script>
 </body>
 
 </html>

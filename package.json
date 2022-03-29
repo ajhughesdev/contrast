@@ -1,37 +1,32 @@
 {
-  "name": "contrast",
+  "name": "postcss-refactor",
   "version": "1.0.0",
   "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "npx postcss css/*.css -d build/css/ --no-map  --watch",
-    "build": "npx postcss css/*.css -d build/css/ --no-map"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ajhughesdev/contrast.git"
+    "css:dev": "postcss src/scss/main.scss --output build/css/main.css --env development --verbose",
+    "css:watch": "postcss src/scss/main.scss --output build/css/main.css --env development --verbose --watch",
+    "css:build": "postcss src/scss/main.scss --output build/css/main.css --env production --verbose"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ajhughesdev/contrast/issues"
-  },
-  "homepage": "https://github.com/ajhughesdev/contrast#readme",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
-    "css-has-pseudo": "^3.0.4",
     "cssnano": "^5.1.5",
     "postcss": "^8.4.12",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-assets": "^6.0.0",
+    "postcss-calc": "^8.2.4",
     "postcss-cli": "^9.1.0",
-    "postcss-import": "^14.1.0",
+    "postcss-map-get": "^0.3.0",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.4.3",
-    "postcss-url": "^10.1.3",
+    "postcss-scss": "^4.0.3",
+    "postcss-sort-media-queries": "^4.2.1",
+    "postcss-svg-slim": "^2.0.4",
     "the-new-css-reset": "^1.5.1"
   },
   "browserslist": [
-    "> 0.2%",
-    "last 2 versions",
-    "not dead"
+    "> 2%"
   ]
 }

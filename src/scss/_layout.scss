@@ -1,0 +1,41 @@
+// media query breakpoints
+$breakpoint: ('small': 25.875rem,
+  'medium': 48rem,
+  'large': 90rem);
+
+/*
+responsive breakpoint mixin:
+@include respond('medium') { ... }
+*/
+@mixin respond($bp) {
+  @media (min-width: map-get($breakpoint, $bp)) {
+    @content;
+  }
+}
+
+html {
+  margin: 0 auto;
+  max-width: 25.875rem;
+  height: 100%;
+}
+
+#hero {
+  margin: 50px 1.25rem 0;
+
+  p {
+    margin: .5rem 0 0 0;
+  }
+
+  button.cta-button {
+    @include cta-button;
+    margin: 1rem 0 2.625rem 0;
+  }
+
+  .logo-svgs {
+   display: flex;
+
+    img {
+      margin: 1.5rem 1.5rem 0 0;
+    }
+  }
+}
