@@ -1,0 +1,11 @@
+// root Sass file
+// src/scss/main.scss
+@charset 'utf-8';
+@import '_reset';
+@import '_variables';
+@import '_typography';
+@import '_mixins';
+@import 'components/_card';
+@import 'components/_mobile-nav';
+@import 'components/_selection-bar';
+@import '_layout';

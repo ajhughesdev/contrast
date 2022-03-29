@@ -1,0 +1,258 @@
+/* root Sass file*/
+/* src/scss/main.scss*/
+@charset 'utf-8';
+/***
+    The new CSS reset - version 1.5.0 (last updated 1.3.2022)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+ */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Reapply the pointer cursor for anchor tags */
+a, button {
+    cursor: revert;
+}
+/* Remove list styles (bullets/numbers) */
+ol, ul, menu {
+    list-style: none;
+}
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+/* minimum style to allow to style meter element */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+/* reset default text opacity of input placeholder */
+::placeholder {
+    color: unset;
+}
+/* fix the feature of 'hidden' attribute.
+   display:revert; revert to element instead of attribute */
+:where([hidden]) {
+    display: none;
+}
+/* revert for bug in Chromium browsers
+   - fix for the content editable attribute will work properly. */
+:where([contenteditable]) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+}
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+@font-face {
+  font-display: optional;
+  font-family: "Archivo";
+  src: url("../../src/font/Archivo-VariableFont_wdth,wght.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+}
+@font-face {
+  font-family: "Archivo-fallback";
+  size-adjust: 98.47%;
+  ascent-override: 90%;
+  src: local("Arial");
+}
+html {
+  font-family: "Archivo", "Archivo-fallback", sans-serif;
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: hsl(163 11% 12%);
+}
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl(0, 0%, 35%);
+}
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  position: relative;
+  margin: 1.25rem 1.25rem 0;
+}
+.topnav #myLinks {
+  display: none;
+  margin-top: 1.25rem;
+}
+.accordion-icon {
+  display: grid;
+}
+.topnav .hamburger-menu {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  cursor: pointer;
+}
+.accordion-hidden {
+  display: none;
+}
+.accordion-list,
+.accordion-sublist {
+  margin: 0;
+  padding: 0;
+}
+.accordion-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  border: 1px solid hsl(0 0% 88%);
+  font-size: 18px;
+  border-radius: 0.3125rem;
+  color: hsl(0, 0%, 35%);
+  margin: 5px 0;
+}
+.accordion-item {
+  margin: 5px 0;
+}
+.accordion-active {
+  background-color: hsl(210 9% 96%);
+  font-weight: 700;
+}
+.accordion-sublist {
+  margin-left: 2rem;
+}
+.accordion-sublink {
+  color: hsl(0, 0%, 35%);
+  display: block;
+  padding: .3125rem 0;
+  font-size: 1rem;
+}
+.accordion-wrapper {
+  display: none;
+}
+.accordion-wrapper.active {
+  display: block;
+}
+.scroll {
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: none;
+}
+.selection-bar {
+  max-width: 374px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 20px;
+  margin: 5rem 1.25rem 0;
+}
+.selection-bar .logo {
+    width: 30%;
+  }
+.selection-bar ul {
+    width: 63.75%;
+  }
+.sort-by {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  color: hsla(0, 0%, 35%, 1);
+  border: 1px solid hsla(0, 0%, 88%, 1);
+  border-radius: 5px;
+  padding: 12px 18px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sort-by svg {
+    margin: 0 0 0 0.625rem;
+  }
+.resource-item {
+  padding: 10px 0 10px;
+  cursor: pointer;
+}
+.resource-item:not(:last-child) {
+    margin: 0 24px 0 0;
+  }
+#resources header,
+  #resources nav {
+    font-size: 0;
+  }
+.sort-by,
+.resource-item {
+  font-size: 18px;
+  color: hsla(0, 0%, 35%, 1);
+}
+.sort-by,
+.resource-item,
+.vertical-align-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.active-bar {
+  padding: 0.625rem 1.125rem;
+  color: hsla(243, 47%, 9%, 1);
+  background-color: hsl(210 9% 96%);
+  border-radius: 0.3125rem;
+  font-weight: 700;
+}
+/* media query breakpoints*/
+/*
+responsive breakpoint mixin:
+@include respond('medium') { ... }
+*/
+html {
+  margin: 0 auto;
+  max-width: 25.875rem;
+  height: 100%;
+}
+#hero {
+  margin: 50px 1.25rem 0;
+}
+#hero p {
+    margin: .5rem 0 0 0;
+  }
+#hero button.cta-button {
+  padding: 1.125rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(0 0% 100%);
+  background-color: hsl(258 83% 45%);
+  line-height: 1.08778;
+  border-radius: 0.3125rem;
+  white-space: nowrap;
+  cursor: pointer;
+    margin: 1rem 0 2.625rem 0;
+  }
+#hero .logo-svgs {
+   display: flex;
+  }
+#hero .logo-svgs img {
+      margin: 1.5rem 1.5rem 0 0;
+    }
+/*# sourceMappingURL=main.css.map */

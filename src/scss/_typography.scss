@@ -1,0 +1,34 @@
+@font-face {
+  font-display: optional;
+  font-family: "Archivo";
+  src: url("../../src/font/Archivo-VariableFont_wdth,wght.woff2") format("woff2-variations");
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+}
+
+@font-face {
+  font-family: "Archivo-fallback";
+  size-adjust: 98.47%;
+  ascent-override: 90%;
+  src: local("Arial");
+}
+
+html {
+  font-family: "Archivo", "Archivo-fallback", sans-serif;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: hsl($font-clr-drk);
+}
+
+p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  color: hsl($font-clr-lt);
+}
