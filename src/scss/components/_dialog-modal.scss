@@ -1,5 +1,5 @@
 dialog::backdrop {
-  background-color: hsla(($clr-blk), 0.2);
+  background-color: hsla($clr-blk, 0.2);
 }
 
 dialog {
@@ -35,6 +35,7 @@ dialog header {
   svg {
     display: flex;
     align-self: center;
+    cursor: pointer;
   }
 }
 
@@ -56,7 +57,7 @@ dialog label:not(.asterisk)::after {
 }
 
 dialog input {
-  padding: 18px 24px;
+  padding: 1.125rem 1.5rem;
   background-color: hsl($input-bg-clr);
   border-radius: 0.3125rem;
   text-overflow: ellipsis;

@@ -262,10 +262,10 @@ dialog .select-inner {
   font-weight: 700;
 }
 dialog::-webkit-backdrop {
-  background-color: hsla((0, 0%, 0%), 0.2);
+  background-color: hsla(0, 0%, 0%, 0.2);
 }
 dialog::backdrop {
-  background-color: hsla((0, 0%, 0%), 0.2);
+  background-color: hsla(0, 0%, 0%, 0.2);
 }
 dialog {
   position: fixed;
@@ -298,6 +298,7 @@ dialog header {
 dialog header svg {
     display: flex;
     align-self: center;
+    cursor: pointer;
   }
 dialog label {
   width: 100%;
@@ -322,7 +323,7 @@ dialog label:not(.asterisk)::after {
   color: red;
 }
 dialog input {
-  padding: 18px 24px;
+  padding: 1.125rem 1.5rem;
   background-color: hsl(0, 0%, 97%);
   border-radius: 0.3125rem;
   text-overflow: ellipsis;
