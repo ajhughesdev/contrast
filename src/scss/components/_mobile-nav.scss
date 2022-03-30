@@ -37,11 +37,9 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 18px;
-  border: 1px solid hsl($border-clr);
-  font-size: 18px;
+  border: .0625rem solid hsl($border-clr);
   border-radius: $border-radius;
-  color: hsl($font-clr-lt);
-  margin: 5px 0;
+  margin: .3125rem 0;
 }
 
 .accordion-item {

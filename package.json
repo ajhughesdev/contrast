@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.4",
     "cssnano": "^5.1.5",
     "postcss": "^8.4.12",
     "postcss-advanced-variables": "^3.0.1",
@@ -27,6 +28,9 @@
     "the-new-css-reset": "^1.5.1"
   },
   "browserslist": [
-    "> 2%"
+    "> 2%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
   ]
 }

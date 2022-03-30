@@ -9,7 +9,7 @@
     Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
     - The "symbol *" part is to solve Firefox SVG sprite bug
  */
-*:where(:not(iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+*:where(:not(iframe):not(canvas):not(img):not(svg):not(video):not(svg *):not(symbol *)) {
     all: unset;
     display: revert;
 }
@@ -42,9 +42,16 @@ textarea {
 /* minimum style to allow to style meter element */
 meter {
     -webkit-appearance: revert;
-    appearance: revert;
+    -moz-appearance: revert;
+         appearance: revert;
 }
 /* reset default text opacity of input placeholder */
+::-moz-placeholder {
+    color: unset;
+}
+:-ms-input-placeholder {
+    color: unset;
+}
 ::placeholder {
     color: unset;
 }
@@ -58,7 +65,7 @@ meter {
 :where([contenteditable]) {
     -moz-user-modify: read-write;
     -webkit-user-modify: read-write;
-    overflow-wrap: break-word;
+    word-wrap: break-word;
     -webkit-line-break: after-white-space;
 }
 /* apply back the draggable feature - exist only in Chromium and Safari */
@@ -87,12 +94,47 @@ h1 {
   font-size: 2.25rem;
   line-height: 1.25;
   font-weight: 700;
-  color: hsl(163 11% 12%);
+  color: hsl(163, 11%, 12%);
 }
 p {
   font-size: 1.125rem;
   line-height: 1.5;
   font-weight: 400;
+  color: hsl(0, 0%, 35%);
+}
+dialog h1 {
+  font-size: 1.5rem;
+  line-height: 26px;
+  font-weight: 700;
+  color: hsl(0, 0%, 0%);
+}
+.accordion-link {
+  font-size: 18px;
+  color: hsl(0, 0%, 35%);
+}
+dialog label {
+  color: hsl(0, 0%, 35%);
+}
+dialog input::-moz-placeholder, dialog textarea::-moz-placeholder {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 67%);
+  line-height: 1.5;
+}
+dialog input:-ms-input-placeholder, dialog textarea:-ms-input-placeholder {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 67%);
+  line-height: 1.5;
+}
+dialog input::placeholder,
+dialog textarea::placeholder {
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 67%);
+  line-height: 1.5;
+}
+dialog .select-inner {
+  font-size: 1.125rem;
+  font-family: "Archivo", "Archivo-fallback", sans-serif;
+  line-height: 1.5;
   color: hsl(0, 0%, 35%);
 }
 /* Style the navigation menu */
@@ -128,17 +170,15 @@ p {
   align-items: center;
   justify-content: space-between;
   padding: 12px 18px;
-  border: 1px solid hsl(0 0% 88%);
-  font-size: 18px;
+  border: .0625rem solid hsl(0, 0%, 88%);
   border-radius: 0.3125rem;
-  color: hsl(0, 0%, 35%);
-  margin: 5px 0;
+  margin: .3125rem 0;
 }
 .accordion-item {
   margin: 5px 0;
 }
 .accordion-active {
-  background-color: hsl(210 9% 96%);
+  background-color: hsl(210, 9%, 96%);
   font-weight: 700;
 }
 .accordion-sublist {
@@ -217,9 +257,114 @@ p {
 .active-bar {
   padding: 0.625rem 1.125rem;
   color: hsla(243, 47%, 9%, 1);
-  background-color: hsl(210 9% 96%);
+  background-color: hsl(210, 9%, 96%);
   border-radius: 0.3125rem;
   font-weight: 700;
+}
+dialog::-webkit-backdrop {
+  background-color: hsla((0, 0%, 0%), 0.2);
+}
+dialog::backdrop {
+  background-color: hsla((0, 0%, 0%), 0.2);
+}
+dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 450ms ease;
+}
+.dialog-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.25rem;
+  width: 25.5625rem;
+  height: 90%;
+  border-radius: 0.3125rem;
+  overflow: auto;
+}
+dialog header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: unset;
+}
+dialog header svg {
+    display: flex;
+    align-self: center;
+  }
+dialog label {
+  width: 100%;
+  display: flex;
+  gap: 3px;
+  padding: 2.25rem 0 1rem;
+}
+dialog button.main-cta {
+  padding: 1.125rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(258, 83%, 45%);
+  line-height: 1.08778;
+  border-radius: 0.3125rem;
+  white-space: nowrap;
+  cursor: pointer;
+  margin-top: 2.25rem;
+}
+dialog label:not(.asterisk)::after {
+  content: " *";
+  color: red;
+}
+dialog input {
+  padding: 18px 24px;
+  background-color: hsl(0, 0%, 97%);
+  border-radius: 0.3125rem;
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
+dialog .select-label {
+  display: block;
+}
+dialog .select-inner {
+  padding: 1.125rem 1.5rem;
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' fill='none'%3E%3Cpath d='m1,.75,4.5,4.5L10,.75' stroke='%23595959'/%3E%3C/svg%3E") no-repeat;
+  background-position: top 50% right 24px;
+  /* background-position-x: right 24px;*/
+  /* background-position-y: top 50%;*/
+  border: .0625rem hsl(0, 0%, 88%) solid;
+  border-radius: 0.3125rem;
+  width: 100%;
+}
+.select-inner:hover,
+.select-inner:focus,
+.select-inner:active {
+  cursor: pointer;
+}
+.desc-label {
+  display: grid;
+  grid-template-areas:
+    "a b"
+    "c c";
+  justify-content: space-between;
+  align-items: center;
+}
+.desc-label dialog label[for="desc"] {
+    display: flex;
+    grid-area: a;
+  }
+dialog [id="desc"] {
+  width: 100%;
+  background-color: hsl(0, 0%, 97%);
+  padding: 1.125rem 1.5rem;
+  border-radius: 0.3125rem;
+  grid-area: c;
 }
 /* media query breakpoints*/
 /*
@@ -241,8 +386,8 @@ html {
   padding: 1.125rem 1.5rem;
   font-size: 1.125rem;
   font-weight: 700;
-  color: hsl(0 0% 100%);
-  background-color: hsl(258 83% 45%);
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(258, 83%, 45%);
   line-height: 1.08778;
   border-radius: 0.3125rem;
   white-space: nowrap;

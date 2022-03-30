@@ -1,191 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="code louisville winter '22 final project"
+    />
+    <title>Contrast - Design resources for developers.</title>
+    <link rel="stylesheet" href="./build/css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="code louisville winter '22 final project" />
-  <title>Contrast - Design resources for developers.</title>
-  <link rel="stylesheet" href="./build/css/main.css" />
-</head>
+  <body>
+    <dialog id="modal">
+      <div class="overlay">
+        <div class="dialog-content">
+          <form action="#" method="dialog">
+            <header class="submit-resource">
+              <h1>Submit Resource</h1>
+              <button value="cancel">
+                <svg fill="none" viewBox="0 0 24 24" width="24">
+                  <circle cx="12" cy="12" r="12" fill="#EFF0F3" />
+                  <path
+                    stroke="#A7AAB3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14.5 9 9 14.5M9 9l5.5 5.5"
+                  />
+                </svg>
+              </button>
+            </header>
+            <ul>
+              <li>
+                <label for="name">Resource Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="resource_name"
+                  placeholder="UI8"
+                />
+              </li>
+              <li class="desc-label">
+                <label for="desc">Resource Description</label>
+                <label class="asterisk">(Max. 150 char.)</label>
+                <textarea
+                  type="text"
+                  id="desc"
+                  name="resource_desc"
+                  rows="6"
+                  maxlength="150"
+                  placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."
+                ></textarea>
+              </li>
+              <li>
+                <label for="link"> Resource Link</label>
+                <input
+                  type="url"
+                  id="link"
+                  name="resource_url"
+                  placeholder="https://ui8.net"
+                />
+              </li>
+              <li>
+                <label for="icon-link"> Resource Icon Link</label>
+                <input
+                  type="url"
+                  id="icon-link"
+                  name="resource_icon_url"
+                  placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642.........."
+                />
+              </li>
+              <li class="select-label">
+                <label for="resources-cat">Resource Category</label>
 
-<body>
-  <header>
-    <nav class="topnav">
-      <a href="#home" class="logo">
-        <img src="./src/assets/contrast-logo.svg" alt="contrast logo" />
-      </a>
-      <div class="accordion-wrapper active" id="parent" data-accordion-wrapper>
-        <div role="navigation" class="accordion-menu">
-          <ul id="myLinks" class="accordion-list">
-            <li class="accordion-item">
-              <a href="#menu-1" class="accordion-link" data-accordion-menu>
-                <span>
-                  Resources
-                </span>
-                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
-                  </svg></span>
-              </a>
-              <ul class="accordion-sublist accordion-hidden" id="menu-1">
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Fonts
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Mockups
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Illustrations
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Icons
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Books
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Inspiration
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-
-            <li class="accordion-item">
-              <a href="#menu-2" class="accordion-link" data-accordion-menu>
-                <span>
-                  Company
-                </span>
-                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
-                  </svg></span>
-              </a>
-              <ul class="accordion-sublist accordion-hidden" id="menu-2">
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Blog
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="accordion-item">
-              <a href="#menu-3" class="accordion-link" data-accordion-menu>
-                <span>
-                  Support
-                </span>
-                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
-                  </svg></span>
-              </a>
-              <ul class="accordion-sublist accordion-hidden" id="menu-3">
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </li>
-
-            <li class="accordion-item">
-              <a href="#menu-4" class="accordion-link" data-accordion-menu>
-                <span>
-                  Sponsor
-                </span>
-                <span class="accordion-icon"><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
-                    <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
-                  </svg></span>
-              </a>
-              <ul class="accordion-sublist accordion-hidden" id="menu-4">
-                <li>
-                  <a href="#" class="accordion-sublink">
-                    Sponsor Resource
-                  </a>
-                </li>
-
-              </ul>
-            </li>
-          </ul>
+                <select
+                  class="select-inner"
+                  name="resources"
+                  id="resources-cat"
+                >
+                  <option value="mockups" selected>Mockups</option>
+                  <option value="fonts">Fonts</option>
+                  <option value="illustrations">Illustrations</option>
+                  <option value="icons">Icons</option>
+                  <option value="books">Books</option>
+                  <option value="inspiration">Inspiration</option>
+                </select>
+              </li>
+              <li>
+                <button value="submit" class="main-cta">Submit Resource</button>
+              </li>
+            </ul>
+          </form>
         </div>
       </div>
-      <span class="hamburger-menu">
-        <svg width="24" height="20" viewBox="0 0 24 20" fill="none" style="display: block;">
-          <path d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z" fill="black" />
-        </svg>
-      </span>
-    </nav>
-  </header>
+    </dialog>
+    <header>
+      <nav class="topnav">
+        <a href="#home" class="logo">
+          <img src="./src/assets/contrast-logo.svg" alt="contrast logo" />
+        </a>
+        <div
+          class="accordion-wrapper active"
+          id="parent"
+          data-accordion-wrapper
+        >
+          <div role="navigation" class="accordion-menu">
+            <ul id="myLinks" class="accordion-list">
+              <li class="accordion-item">
+                <a href="#menu-1" class="accordion-link" data-accordion-menu>
+                  <span> Resources </span>
+                  <span class="accordion-icon"
+                    ><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                      <path
+                        d="M1 0.75L5.5 5.25L10 0.75"
+                        stroke="#595959"
+                      /></svg
+                  ></span>
+                </a>
+                <ul class="accordion-sublist accordion-hidden" id="menu-1">
+                  <li>
+                    <a href="#" class="accordion-sublink"> Fonts </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Mockups </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Illustrations </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Icons </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Books </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Inspiration </a>
+                  </li>
+                </ul>
+              </li>
 
-  <main>
-    <section id="hero">
-      <h1>
-        Design resources for developers.
-      </h1>
-      <p>Explore a collection of 3400+ curated design resources, both free and paid, developers can use to create
-        landing pages quicker.</p>
-      <button type="button" class="cta-button" id="header-button">Submit Resource</button>
-      <p>Used by individuals in:</p>
-      <div class="logo-svgs">
-        <a href="https://google.com/" target="_blank" rel="nonreferrer noopener" style="display: block;">
-          <img src="./src/assets/google.svg" alt="google logo" />
-        </a>
-        <a href="https://discord.com/" target="_blank" rel="nonreferrer noopener"><img src="./src/assets/discord.svg"
-            alt="discord logo" style="display: block;" />
-        </a>
-        <a href="https://slack.com/" target="_blank" rel="nonreferrer noopener">
-          <img src="./src/assets/slack.svg" alt="slack logo" style="display: block;" />
-        </a>
-        <a href="https://twitter.com/" target="_blank" rel="nonreferrer noopener">
-          <img src="./src/assets/twitter.svg" alt="twitter logo" style="display: block;" />
-        </a>
-      </div>
-    </section>
-    <section id="resources">
-      <header class="selection-bar">
-        <ul class="vertical-align-middle scroll">
-          <li class="resource-item active-bar" id="fonts">Fonts</li>
-          <li class="resource-item" id="mockups">Mockups</li>
-          <li class="resource-item" id="illustrations">Illustrations</li>
-          <li class="resource-item" id="icons">Icons</li>
-          <li class="resource-item" id="books">Books</li>
-          <li class="resource-item" id="inspiration">Inspiration</li>
-        </ul>
-        <span class="sort-by">Sort by<svg width="11" height="6" viewBox="0 0 11 6" fill="none">
-            <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+              <li class="accordion-item">
+                <a href="#menu-2" class="accordion-link" data-accordion-menu>
+                  <span> Company </span>
+                  <span class="accordion-icon"
+                    ><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                      <path
+                        d="M1 0.75L5.5 5.25L10 0.75"
+                        stroke="#595959"
+                      /></svg
+                  ></span>
+                </a>
+                <ul class="accordion-sublist accordion-hidden" id="menu-2">
+                  <li>
+                    <a href="#" class="accordion-sublink"> About </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Blog </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordion-item">
+                <a href="#menu-3" class="accordion-link" data-accordion-menu>
+                  <span> Support </span>
+                  <span class="accordion-icon"
+                    ><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                      <path
+                        d="M1 0.75L5.5 5.25L10 0.75"
+                        stroke="#595959"
+                      /></svg
+                  ></span>
+                </a>
+                <ul class="accordion-sublist accordion-hidden" id="menu-3">
+                  <li>
+                    <a href="#" class="accordion-sublink"> FAQ </a>
+                  </li>
+                  <li>
+                    <a href="#" class="accordion-sublink"> Contact </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="accordion-item">
+                <a href="#menu-4" class="accordion-link" data-accordion-menu>
+                  <span> Sponsor </span>
+                  <span class="accordion-icon"
+                    ><svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+                      <path
+                        d="M1 0.75L5.5 5.25L10 0.75"
+                        stroke="#595959"
+                      /></svg
+                  ></span>
+                </a>
+                <ul class="accordion-sublist accordion-hidden" id="menu-4">
+                  <li>
+                    <a href="#" class="accordion-sublink"> Sponsor Resource </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="hamburger-menu">
+          <svg
+            width="24"
+            height="20"
+            viewBox="0 0 24 20"
+            fill="none"
+            style="display: block"
+          >
+            <path
+              d="M24 4H0V0H24V4ZM24 8H0V12H24V8ZM24 16H0V20H24V16Z"
+              fill="black"
+            />
           </svg>
         </span>
-      </header>
-      <!-- JSON DATA -->
-      <ul id="fonts-results"></ul>
-      <ul id="mockups-results"></ul>
-      <ul id="illustrations-results"></ul>
-      <ul id="icons-results"></ul>
-      <!-- END JSON DATA -->
-    </section>
-  </main>
+      </nav>
+    </header>
 
-  <script src="./src/js/main.js" type="module"></script>
-</body>
+    <main>
+      <section id="hero">
+        <h1>Design resources for developers.</h1>
+        <p>
+          Explore a collection of 3400+ curated design resources, both free and
+          paid, developers can use to create landing pages quicker.
+        </p>
+        <button type="button" class="cta-button" id="hero-button">
+          Submit Resource
+        </button>
+        <p>Used by individuals in:</p>
+        <div class="logo-svgs">
+          <a
+            href="https://google.com/"
+            target="_blank"
+            rel="nonreferrer noopener"
+            style="display: block"
+          >
+            <img src="./src/assets/google.svg" alt="google logo" />
+          </a>
+          <a
+            href="https://discord.com/"
+            target="_blank"
+            rel="nonreferrer noopener"
+            ><img
+              src="./src/assets/discord.svg"
+              alt="discord logo"
+              style="display: block"
+            />
+          </a>
+          <a
+            href="https://slack.com/"
+            target="_blank"
+            rel="nonreferrer noopener"
+          >
+            <img
+              src="./src/assets/slack.svg"
+              alt="slack logo"
+              style="display: block"
+            />
+          </a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            rel="nonreferrer noopener"
+          >
+            <img
+              src="./src/assets/twitter.svg"
+              alt="twitter logo"
+              style="display: block"
+            />
+          </a>
+        </div>
+      </section>
+      <section id="resources">
+        <header class="selection-bar">
+          <ul class="vertical-align-middle scroll">
+            <li class="resource-item active-bar" id="fonts">Fonts</li>
+            <li class="resource-item" id="mockups">Mockups</li>
+            <li class="resource-item" id="illustrations">Illustrations</li>
+            <li class="resource-item" id="icons">Icons</li>
+            <li class="resource-item" id="books">Books</li>
+            <li class="resource-item" id="inspiration">Inspiration</li>
+          </ul>
+          <span class="sort-by"
+            >Sort by<svg width="11" height="6" viewBox="0 0 11 6" fill="none">
+              <path d="M1 0.75L5.5 5.25L10 0.75" stroke="#595959" />
+            </svg>
+          </span>
+        </header>
+        <!-- JSON DATA -->
+        <ul id="fonts-results"></ul>
+        <ul id="mockups-results"></ul>
+        <ul id="illustrations-results"></ul>
+        <ul id="icons-results"></ul>
+        <!-- END JSON DATA -->
+      </section>
+    </main>
 
+    <script src="./src/js/main.js" type="module"></script>
+  </body>
 </html>

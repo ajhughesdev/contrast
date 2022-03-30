@@ -32,3 +32,33 @@ p {
   font-weight: 400;
   color: hsl($font-clr-lt);
 }
+
+dialog h1 {
+  font-size: 1.5rem;
+  line-height: 26px;
+  font-weight: 700;
+  color: hsl($clr-blk);
+}
+
+.accordion-link {
+  font-size: 18px;
+  color: hsl($font-clr-lt);
+}
+
+dialog label {
+  color: hsl($font-clr-lt);
+}
+
+dialog input::placeholder,
+dialog textarea::placeholder {
+  font-size: 1.125rem;
+  color: hsl($input-txt-clr);
+  line-height: 1.5;
+}
+
+dialog .select-inner {
+  font-size: 1.125rem;
+  font-family: "Archivo", "Archivo-fallback", sans-serif;
+  line-height: 1.5;
+  color: hsl($font-clr-lt);
+}

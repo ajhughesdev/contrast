@@ -26,8 +26,9 @@ module.exports = (cfg) => {
           'has-pseudo-class': true,
           'place-properties': true,
           'media-query-ranges': true,
-        }
+        },
       }),
+      require('autoprefixer'),
       dev ? null : require('cssnano')(),
     ],
   };
