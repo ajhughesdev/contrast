@@ -2,7 +2,7 @@ function fetchResourceCards(x) {
   let ul = document.getElementById(`${x}-results`);
   let list = document.createDocumentFragment();
 
-  let url = `https://ajhughesdev.github.io/contrast/build/api/${x}/${x}.json`;
+  let url = `./api/${x}/${x}.json`;
 
   fetch(url)
     .then((response) => {
@@ -22,10 +22,7 @@ function fetchResourceCards(x) {
         desc.innerHTML = `${resource.Description}`;
         link.innerHTML = `Visit Resource`;
 
-        icon.setAttribute(
-          "src",
-          `https://ajhughesdev.github.io/contrast/build/api/${x}/${resource.Icon}`
-        );
+        icon.setAttribute("src", `./api/${x}/${resource.Icon}`);
         icon.setAttribute("alt", `logo`);
         link.setAttribute("href", `${resource.Link}`);
 
