@@ -102,3 +102,6 @@ icons.addEventListener("click", () => {
   illustrationsResults.style.display = "none";
   fontsResults.style.display = "none";
 });
+
+// const form = document.querySelector("form");
+// form.addEventListener("submit", handleSubmit);

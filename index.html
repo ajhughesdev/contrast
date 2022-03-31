@@ -27,27 +27,28 @@
           <ul>
             <li>
               <label for="name">Resource Name</label>
-              <input type="text" id="name" name="resource_name" placeholder="UI8" />
+              <input type="text" id="name" name="Title" placeholder="UI8" required />
             </li>
             <li class="desc-label">
               <label for="desc">Resource Description</label>
               <label class="asterisk">(Max. 150 char.)</label>
-              <textarea id="desc" name="resource_desc" rows="6" maxlength="150"
-                placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."></textarea>
+              <textarea id="desc" name="Description" rows="6" maxlength="150"
+                placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."
+                required></textarea>
             </li>
             <li>
               <label for="link"> Resource Link</label>
-              <input type="url" id="link" name="resource_url" placeholder="https://ui8.net" />
+              <input type="url" id="link" name="Link" placeholder="https://ui8.net" required />
             </li>
             <li>
               <label for="icon-link"> Resource Icon Link</label>
-              <input type="url" id="icon-link" name="resource_icon_url"
-                placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642.........." />
+              <input type="url" id="icon-link" name="Icon"
+                placeholder="https://scontent.faly2-2.fna.fbcdn.net/v/t1.6435-9/4642.........." required />
             </li>
             <li class="select-label">
               <label for="resources-cat">Resource Category</label>
 
-              <select class="select-inner" name="resources" id="resources-cat">
+              <select class="select-inner" name="Resource" id="resources-cat" required>
                 <option value="mockups" selected>Mockups</option>
                 <option value="fonts">Fonts</option>
                 <option value="illustrations">Illustrations</option>
@@ -57,7 +58,7 @@
               </select>
             </li>
             <li>
-              <button value="submit" id="submit-form" class="main-cta">Submit Resource</button>
+              <button value="submit" id="submit-form" type="submit" class="main-cta">Submit Resource</button>
             </li>
           </ul>
         </form>
@@ -212,7 +213,7 @@
         material to illustrations.
       </p>
       <form>
-        <input type="email" placeholder="john@example.com"/><button type="button" class="subscribe">
+        <input type="email" placeholder="john@example.com" /><button type="button" class="subscribe">
           Subscribe
         </button>
       </form>
