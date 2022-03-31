@@ -1,0 +1,31 @@
+.resource-grid-cell {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.875rem;
+  margin-top: 3.375rem;
+}
+
+.resource-grid-cell li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.25rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid hsl(0 0% 88%);
+}
+
+.resource-grid-cell p {
+  padding: unset;
+}
+
+.resource-grid-cell a {
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+
+  &::after {
+    content: " \2192";
+  }
+}

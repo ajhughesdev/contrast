@@ -200,6 +200,34 @@ footer li:not(.categories) {
 footer li:not(.categories) :hover {
     text-decoration: underline;
   }
+.resource-grid-cell {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.875rem;
+  gap: 1.875rem;
+  margin-top: 3.375rem;
+}
+.resource-grid-cell li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2.25rem;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid hsl(0, 0%, 88%);
+}
+.resource-grid-cell p {
+  padding: unset;
+}
+.resource-grid-cell a {
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  margin-top: 1.5rem;
+}
+.resource-grid-cell a::after {
+    content: " \2192";
+  }
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
@@ -383,7 +411,7 @@ dialog .select-label {
 dialog .select-inner {
   padding: 1.125rem 1.5rem;
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' fill='none'%3E%3Cpath d='m1,.75,4.5,4.5L10,.75' stroke='%23595959'/%3E%3C/svg%3E") no-repeat;
-  background-position: top 50% right 24px;
+  background-position: top 50% right 1.5rem;
   border: .0625rem hsl(0, 0%, 88%) solid;
   border-radius: 0.3125rem;
   width: 100%;
@@ -451,7 +479,7 @@ html {
   margin-top: 5rem;
   background: hsl(258, 83%, 45%) url("../../src/assets/peeps.svg") no-repeat;
   background-size: 17.6rem;
-  background-position: top 100% right calc(50% - 7.0096px);
+  background-position: top 100% right calc(50% - 0.4381rem);
   padding: 3.5rem 1.25rem 0;
 }
 .signup p {
