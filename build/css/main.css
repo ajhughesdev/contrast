@@ -102,18 +102,41 @@ p {
   font-weight: 400;
   color: hsl(0, 0%, 35%);
 }
+#resources header,
+  #resources nav {
+    font-size: 0;
+  }
+.sort-by {
+  font-weight: 400;
+  color: hsl(0, 0%, 35%);
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.08778;
+}
+.sort-by,
+.resource-item {
+  font-size: 18px;
+  color: hsl(0, 0%, 35%);
+}
+.active-bar {
+  color: hsl(243, 47%, 9%);
+  font-weight: 700;
+}
+.accordion-link {
+  font-size: 18px;
+  color: hsl(0, 0%, 35%);
+}
 dialog h1 {
   font-size: 1.5rem;
   line-height: 26px;
   font-weight: 700;
   color: hsl(0, 0%, 0%);
 }
-.accordion-link {
-  font-size: 18px;
-  color: hsl(0, 0%, 35%);
-}
 dialog label {
   color: hsl(0, 0%, 35%);
+}
+dialog input {
+  line-height: 1.5;
 }
 dialog input::-moz-placeholder, dialog textarea::-moz-placeholder {
   font-size: 1.125rem;
@@ -137,6 +160,46 @@ dialog .select-inner {
   line-height: 1.5;
   color: hsl(0, 0%, 35%);
 }
+.signup p {
+  color: hsl(252, 82%, 87%);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+h3 {
+  font-size: 1.625rem;
+  color: hsl(0, 0%, 100%);
+  line-height: 34px;
+  font-weight: 700;
+}
+input[type="email"] {
+  color: hsl(248, 4%, 64%);
+  font-size: 1.125rem;
+}
+button.subscribe {
+  text-align: center;
+  color: hsl(258, 83%, 45%);
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 700;
+}
+footer p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: hsl(0, 0%, 0%);
+}
+.categories {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.08778;
+}
+footer li:not(.categories) {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: hsla(0, 0%, 35%);
+}
+footer li:not(.categories) :hover {
+    text-decoration: underline;
+  }
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
@@ -204,11 +267,10 @@ dialog .select-inner {
   scrollbar-width: none;
 }
 .selection-bar {
-  max-width: 374px;
+  max-width: 23.375rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  line-height: 20px;
   margin: 5rem 1.25rem 0;
 }
 .selection-bar .logo {
@@ -220,34 +282,21 @@ dialog .select-inner {
 .sort-by {
   display: flex;
   align-items: center;
-  text-align: center;
-  font-weight: 400;
-  color: hsla(0, 0%, 35%, 1);
-  border: 1px solid hsla(0, 0%, 88%, 1);
-  border-radius: 5px;
-  padding: 12px 18px;
+  border: 1px solid hsl(0, 0%, 88%);
+  border-radius: 0.3125rem;
+  padding: .75rem 1.125rem;
   cursor: pointer;
-  white-space: nowrap;
 }
 .sort-by svg {
     margin: 0 0 0 0.625rem;
   }
 .resource-item {
-  padding: 10px 0 10px;
+  padding: .625rem 0 .625rem;
   cursor: pointer;
 }
 .resource-item:not(:last-child) {
-    margin: 0 24px 0 0;
+    margin: 0 1.5rem 0 0;
   }
-#resources header,
-  #resources nav {
-    font-size: 0;
-  }
-.sort-by,
-.resource-item {
-  font-size: 18px;
-  color: hsla(0, 0%, 35%, 1);
-}
 .sort-by,
 .resource-item,
 .vertical-align-middle {
@@ -256,10 +305,8 @@ dialog .select-inner {
 }
 .active-bar {
   padding: 0.625rem 1.125rem;
-  color: hsla(243, 47%, 9%, 1);
   background-color: hsl(210, 9%, 96%);
   border-radius: 0.3125rem;
-  font-weight: 700;
 }
 dialog::-webkit-backdrop {
   background-color: hsla(0, 0%, 0%, 0.2);
@@ -337,8 +384,6 @@ dialog .select-inner {
   padding: 1.125rem 1.5rem;
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='6' fill='none'%3E%3Cpath d='m1,.75,4.5,4.5L10,.75' stroke='%23595959'/%3E%3C/svg%3E") no-repeat;
   background-position: top 50% right 24px;
-  /* background-position-x: right 24px;*/
-  /* background-position-y: top 50%;*/
   border: .0625rem hsl(0, 0%, 88%) solid;
   border-radius: 0.3125rem;
   width: 100%;
@@ -396,9 +441,66 @@ html {
     margin: 1rem 0 2.625rem 0;
   }
 #hero .logo-svgs {
-   display: flex;
+    display: flex;
   }
 #hero .logo-svgs img {
       margin: 1.5rem 1.5rem 0 0;
     }
+.signup {
+  min-height: 43.5rem;
+  margin-top: 5rem;
+  background: hsl(258, 83%, 45%) url("../../src/assets/peeps.svg") no-repeat;
+  background-size: 17.6rem;
+  background-position: top 100% right calc(50% - 7.0096px);
+  padding: 3.5rem 1.25rem 0;
+}
+.signup p {
+  padding-top: 0.5rem;
+}
+input[type="email"] {
+  background-color: hsl(240, 4%, 95%);
+  padding: 1.125rem 0.625rem 1.125rem 1.5rem;
+  border-radius: 0.3125rem;
+  margin: 1rem 1rem 0 0;
+  width: 100%;
+
+}
+.signup p:last-of-type {
+  padding: 0.75rem 0;
+}
+button.subscribe {
+  margin: 1rem auto 0;
+  padding: 1.125rem 1.5rem;
+  background-color: hsl(252, 82%, 87%);
+  border-radius: 0.3125rem;
+  width: 100%;
+}
+footer {
+  padding: 5rem 1.25rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
+}
+.categories {
+  padding: 1.1875rem 0 1rem 0;
+}
+footer li:not(.categories) {
+  display: block;
+  padding: 0 0 0.5rem;
+
+
+}
+ul.d {
+  padding: 0.9375rem 0 0;
+}
+ul.e {
+  margin: -5.625rem 0;
+}
+ul.c,
+ul.e {
+  padding: 0 0 0 2.1875rem;
+}
+.footer-logo {
+  grid-area: 1 / 1 / 2 / 3;
+}
 /*# sourceMappingURL=main.css.map */

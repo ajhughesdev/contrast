@@ -22,8 +22,8 @@ function accordionMenu() {
   }
 
   // Accordion menu
-  document.addEventListener('click', function (e) {
-    let trigger = e.target.closest('[data-accordion-menu]');
+  document.addEventListener("click", function (e) {
+    let trigger = e.target.closest("[data-accordion-menu]");
     if (!trigger) return;
 
     let target = document.querySelector(trigger.hash);
@@ -31,13 +31,13 @@ function accordionMenu() {
 
     e.preventDefault();
 
-    target.classList.toggle('accordion-hidden');
+    target.classList.toggle("accordion-hidden");
 
-    trigger.classList.toggle('accordion-active');
+    trigger.classList.toggle("accordion-active");
   });
 
-  document.addEventListener('click', function (e) {
-    let trigger = e.target.closest('[data-accordion-menu-nav]');
+  document.addEventListener("click", function (e) {
+    let trigger = e.target.closest("[data-accordion-menu-nav]");
     if (!trigger) return;
 
     let target = document.querySelector(trigger.hash);
@@ -45,28 +45,28 @@ function accordionMenu() {
 
     e.preventDefault();
 
-    if (target.classList.contains('active')) {
-      target.classList.remove('active');
+    if (target.classList.contains("active")) {
+      target.classList.remove("active");
       return;
     }
 
-    let accordions = document.querySelectorAll('[data-accordion-wrapper]');
+    let accordions = document.querySelectorAll("[data-accordion-wrapper]");
     for (let i = 0; i < accordions.length; i++) {
-      accordions[i].classList.remove('active');
+      accordions[i].classList.remove("active");
     }
 
-    target.classList.toggle('active');
+    target.classList.toggle("active");
   });
 }
 
-document.querySelectorAll('.accordion-link').forEach((item) => {
-  item.addEventListener('click', toggleActive());
+document.querySelectorAll(".accordion-link").forEach((item) => {
+  item.addEventListener("click", toggleActive());
 });
 
 function toggleActive() {
   document
-    .querySelector('.accordion-link')
-    .classList.toggle('accordion-active');
+    .querySelector(".accordion-link")
+    .classList.toggle("accordion-active");
 }
 
 export { accordionMenu };

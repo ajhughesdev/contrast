@@ -33,6 +33,39 @@ p {
   color: hsl($font-clr-lt);
 }
 
+#resources {
+
+  header,
+  nav {
+    font-size: 0;
+  }
+}
+
+.sort-by {
+  font-weight: 400;
+  color: hsl($font-clr-lt);
+  text-align: center;
+  white-space: nowrap;
+  line-height: $ln-hght-20;
+}
+
+.sort-by,
+.resource-item {
+  font-size: 18px;
+  color: hsl(0, 0%, 35%);
+}
+
+.active-bar {
+  color: hsl($font-active-clr);
+  font-weight: 700;
+}
+
+
+.accordion-link {
+  font-size: 18px;
+  color: hsl($font-clr-lt);
+}
+
 dialog h1 {
   font-size: 1.5rem;
   line-height: 26px;
@@ -40,13 +73,13 @@ dialog h1 {
   color: hsl($clr-blk);
 }
 
-.accordion-link {
-  font-size: 18px;
-  color: hsl($font-clr-lt);
-}
 
 dialog label {
   color: hsl($font-clr-lt);
+}
+
+dialog input {
+  line-height: 1.5;
 }
 
 dialog input::placeholder,
@@ -61,4 +94,52 @@ dialog .select-inner {
   font-family: "Archivo", "Archivo-fallback", sans-serif;
   line-height: 1.5;
   color: hsl($font-clr-lt);
+}
+
+.signup p {
+  color: hsl(252, 82%, 87%);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+h3 {
+  font-size: 1.625rem;
+  color: hsl(0 0% 100%);
+  line-height: 34px;
+  font-weight: 700;
+}
+
+input[type="email"] {
+  color: hsl($font-clr-gray);
+  font-size: 1.125rem;
+}
+
+button.subscribe {
+  text-align: center;
+  color: hsl(258 83% 45%);
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+footer p {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: hsl($clr-blk);
+}
+
+.categories {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: $ln-hght-20;
+}
+
+footer li:not(.categories) {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: hsla($font-clr-lt);
+
+  :hover {
+    text-decoration: underline;
+  }
 }

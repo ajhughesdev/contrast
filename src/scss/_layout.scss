@@ -32,10 +32,79 @@ html {
   }
 
   .logo-svgs {
-   display: flex;
+    display: flex;
 
     img {
       margin: 1.5rem 1.5rem 0 0;
     }
   }
+}
+
+.signup {
+  min-height: 43.5rem;
+  margin-top: 5rem;
+  background: hsl($btn-bg-clr-primary) url("../../src/assets/peeps.svg") no-repeat;
+  background-size: 17.6rem;
+  background-position: top 100% right calc(50% - 7.0096px);
+  padding: 3.5rem 1.25rem 0;
+}
+
+.signup p {
+  padding-top: 0.5rem;
+}
+
+input[type="email"] {
+  background-color: hsl($btn-bg-clr-gray);
+  padding: 1.125rem 0.625rem 1.125rem 1.5rem;
+  border-radius: $border-radius;
+  margin: 1rem 1rem 0 0;
+  width: 100%;
+
+}
+
+.signup p:last-of-type {
+  padding: 0.75rem 0;
+}
+
+button.subscribe {
+  margin: 1rem auto 0;
+  padding: 1.125rem 1.5rem;
+  background-color: hsl($btn-bg-clr-secondary);
+  border-radius: $border-radius;
+  width: 100%;
+}
+
+footer {
+  padding: 5rem 1.25rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
+}
+
+.categories {
+  padding: 1.1875rem 0 1rem 0;
+}
+
+footer li:not(.categories) {
+  display: block;
+  padding: 0 0 0.5rem;
+
+
+}
+
+ul.d {
+  padding: 0.9375rem 0 0;
+}
+
+ul.e {
+  margin: -5.625rem 0;
+}
+
+ul.c,
+ul.e {
+  padding: 0 0 0 2.1875rem;
+}
+
+.footer-logo {
+  grid-area: 1 / 1 / 2 / 3;
 }
