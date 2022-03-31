@@ -40,7 +40,7 @@ function fetchResourceCards(x) {
       console.log(error);
     });
 
-  document.getElementById(`${x}-results`).style.display = "grid";
+  // document.getElementById(`${x}-results`).style.display = "grid";
 }
 
 function makeActive(x) {
