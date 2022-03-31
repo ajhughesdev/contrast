@@ -59,7 +59,7 @@ input[type="email"] {
   border-radius: $border-radius;
   margin: 1rem 1rem 0 0;
   width: 100%;
-
+  cursor: auto;
 }
 
 .signup p:last-of-type {
@@ -72,6 +72,7 @@ button.subscribe {
   background-color: hsl($btn-bg-clr-secondary);
   border-radius: $border-radius;
   width: 100%;
+  cursor: pointer;
 }
 
 footer {

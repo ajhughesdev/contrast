@@ -2,13 +2,13 @@
     {
         "Title": "Google Fonts",
         "Description": "Making the web more beautiful, fast, and open through great typography.",
-        "Link": "https://freetypography.com/",
+        "Link": "https://fonts.google.com/",
         "Icon": "Google Fonts.svg"
-    },
-    {
+      },
+      {
         "Title": "MyFonts",
         "Description": "The #1 place to download great @font-face webfonts and desktop fonts.",
-        "Link": "https://fonts.google.com/",
+        "Link": "https://freetypography.com/",
         "Icon": "MyFonts Logo.svg"
     },
     {

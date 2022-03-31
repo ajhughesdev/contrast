@@ -34,23 +34,24 @@ function fetchResourceCards(x) {
 
         ul.appendChild(list);
         ul.classList.add("resource-grid-cell");
-        ul.setAttribute("id", `${x}`);
       });
     })
     .catch(function (error) {
       console.log(error);
     });
 
-  // document.getElementById(`${x}-results`).style.display = "grid";
+  document.getElementById(`${x}-results`).style.display = "grid";
 }
 
-function selectionBarToggle(y) {
-  if (document.getElementById(`${y}`).classList.contains("active") === false) {
-    document.getElementById(`${y}`).classList.toggle("active");
-    document.getElementById(`${y}Results`).style.display = "grid";
+function makeActive(x) {
+  if (
+    document.getElementById(`${x}`).classList.contains("active-bar") === false
+  ) {
+    document.getElementById(`${x}`).classList.toggle("active-bar");
+    document.getElementById(`${x}-results`).style.display = "grid";
   } else {
     return;
   }
 }
 
-export { fetchResourceCards, selectionBarToggle };
+export { fetchResourceCards, makeActive };

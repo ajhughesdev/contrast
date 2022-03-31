@@ -1,29 +1,42 @@
-.resource-grid-cell {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.875rem;
-  margin-top: 3.375rem;
-}
-
-.resource-grid-cell li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 2.25rem;
-  border-radius: 0.3125rem;
-  border: 0.0625rem solid hsl(0 0% 88%);
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: $ln-hght-20;
+  padding: 1rem 0;
+  color: hsl($clr-blk);
 }
 
 .resource-grid-cell p {
-  padding: unset;
+  color: hsl($font-clr-lt);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.resource-grid-cell {
+  display: grid;
+  margin: 3.375rem 1.25rem 0;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+.resource-grid-cell li {
+  display: grid;
+  padding: 2.25rem;
+  border-radius: $border-radius;
+  border: 0.0625rem solid hsl($border-clr);
+}
+
+.resource-grid-cell li img {
+  height: 1.625rem;
 }
 
 .resource-grid-cell a {
   font-weight: 700;
   text-decoration: underline;
   font-size: 1.125rem;
-  line-height: 1.25rem;
-  margin-top: 1.5rem;
+  line-height: $ln-hght-20;
+  margin: 1.5rem 0 0;
+  color: hsl($clr-blk);
 
   &::after {
     content: " \2192";

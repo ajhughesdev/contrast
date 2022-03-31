@@ -200,30 +200,41 @@ footer li:not(.categories) {
 footer li:not(.categories) :hover {
     text-decoration: underline;
   }
+h2 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.08778;
+  padding: 1rem 0;
+  color: hsl(0, 0%, 0%);
+}
+.resource-grid-cell p {
+  color: hsl(0, 0%, 35%);
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
 .resource-grid-cell {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1.875rem;
-  gap: 1.875rem;
-  margin-top: 3.375rem;
+  margin: 3.375rem 1.25rem 0;
+  grid-template-columns: 1fr;
+  grid-gap: 1.25rem;
+  gap: 1.25rem;
 }
 .resource-grid-cell li {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  display: grid;
   padding: 2.25rem;
   border-radius: 0.3125rem;
   border: 0.0625rem solid hsl(0, 0%, 88%);
 }
-.resource-grid-cell p {
-  padding: unset;
+.resource-grid-cell li img {
+  height: 1.625rem;
 }
 .resource-grid-cell a {
   font-weight: 700;
   text-decoration: underline;
   font-size: 1.125rem;
-  line-height: 1.25rem;
-  margin-top: 1.5rem;
+  line-height: 1.08778;
+  margin: 1.5rem 0 0;
+  color: hsl(0, 0%, 0%);
 }
 .resource-grid-cell a::after {
     content: " \2192";
@@ -491,7 +502,7 @@ input[type="email"] {
   border-radius: 0.3125rem;
   margin: 1rem 1rem 0 0;
   width: 100%;
-
+  cursor: auto;
 }
 .signup p:last-of-type {
   padding: 0.75rem 0;
@@ -502,6 +513,7 @@ button.subscribe {
   background-color: hsl(252, 82%, 87%);
   border-radius: 0.3125rem;
   width: 100%;
+  cursor: pointer;
 }
 footer {
   padding: 5rem 1.25rem 0;
