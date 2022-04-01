@@ -1,6 +1,7 @@
 import { fetchResourceCards, makeActive } from "./fetchResourceCards.js";
 import { accordionMenu } from "./accordionMenu.js";
 import "./dialogModal.js";
+import { retrieveData } from "./dialogModal.js";
 import { mobileNavToggle } from "./mobileNavToggle.js";
 
 const browse = document.querySelector(".browse");
@@ -41,6 +42,14 @@ accordionMenu();
 document
   .querySelector(".hamburger-menu")
   .addEventListener("click", mobileNavToggle);
+
+window.addEventListener("onload", () => {
+  if (localStorage.getItem("Resource")) {
+    retrieveData();
+  } else {
+    return;
+  }
+});
 
 // "Browse" anchor tag
 // browse.addEventListener("click", () => {

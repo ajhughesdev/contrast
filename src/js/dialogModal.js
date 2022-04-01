@@ -58,4 +58,4 @@ function retrieveData() {
   ul.classList.add("resource-grid-cell");
 }
 
-export { modalOpenBtn };
+export { modalOpenBtn, retrieveData };
