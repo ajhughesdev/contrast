@@ -1,3 +1,7 @@
+![Landing Page - Mobile View](https://user-images.githubusercontent.com/69234359/161306376-61de828a-438c-4856-b999-9e9c25380bb4.png)
+![Landing Page - Tablet View](https://user-images.githubusercontent.com/69234359/161306377-e4305dae-12cd-4a3f-80b3-f00a52534a32.png)
+![Landing Page - Desktop View](https://user-images.githubusercontent.com/69234359/161306379-f18bc847-5479-4854-a534-e364b5498e7d.png)
+![Submit Resource - Desktop View](https://user-images.githubusercontent.com/69234359/161306380-bab3991a-9904-4f18-8935-b788dd230614.png)
 # contrast
 
 #### a website w/ resources for developers
