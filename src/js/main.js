@@ -55,6 +55,15 @@ window.addEventListener("load", () => {
   }
 });
 
+// "Browse" anchor tag
+browse.addEventListener("click", () => {
+  hero.style.display = "none";
+  newsletter.style.display = "none";
+  footer.style.paddingTop = "10rem";
+  browseBody.style.background = "transparent";
+  browseHeader.style.marginBottom = "-29px";
+});
+
 // switch to "Mockups" resources
 mockups.addEventListener("click", () => {
   makeActive("mockups");
@@ -114,13 +123,11 @@ if (mediaQueryList.matches) {
   document.querySelector('[id="desc"]').setAttribute("rows", 5);
 }
 
-// "Browse" anchor tag
-browse.addEventListener("click", () => {
-  hero.style.display = "none";
-  newsletter.style.display = "none";
-  footer.style.paddingTop = "5rem";
-  browseBody.style.background = "transparent";
-  browseHeader.style.marginBottom = "-29px";
-});
-
-
+// // "Browse" anchor tag
+// browse.addEventListener("click", () => {
+//   hero.style.display = "none";
+//   newsletter.style.display = "none";
+//   footer.style.paddingTop = "5rem";
+//   browseBody.style.background = "transparent";
+//   browseHeader.style.marginBottom = "-29px";
+// });

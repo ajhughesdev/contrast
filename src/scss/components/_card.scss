@@ -22,6 +22,7 @@ h2 {
     grid-template-columns: 1fr 1fr;
     margin: 3.375rem 1.25rem 0;
   }
+
   @media screen and (min-width: 1140px) {
     grid-template-columns: repeat(3, 1fr);
   }
