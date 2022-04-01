@@ -443,7 +443,7 @@ dialog label {
   gap: .1875rem;
   padding: 2.25rem 0 1rem;
 }
-dialog button.main-cta {
+dialog button.submit-form {
   padding: 1.125rem 1.5rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -616,7 +616,7 @@ p {
 .dialog-content {
     width: 37.875rem
 }
-dialog button.main-cta {
+dialog button.submit-form {
     max-width: 12.25rem
 }
 dialog [id="desc"] {
@@ -627,8 +627,7 @@ dialog [id="desc"] {
 @media screen and (min-width: 768px) and (max-width: 1139px){
 .resource-grid-cell {
     grid-template-columns: 1fr 1fr;
-    margin: 3.375rem 0 0;
-    padding: 0 2.5rem 0
+    margin: 3.375rem 1.25rem 0
 }
 .topnav {
     /* margin: 2.5rem 2.5rem 0;*/
