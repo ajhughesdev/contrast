@@ -13,16 +13,17 @@
   align-items: center;
   margin: 5rem 1.25rem 0;
 
-  @include respond('medium') {
-    margin: 5rem 2.5rem 0;
+  @media screen and (min-width: 768px) {
+    margin: 5rem 1.25rem;
     max-width: unset;
+    line-height: $ln-hght-20;
   }
 
   ul {
     width: 63.75%;
 
-    @include respond('medium') {
-      width: unset;
+    @media screen and (min-width: 768px) {
+      width: 100%;
     }
   }
 }

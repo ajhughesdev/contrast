@@ -18,10 +18,13 @@ h2 {
   grid-template-columns: 1fr;
   gap: 1.25rem;
 
-  @include respond('medium') {
+  @media screen and (min-width: 768px) and (max-width: 1139px) {
     grid-template-columns: 1fr 1fr;
     margin: 3.375rem 0 0;
     padding: 0 2.5rem 0;
+  }
+  @media screen and (min-width: 1140px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -30,10 +33,10 @@ h2 {
   padding: 2.25rem;
   border-radius: $border-radius;
   border: 0.0625rem solid hsl($border-clr);
-}
 
-.resource-grid-cell li img {
-  height: 1.625rem;
+  img {
+    height: 1.625rem;
+  }
 }
 
 .resource-grid-cell a {

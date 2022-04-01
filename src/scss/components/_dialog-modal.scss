@@ -25,8 +25,9 @@ dialog {
   border-radius: $border-radius;
   overflow: auto;
 
-  @include respond('medium') {
+  @media screen and (min-width: 768px) and (max-width: 1139px) {
     width: 37.875rem;
+
   }
 }
 
@@ -53,6 +54,10 @@ dialog label {
 dialog button.main-cta {
   @include cta-button;
   margin-top: 2.25rem;
+
+  @media screen and (min-width: 768px) and (max-width: 1139px) {
+    max-width: 12.25rem;
+  }
 }
 
 dialog label:not(.asterisk)::after {
@@ -108,4 +113,9 @@ dialog [id="desc"] {
   padding: 1.125rem 1.5rem;
   border-radius: $border-radius;
   grid-area: c;
+
+  @media screen and (min-width: 768px) and (max-width: 1139px) {
+    line-height: 1.5;
+    font-size: 1.125rem;
+  }
 }

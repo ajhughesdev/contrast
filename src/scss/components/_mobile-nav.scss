@@ -4,8 +4,10 @@
   position: relative;
   margin: 1.25rem 1.25rem 0;
 
-  @include respond('medium') {
-    margin: 2.5rem 2.5rem 0;
+  @media screen and (min-width: 768px) {
+    // margin: 2.5rem 2.5rem 0;
+    line-height: $ln-hght-20;
+    font-size: 1.125rem;
   }
 }
 
@@ -24,7 +26,12 @@
   right: 0;
   top: 7px;
   cursor: pointer;
+
+  @media screen and (min-width: 1140px) {
+    display: none;
+  }
 }
+
 
 .accordion-hidden {
   display: none;

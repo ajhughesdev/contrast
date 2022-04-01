@@ -44,7 +44,7 @@ document
   .addEventListener("click", mobileNavToggle);
 
 document.querySelector(".cancel-btn").addEventListener("click", () => {
-  document.querySelector('dialog').close();
+  document.querySelector("dialog").close();
 });
 
 window.addEventListener("load", () => {
@@ -116,5 +116,9 @@ icons.addEventListener("click", () => {
   fontsResults.style.display = "none";
 });
 
-// const form = document.querySelector("form");
-// form.addEventListener("submit", handleSubmit);
+let mediaQueryList = window.matchMedia("(min-width: 768px)");
+if (mediaQueryList.matches) {
+  document.querySelector('[id="desc"]').setAttribute("rows", 3);
+} else {
+  document.querySelector('[id="desc"]').setAttribute("rows", 5);
+}

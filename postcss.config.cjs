@@ -18,6 +18,7 @@ module.exports = (cfg) => {
       require("postcss-assets")({
         loadPaths: ["./src/assets/"],
       }),
+      require("postcss-media-minmax")(),
       require("postcss-preset-env")({
         stage: 0,
         features: {
