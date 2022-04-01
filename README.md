@@ -13,13 +13,13 @@ The three screen sizes targeted are 414px, 768px, and 1440px. I used media queri
 - using the provided json files, I fetched the javascript objects and displayed them in unordered lists. all the data is fetched on page load and I used event listeners to display the appropriate resources depending on the tab choosen in the selection bar.
 
 2. Create a form and save the values (on click of Submit button) to an external file.
-- the dialog element that appears when pressing "submit resources" is a form re: several inputs. you may test with your own data or you can fill in the form with this information to see the results:
+- the dialog element that appears when pressing "submit resources" is a form w/ several inputs. you may test with your own data or you can fill in the form with this information to see the results:
 
-  resource name: Iconmonstr<br>
-  description: A free source of SVG and PNG icons.<br>
-  resource link: https://iconmonstr.com/<br>
-  icon link: https://cdns.iconmonstr.com/wp-content/assets/preview/2020/240/iconmonstr-friend-3.png<br>
-  pick "icon" in my custom-styled dropdown menu<br>
+  resource name: Iconmonstr <br>
+  description: A free source of SVG and PNG icons. <br>
+  resource link: https://iconmonstr.com/ <br>
+  icon link: https://cdns.iconmonstr.com/wp-content/assets/preview/2020/240/iconmonstr-friend-3.png <br>
+  pick "icon" in my custom-styled dropdown menu <br>
   
 - when you click submit resource again, you are returned to the main page. refresh the page, and you will see your new resource card rendering with the other resources available. the information is persisted using localStorage.
 
