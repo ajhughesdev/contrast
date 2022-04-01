@@ -43,6 +43,10 @@ document
   .querySelector(".hamburger-menu")
   .addEventListener("click", mobileNavToggle);
 
+document.querySelector(".cancel-btn").addEventListener("click", () => {
+  document.querySelector('dialog').close();
+});
+
 window.addEventListener("load", () => {
   if (localStorage.getItem("Resource")) {
     retrieveData();
