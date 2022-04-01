@@ -1,7 +1,3 @@
-![Landing Page - Mobile View](https://user-images.githubusercontent.com/69234359/161306376-61de828a-438c-4856-b999-9e9c25380bb4.png)
-![Landing Page - Tablet View](https://user-images.githubusercontent.com/69234359/161306377-e4305dae-12cd-4a3f-80b3-f00a52534a32.png)
-![Landing Page - Desktop View](https://user-images.githubusercontent.com/69234359/161306379-f18bc847-5479-4854-a534-e364b5498e7d.png)
-![Submit Resource - Desktop View](https://user-images.githubusercontent.com/69234359/161306380-bab3991a-9904-4f18-8935-b788dd230614.png)
 # contrast
 
 #### a website w/ resources for developers
@@ -40,3 +36,8 @@ The three screen sizes targeted are 414px, 768px, and 1440px. I used media queri
 I'm super interested in localStorage now and indexedDB now after this project. I assume most online "generators" like resume makers or css generators, etc use a browser storage situation. I thought, way to late in the session to start from scratch, that it would be cool to make some sort of profile generator or social media card maker that takes user input and spits it back out wrapped in html/css for the user to copy or download. 
 
 I know this course focuses on JavaScript but I am particularly proud of how I matched the original design of the site with all the skills I've learned so far with Code Louisville. I will upload some .png files of the mockups so you can compare and refer to them. #pixelperfect? haha jk
+
+![Landing Page - Mobile View](https://user-images.githubusercontent.com/69234359/161306376-61de828a-438c-4856-b999-9e9c25380bb4.png)
+![Landing Page - Tablet View](https://user-images.githubusercontent.com/69234359/161306377-e4305dae-12cd-4a3f-80b3-f00a52534a32.png)
+![Landing Page - Desktop View](https://user-images.githubusercontent.com/69234359/161306379-f18bc847-5479-4854-a534-e364b5498e7d.png)
+![Submit Resource - Desktop View](https://user-images.githubusercontent.com/69234359/161306380-bab3991a-9904-4f18-8935-b788dd230614.png)
