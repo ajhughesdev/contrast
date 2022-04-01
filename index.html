@@ -32,7 +32,7 @@
             <li class="desc-label">
               <label for="desc">Resource Description</label>
               <label class="asterisk">(Max. 150 char.)</label>
-              <textarea id="desc" name="Description" rows="6" maxlength="150"
+              <textarea id="desc" name="Description" type="text" rows="6" maxlength="150"
                 placeholder="100% curated digital marketplace with a growing library of high quality UX/UI design resources and freebies for designers."
                 required></textarea>
             </li>
@@ -278,8 +278,11 @@
       <li><a href="#">Sponsor Resource</a></li>
     </ul>
   </footer>
-
   <script src="./src/js/main.js" type="module"></script>
+  <script src="./node_modules/dcounts-js/src/dcounts-js.min.js"></script>
+  <script>
+    dcounts('desc', 150);
+  </script>
 </body>
 
 </html>

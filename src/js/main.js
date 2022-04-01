@@ -55,15 +55,6 @@ window.addEventListener("load", () => {
   }
 });
 
-// "Browse" anchor tag
-// browse.addEventListener("click", () => {
-//   hero.style.display = "none";
-//   newsletter.style.display = "none";
-//   footer.style.paddingTop = "5rem";
-//   browseBody.style.background = "transparent";
-//   browseHeader.style.marginBottom = "-29px";
-// });
-
 // switch to "Mockups" resources
 mockups.addEventListener("click", () => {
   makeActive("mockups");
@@ -131,3 +122,5 @@ browse.addEventListener("click", () => {
   browseBody.style.background = "transparent";
   browseHeader.style.marginBottom = "-29px";
 });
+
+
