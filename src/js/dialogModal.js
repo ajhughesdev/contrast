@@ -12,10 +12,11 @@ submitForm.addEventListener("click", () => {
   let Icon = document.getElementById("icon-link").value;
   let Title = document.getElementById("name").value;
   let Description = document.getElementById("desc").value;
-  let Link = document.getElementById("icon-link").value;
+  let Link = document.getElementById("link").value;
   let key = document.getElementById("resources-cat").value;
 
   const Resource = {
+    key: key,
     Icon: Icon,
     Title: Title,
     Description: Description,
@@ -56,7 +57,5 @@ function retrieveData() {
   ul.appendChild(list);
   ul.classList.add("resource-grid-cell");
 }
-
-retrieveData();
 
 export { modalOpenBtn };
