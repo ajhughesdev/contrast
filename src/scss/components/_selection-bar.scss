@@ -13,12 +13,17 @@
   align-items: center;
   margin: 5rem 1.25rem 0;
 
-  .logo {
-    width: 30%;
+  @include respond('medium') {
+    margin: 5rem 2.5rem 0;
+    max-width: unset;
   }
 
   ul {
     width: 63.75%;
+
+    @include respond('medium') {
+      width: unset;
+    }
   }
 }
 
@@ -53,6 +58,7 @@
 
 .active-bar {
   padding: 0.625rem 1.125rem;
-  background-color: hsl(210 9% 96%);
+  color: hsl($font-active-clr);
   border-radius: $border-radius;
+  background-color: hsl($font-active-bg-clr);
 }

@@ -72,6 +72,11 @@ meter {
 :where([draggable="true"]) {
     -webkit-user-drag: element;
 }
+/* media query breakpoints*/
+/*
+responsive breakpoint mixin:
+@include respond('medium') { ... }
+*/
 @font-face {
   font-display: optional;
   font-family: "Archivo";
@@ -115,7 +120,7 @@ p {
 }
 .sort-by,
 .resource-item {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: hsl(0, 0%, 35%);
 }
 .active-bar {
@@ -128,7 +133,7 @@ p {
 }
 dialog h1 {
   font-size: 1.5rem;
-  line-height: 26px;
+  line-height: 1.08792;
   font-weight: 700;
   color: hsl(0, 0%, 0%);
 }
@@ -168,7 +173,7 @@ dialog .select-inner {
 h3 {
   font-size: 1.625rem;
   color: hsl(0, 0%, 100%);
-  line-height: 34px;
+  line-height: 1.30769;
   font-weight: 700;
 }
 input[type="email"] {
@@ -179,7 +184,7 @@ button.subscribe {
   text-align: center;
   color: hsl(258, 83%, 45%);
   font-size: 1.125rem;
-  line-height: 20px;
+  line-height: 1.08778;
   font-weight: 700;
 }
 footer p {
@@ -188,14 +193,14 @@ footer p {
   color: hsl(0, 0%, 0%);
 }
 .categories {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.08778;
 }
 footer li:not(.categories) {
   font-size: 1.125rem;
   line-height: 1.5;
-  color: hsla(0, 0%, 35%);
+  color: hsl(0, 0%, 35%);
 }
 footer li:not(.categories) :hover {
     text-decoration: underline;
@@ -277,13 +282,13 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
+  padding: .75rem 1.125rem;
   border: .0625rem solid hsl(0, 0%, 88%);
   border-radius: 0.3125rem;
   margin: .3125rem 0;
 }
 .accordion-item {
-  margin: 5px 0;
+  margin: .3125rem 0;
 }
 .accordion-active {
   background-color: hsl(210, 9%, 96%);
@@ -318,9 +323,6 @@ h2 {
   align-items: center;
   margin: 5rem 1.25rem 0;
 }
-.selection-bar .logo {
-    width: 30%;
-  }
 .selection-bar ul {
     width: 63.75%;
   }
@@ -350,8 +352,9 @@ h2 {
 }
 .active-bar {
   padding: 0.625rem 1.125rem;
-  background-color: hsl(210, 9%, 96%);
+  color: hsl(243, 47%, 9%);
   border-radius: 0.3125rem;
+  background-color: hsl(210, 9%, 96%);
 }
 dialog::-webkit-backdrop {
   background-color: hsla(0, 0%, 0%, 0.2);
@@ -395,7 +398,7 @@ dialog header svg {
 dialog label {
   width: 100%;
   display: flex;
-  gap: 3px;
+  gap: .1875rem;
   padding: 2.25rem 0 1rem;
 }
 dialog button.main-cta {
@@ -457,18 +460,13 @@ dialog [id="desc"] {
   border-radius: 0.3125rem;
   grid-area: c;
 }
-/* media query breakpoints*/
-/*
-responsive breakpoint mixin:
-@include respond('medium') { ... }
-*/
 html {
   margin: 0 auto;
   max-width: 25.875rem;
   height: 100%;
 }
 #hero {
-  margin: 50px 1.25rem 0;
+  margin: 3.125rem 1.25rem 0;
 }
 #hero p {
     margin: .5rem 0 0 0;
@@ -533,20 +531,94 @@ footer {
 footer li:not(.categories) {
   display: block;
   padding: 0 0 0.5rem;
-
-
+}
+.footer-logo {
+  grid-area: 1 / 1 / 2 / 3;
+}
+ul.c {
+  padding: 0 0 0 2.1875rem;
 }
 ul.d {
   padding: 0.9375rem 0 0;
 }
 ul.e {
   margin: -5.625rem 0;
-}
-ul.c,
-ul.e {
   padding: 0 0 0 2.1875rem;
 }
+@media (min-width: 48rem){
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.08804
+}
+.resource-grid-cell {
+    grid-template-columns: 1fr 1fr;
+    margin: 3.375rem 0 0;
+    padding: 0 2.5rem 0
+}
+.topnav {
+    margin: 2.5rem 2.5rem 0
+}
+.selection-bar {
+    margin: 5rem 2.5rem 0;
+    max-width: unset
+}
+.selection-bar ul {
+      width: unset
+  }
+.dialog-content {
+    width: 37.875rem
+}
+html {
+    max-width: 48rem
+}
+#hero {
+    margin: 3.125rem 2.5rem 0
+}
+#hero p {
+      padding: .5rem 0 0;
+      font-stretch: 104%
+  }
+.signup {
+    min-height: 49.125rem;
+    background-size: 32.4375rem;
+    background-position: top 100% left 50%;
+    padding: 3.5rem 2.5rem 0
+}
+input[type="email"] {
+    width: 17.375rem
+}
+.signup p:last-of-type {
+    padding: 0.75rem 0 31.125rem
+}
+button.subscribe {
+    width: unset
+}
+footer {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5rem 2.5rem 0;
+    grid-template-rows: auto auto;
+    font-stretch: 105%
+}
+.categories {
+    padding: 2.875rem auto 1rem 0
+}
 .footer-logo {
-  grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 5
+}
+  ul.b {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+ul.c {
+    grid-area: 2 / 2 / 3 / 3
+}
+ul.d {
+    grid-area: 2 / 3 / 3 / 4;
+    padding: unset
+}
+ul.e {
+    grid-area: 2 / 4 / 3 / 5;
+    margin: unset;
+    padding: unset
+}
 }
 /*# sourceMappingURL=main.css.map */

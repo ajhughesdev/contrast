@@ -1,3 +1,18 @@
+// media query breakpoints
+$breakpoint: ('small': 25.875rem,
+  'medium': 48rem,
+  'large': 90rem);
+
+/*
+responsive breakpoint mixin:
+@include respond('medium') { ... }
+*/
+@mixin respond($bp) {
+  @media (min-width: map-get($breakpoint, $bp)) {
+    @content;
+  }
+}
+
 @mixin cta-button {
   padding: 1.125rem 1.5rem;
   font-size: 1.125rem;

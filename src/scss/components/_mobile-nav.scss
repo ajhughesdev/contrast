@@ -3,6 +3,10 @@
   overflow: hidden;
   position: relative;
   margin: 1.25rem 1.25rem 0;
+
+  @include respond('medium') {
+    margin: 2.5rem 2.5rem 0;
+  }
 }
 
 .topnav #myLinks {
@@ -36,14 +40,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
+  padding: .75rem 1.125rem;
   border: .0625rem solid hsl($border-clr);
   border-radius: $border-radius;
   margin: .3125rem 0;
 }
 
 .accordion-item {
-  margin: 5px 0;
+  margin: .3125rem 0;
 }
 
 .accordion-active {

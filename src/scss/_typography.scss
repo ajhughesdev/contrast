@@ -24,6 +24,11 @@ h1 {
   line-height: 1.25;
   font-weight: 700;
   color: hsl($font-clr-drk);
+
+  @include respond('medium') {
+    font-size: 3.5rem;
+    line-height: $ln-hght-60;
+  }
 }
 
 p {
@@ -51,7 +56,7 @@ p {
 
 .sort-by,
 .resource-item {
-  font-size: 18px;
+  font-size: 1.125rem;
   color: hsl(0, 0%, 35%);
 }
 
@@ -68,7 +73,7 @@ p {
 
 dialog h1 {
   font-size: 1.5rem;
-  line-height: 26px;
+  line-height: $ln-hght-26;
   font-weight: 700;
   color: hsl($clr-blk);
 }
@@ -97,7 +102,7 @@ dialog .select-inner {
 }
 
 .signup p {
-  color: hsl(252, 82%, 87%);
+  color: hsl($btn-bg-clr-secondary);
   font-size: 1.125rem;
   line-height: 1.5;
 }
@@ -105,7 +110,7 @@ dialog .select-inner {
 h3 {
   font-size: 1.625rem;
   color: hsl(0 0% 100%);
-  line-height: 34px;
+  line-height: $ln-hght-34;
   font-weight: 700;
 }
 
@@ -118,7 +123,7 @@ button.subscribe {
   text-align: center;
   color: hsl(258 83% 45%);
   font-size: 1.125rem;
-  line-height: 20px;
+  line-height: $ln-hght-20;
   font-weight: 700;
 }
 
@@ -129,7 +134,7 @@ footer p {
 }
 
 .categories {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: $ln-hght-20;
 }
@@ -137,7 +142,7 @@ footer p {
 footer li:not(.categories) {
   font-size: 1.125rem;
   line-height: 1.5;
-  color: hsla($font-clr-lt);
+  color: hsl($font-clr-lt);
 
   :hover {
     text-decoration: underline;

@@ -17,6 +17,12 @@ h2 {
   margin: 3.375rem 1.25rem 0;
   grid-template-columns: 1fr;
   gap: 1.25rem;
+
+  @include respond('medium') {
+    grid-template-columns: 1fr 1fr;
+    margin: 3.375rem 0 0;
+    padding: 0 2.5rem 0;
+  }
 }
 
 .resource-grid-cell li {
