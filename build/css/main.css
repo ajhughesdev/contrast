@@ -375,6 +375,7 @@ input[type="search"] {
   border-radius: 0.3125rem;
   padding: .75rem 1.125rem;
   cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
 }
 .sort-by svg {
     margin: 0 0 0 0.625rem;

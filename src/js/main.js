@@ -122,3 +122,12 @@ if (mediaQueryList.matches) {
 } else {
   document.querySelector('[id="desc"]').setAttribute("rows", 5);
 }
+
+// "Browse" anchor tag
+browse.addEventListener("click", () => {
+  hero.style.display = "none";
+  newsletter.style.display = "none";
+  footer.style.paddingTop = "5rem";
+  browseBody.style.background = "transparent";
+  browseHeader.style.marginBottom = "-29px";
+});
