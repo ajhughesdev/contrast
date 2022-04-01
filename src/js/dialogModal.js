@@ -13,7 +13,7 @@ submitForm.addEventListener("click", () => {
   let Title = document.getElementById("name").value;
   let Description = document.getElementById("desc").value;
   let Link = document.getElementById("link").value;
-  let key = document.getElementById("resources-cat").value;
+  // let key = document.getElementById("resources-cat").value;
 
   const Resource = {
     key: key,
@@ -28,7 +28,6 @@ submitForm.addEventListener("click", () => {
 
 function retrieveData() {
   const localStorageKey = localStorage.getItem("Resource");
-  let key = document.getElementById("resources-cat").value;
   let parsedData = JSON.parse(localStorageKey);
 
   let ul = document.getElementById("local-storage");

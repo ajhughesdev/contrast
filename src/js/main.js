@@ -43,7 +43,7 @@ document
   .querySelector(".hamburger-menu")
   .addEventListener("click", mobileNavToggle);
 
-window.addEventListener("onload", () => {
+window.addEventListener("load", () => {
   if (localStorage.getItem("Resource")) {
     retrieveData();
   } else {
