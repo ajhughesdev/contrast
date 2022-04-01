@@ -67,9 +67,24 @@
   </dialog>
   <header>
     <nav class="topnav">
-      <a href="#home" class="logo">
-        <img src="./src/assets/contrast-logo.svg" alt="contrast logo" />
-      </a>
+      <ul>
+        <li>
+          <a href="#home" class="logo">
+            <img src="./src/assets/contrast-logo.svg" alt="contrast logo" />
+          </a>
+        </li>
+        <li class="screen-nav browse"><a href="#browse">Browse</a></li>
+        <li class="screen-nav"><a href="#">Sponsor</a></li>
+        <li class="screen-nav"><a href="#">Templates</a></li>
+        <li class="screen-nav">
+          <input class="nosubmit" type="search" placeholder="Search resources" name="search" />
+        </li>
+        <li class="screen-nav">
+          <button type="button" class="main-cta" id="header-button">
+            Submit Resource
+          </button>
+        </li>
+      </ul>
       <div class="accordion-wrapper active" id="parent" data-accordion-wrapper>
         <div role="navigation" class="accordion-menu">
           <ul id="myLinks" class="accordion-list">

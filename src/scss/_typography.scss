@@ -17,11 +17,20 @@
 html {
   font-family: "Archivo", "Archivo-fallback", sans-serif;
   font-size: 16px;
-
 }
 
-body {
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='467' viewBox='0 0 469 467' width='469' class='hero-illustration'%3E%3Cg fill-opacity='.3'%3E%3Ccircle cx='224.5' cy='173.5' fill='%236b7fd7' opacity='.5' r='173.5' /%3E%3Ccircle cx='147' cy='320' fill='%2337ff8b' opacity='.5' r='147' /%3E%3Ccircle cx='335' cy='257' fill='%23feea00' opacity='.5' r='134' /%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 106px;
+.screen-nav {
+  display: none;
+
+  @media screen and (min-width: 1140px) {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1140px) {
+  body {
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' height='467' viewBox='0 0 469 467' width='469' class='hero-illustration'%3E%3Cg fill-opacity='.3'%3E%3Ccircle cx='224.5' cy='173.5' fill='%236b7fd7' opacity='.5' r='173.5' /%3E%3Ccircle cx='147' cy='320' fill='%2337ff8b' opacity='.5' r='147' /%3E%3Ccircle cx='335' cy='257' fill='%23feea00' opacity='.5' r='134' /%3E%3C/g%3E%3C/svg%3E") no-repeat 100% 106px;
+  }
 }
 
 h1 {
@@ -34,7 +43,6 @@ h1 {
     font-size: 3.5rem;
     line-height: $ln-hght-60;
   }
-
 }
 
 p {
