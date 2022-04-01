@@ -30,3 +30,9 @@ The three screen sizes targeted are 414px, 768px, and 1440px. I used media queri
 - the newly supported dialog element includes a close button in the upper right hand corner that will close the modal without submitting information to localStorage.
 - the dev environment was node.js and npm package manager. I used PostCSS to take advantage of future CSS functionalities and to prefix anything needed for cross-browser support.
 - the number of rows available in the textarea element in the dialog form modal changes depending on screen size to keep it big enough to hold the placeholder text. this is done through a simple mediaQueryList and the matchMedia method to check the screen's width.
+- the "books" and "inpiration" tabs are non-functional on purpose. the design I used from codewell.cc only provided data for the first four categories.
+
+<hr>
+I'm super interested in localStorage now and indexedDB now after this project. I assume most online "generators" like resume makers or css generators, etc use a browser storage situation. I thought, way to late in the session to start from scratch, that it would be cool to make some sort of profile generator or social media card maker that takes user input and spits it back out wrapped in html/css for the user to copy or download. 
+
+I know this course focuses on JavaScript but I am particularly proud of how I matched the original design of the site with all the skills I've learned so far with Code Louisville. I will upload some .png files of the mockups so you can compare and refer to them. #pixelperfect? haha jk
