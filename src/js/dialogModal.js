@@ -1,6 +1,5 @@
 const modalOpenBtn = document.querySelectorAll("#header-button, #hero-button");
 const dialog = document.getElementById("modal");
-// const closeBtn = document.querySelector(".cancel");
 const submitForm = document.getElementById("submit-form");
 
 modalOpenBtn.forEach((btn) => {
@@ -16,24 +15,48 @@ submitForm.addEventListener("click", () => {
   let Link = document.getElementById("icon-link").value;
   let key = document.getElementById("resources-cat").value;
 
-  const resource = {
+  const Resource = {
     Icon: Icon,
     Title: Title,
     Description: Description,
     Link: Link,
   };
 
-  window.localStorage.setItem(key, JSON.stringify(resource));
+  window.localStorage.setItem("Resource", JSON.stringify(Resource));
 });
 
 function retrieveData() {
+  const localStorageKey = localStorage.getItem("Resource");
+  let key = document.getElementById("resources-cat").value;
+  let parsedData = JSON.parse(localStorageKey);
+
+  let ul = document.getElementById("local-storage");
+  let list = document.createDocumentFragment();
+
   let li = document.createElement("li");
   let icon = document.createElement("img");
   let title = document.createElement("h2");
   let desc = document.createElement("p");
   let link = document.createElement("a");
+
+  title.innerHTML = `${parsedData.Title}`;
+  desc.innerHTML = `${parsedData.Description}`;
+  link.innerHTML = `Visit Resource`;
+
+  icon.setAttribute("src", `${parsedData.Icon}`);
+  icon.setAttribute("alt", `logo`);
+  link.setAttribute("href", `${parsedData.Link}`);
+
+  li.appendChild(icon);
+  li.appendChild(title);
+  li.appendChild(desc);
+  li.appendChild(link);
+  list.appendChild(li);
+
+  ul.appendChild(list);
+  ul.classList.add("resource-grid-cell");
 }
 
-
+retrieveData();
 
 export { modalOpenBtn };

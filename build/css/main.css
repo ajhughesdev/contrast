@@ -239,6 +239,12 @@ h2 {
 .resource-grid-cell a::after {
     content: " \2192";
   }
+#resources[\:has\(svg\)] {
+  height: 1.625rem;
+}
+#resources:has(svg) {
+  height: 1.625rem;
+}
 /* Style the navigation menu */
 .topnav {
   overflow: hidden;
