@@ -13,7 +13,7 @@ submitForm.addEventListener("click", () => {
   let Title = document.getElementById("name").value;
   let Description = document.getElementById("desc").value;
   let Link = document.getElementById("link").value;
-  // let key = document.getElementById("resources-cat").value;
+  let key = document.getElementById("resources-cat").value;
 
   const Resource = {
     key: key,
