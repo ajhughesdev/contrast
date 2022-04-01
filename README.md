@@ -33,7 +33,7 @@ The three screen sizes targeted are 414px, 768px, and 1440px. I used media queri
 - the "books" and "inpiration" tabs are non-functional on purpose. the design I used from codewell.cc only provided data for the first four categories.
 
 <hr>
-I'm super interested in localStorage now and indexedDB now after this project. I assume most online "generators" like resume makers or css generators, etc use a browser storage situation. I thought, way to late in the session to start from scratch, that it would be cool to make some sort of profile generator or social media card maker that takes user input and spits it back out wrapped in html/css for the user to copy or download. 
+I'm super interested in localStorage now and indexedDB (which I didn't work with) after this project. I assume most online "generators" like resume makers or css generators, etc use a browser storage situation. I thought, way to late in the session to start from scratch, that it would be cool to make some sort of profile generator or social media card maker that takes user input and spits it back out wrapped in html/css for the user to copy or download. 
 
 I know this course focuses on JavaScript but I am particularly proud of how I matched the original design of the site with all the skills I've learned so far with Code Louisville. I will upload some .png files of the mockups so you can compare and refer to them. #pixelperfect? haha jk
 
