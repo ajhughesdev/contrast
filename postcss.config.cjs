@@ -27,6 +27,7 @@ module.exports = (cfg) => {
           "media-query-ranges": true,
         },
       }),
+      require("css-has-pseudo")(),
       require("autoprefixer"),
       dev ? null : require("cssnano")(),
     ],
