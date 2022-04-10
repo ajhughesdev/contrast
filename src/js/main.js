@@ -37,7 +37,7 @@ mockupsResults.style.display = "none";
 iconsResults.style.display = "none";
 illustrationsResults.style.display = "none";
 
-accordionMenu();
+// accordionMenu();
 
 document
   .querySelector(".hamburger-menu")
