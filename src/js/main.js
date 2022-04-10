@@ -1,5 +1,5 @@
 import { fetchResourceCards, makeActive } from "./fetchResourceCards.js";
-import { accordionMenu } from "./accordionMenu.js";
+// import { accordionMenu } from "./accordionMenu.js";
 import "./dialogModal.js";
 import { retrieveData } from "./dialogModal.js";
 import { mobileNavToggle } from "./mobileNavToggle.js";

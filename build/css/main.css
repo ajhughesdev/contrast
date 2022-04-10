@@ -602,6 +602,7 @@ ul.e {
 @media screen and (min-width: 768px){
 h1 {
     font-size: 3.5rem;
+    font-weight: 700;
     line-height: 1.08804
 }
 p:not(.signup) {

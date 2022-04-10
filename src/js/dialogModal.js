@@ -1,6 +1,6 @@
 const modalOpenBtn = document.querySelectorAll("#header-button, #hero-button");
 const dialog = document.getElementById("modal");
-const submitForm = document.getElementById("submit-form");
+// const submitForm = document.getElementById("submit-form");
 
 modalOpenBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
