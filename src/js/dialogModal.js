@@ -8,23 +8,23 @@ modalOpenBtn.forEach((btn) => {
   });
 });
 
-submitForm.addEventListener("click", () => {
-  let Icon = document.getElementById("icon-link").value;
-  let Title = document.getElementById("name").value;
-  let Description = document.getElementById("desc").value;
-  let Link = document.getElementById("link").value;
-  let key = document.getElementById("resources-cat").value;
+// submitForm.addEventListener("click", () => {
+//   let Icon = document.getElementById("icon-link").value;
+//   let Title = document.getElementById("name").value;
+//   let Description = document.getElementById("desc").value;
+//   let Link = document.getElementById("link").value;
+//   let key = document.getElementById("resources-cat").value;
 
-  const Resource = {
-    key: key,
-    Icon: Icon,
-    Title: Title,
-    Description: Description,
-    Link: Link,
-  };
+//   const Resource = {
+//     key: key,
+//     Icon: Icon,
+//     Title: Title,
+//     Description: Description,
+//     Link: Link,
+//   };
 
-  window.localStorage.setItem("Resource", JSON.stringify(Resource));
-});
+//   window.localStorage.setItem("Resource", JSON.stringify(Resource));
+// });
 
 function retrieveData() {
   const localStorageKey = localStorage.getItem("Resource");

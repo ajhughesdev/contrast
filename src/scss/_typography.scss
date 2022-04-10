@@ -40,7 +40,7 @@ h1 {
   }
 }
 
-p {
+p:not(.signup) {
   font-size: 1.125rem;
   line-height: 1.5;
   font-weight: 400;
@@ -48,7 +48,6 @@ p {
 
   @media screen and (min-width: 768px) {
     font-stretch: 104%;
-    padding: 0.5rem 0 1rem;
   }
 }
 
@@ -122,6 +121,7 @@ dialog .select-inner {
 
   @media screen and (min-width: 768px) {
     font-stretch: 100%;
+    margin: unset;
   }
 }
 

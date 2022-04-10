@@ -116,18 +116,9 @@ icons.addEventListener("click", () => {
   fontsResults.style.display = "none";
 });
 
-let mediaQueryList = window.matchMedia("(min-width: 768px)");
+let mediaQueryList = window.matchMedia("(max-width: 767px)");
 if (mediaQueryList.matches) {
-  document.querySelector('[id="desc"]').setAttribute("rows", 3);
+  document.querySelector('[id="desc"]').setAttribute("rows", 6);
 } else {
-  document.querySelector('[id="desc"]').setAttribute("rows", 5);
+  document.querySelector('[id="desc"]').setAttribute("rows", 3);
 }
-
-// // "Browse" anchor tag
-// browse.addEventListener("click", () => {
-//   hero.style.display = "none";
-//   newsletter.style.display = "none";
-//   footer.style.paddingTop = "5rem";
-//   browseBody.style.background = "transparent";
-//   browseHeader.style.marginBottom = "-29px";
-// });
