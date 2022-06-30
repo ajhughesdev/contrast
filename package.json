@@ -18,7 +18,7 @@
     "postcss-advanced-variables": "^3.0.1",
     "postcss-assets": "^6.0.0",
     "postcss-calc": "^8.2.4",
-    "postcss-cli": "^9.1.0",
+    "postcss-cli": "^10.0.0",
     "postcss-map-get": "^0.3.0",
     "postcss-nested": "^5.0.6",
     "postcss-preset-env": "^7.4.3",
