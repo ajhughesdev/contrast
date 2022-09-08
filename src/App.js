@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import Button from './components/Button'
+import UsedBy from './components/UsedBy'
+import ResourceList from './components/ResourceList'
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <h1>Design resources for developers.</h1>
+      <p className='hero-p'>
+        Explore a collection of 3400+ curated design resources, both free and
+        paid, developers can use to create landing pages quicker.
+      </p>
+      <Button />
+      <UsedBy />
+      <ResourceList />
+      <Outlet />
+    </>
+  )
 }
 
-export default App;
+export default App

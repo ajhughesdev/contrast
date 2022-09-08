@@ -1,13 +1,77 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import 'the-new-css-reset';
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('./assets/font/Archivo-VariableFont_wdth,wght.woff2') format('woff2-variations');
+  font-style: normal;
+  font-weight: 100 900;
+  font-stretch: 52% 125%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  font-family: 'Archivo', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+  padding: 1.25rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3.125rem;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #595959;
+}
+
+.hero-p {
+  margin-block: .5rem 1rem;
+}
+
+button.cta {
+  background-color: #4d13d1;
+  color: #fff;
+  border: none;
+  border-radius: .3125rem;
+  padding: 1.125rem 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: calc(19.58 / 18);
+}
+
+.used-by,
+.used-by_logos {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.used-by {
+  margin-block: 3.125rem 5.5625rem;
+  flex-direction: column;
+}
+
+.resource-list:not(:first-child) {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  scrollbar-width: none;
+}
+
+.resource-list:not(:first-child)::-webkit-scrollbar {
+  display: none;
 }
