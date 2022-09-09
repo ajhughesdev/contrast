@@ -3,10 +3,13 @@ import Button from './components/Button'
 import UsedBy from './components/UsedBy'
 import ResourceList from './components/ResourceList'
 import { Outlet } from 'react-router-dom'
+import SortBy from './components/SortBy'
+import Newsletter from './components/Newsletter'
+import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
+    <div className='app'>
       <Header />
       <h1>Design resources for developers.</h1>
       <p className='hero-p'>
@@ -15,9 +18,14 @@ function App() {
       </p>
       <Button />
       <UsedBy />
-      <ResourceList />
+      <div className='resources'>
+        <ResourceList />
+        <SortBy />
+      </div>
       <Outlet />
-    </>
+      <Newsletter />
+      <Footer />
+    </div>
   )
 }
 

@@ -12,20 +12,21 @@ html {
   font-family: 'Archivo', sans-serif;
   font-size: 16px;
   min-height: 100vh;
-  padding: 1.25rem;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 3.125rem;
+  margin: 1.25rem 1.25rem 3.125rem;
 }
 
 h1 {
   font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.25;
+  color: #1c2321;
+  margin-inline: 1.25rem;
 }
 
 p {
@@ -36,14 +37,16 @@ p {
 }
 
 .hero-p {
-  margin-block: .5rem 1rem;
+  margin-inline: 1.25rem;
+  margin-block: 0.5rem 1rem;
 }
 
 button.cta {
+  margin-inline: 1.25rem 12.375rem;
   background-color: #4d13d1;
   color: #fff;
   border: none;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   padding: 1.125rem 1.5rem;
   font-size: 1.125rem;
   font-weight: 700;
@@ -57,21 +60,181 @@ button.cta {
 }
 
 .used-by {
+  margin-inline: 1.25rem;
   margin-block: 3.125rem 5.5625rem;
   flex-direction: column;
 }
 
-.resource-list:not(:first-child) {
+.resources {
+  margin-inline: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.resource-list {
   display: flex;
   flex-direction: row;
   gap: 1.5rem;
   white-space: nowrap;
-  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   scrollbar-width: none;
+  max-width: 237px;
+  overflow-x: auto;
+  font-size: 18px;
+  line-height: calc(19.58 / 18);
+  font-weight: 400;
+  color: #595959;
 }
 
-.resource-list:not(:first-child)::-webkit-scrollbar {
+.resource-list::-webkit-scrollbar {
   display: none;
+}
+
+.select-inner {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.3125rem;
+  padding-block: 12px;
+  cursor: pointer;
+}
+
+.select-inner:hover,
+.select-inner:focus,
+.select-inner:active,
+select:hover {}
+
+.select-inner svg {
+  cursor: pointer;
+  margin-inline: 0 18px;
+  margin-block: auto;
+}
+
+select {
+  color: #595959;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: calc(19.58 / 18);
+  padding-inline: 18px 0;
+}
+
+article {
+  margin-inline: 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 2.25rem;
+}
+
+.card:first-child {
+  margin-top: 54px;
+}
+
+h2,
+.card_link,
+input::placeholder,
+form button {
+  font-size: 1.125rem;
+  line-height: calc(19.58 / 18);
+}
+
+h1,
+.card_link,
+form button {
+  font-weight: 700;
+}
+
+h2,
+.card_link {
+  color: #000;
+}
+
+h2 {
+  padding-block: 1rem;
+}
+
+.card_link {
+  display: block;
+  margin-block: 24px 0;
+  text-decoration-line: underline;
+}
+
+.card_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.newsletter_container {
+  background-color: #4d13d1;
+  background-image: url('./assets/peeps.svg');
+  background-repeat: no-repeat;
+  background-position: left 50% bottom 0;
+  background-size: 279.77px;
+  width: 100vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-inline: 0;
+  margin-inline: 0;
+  position: relative;
+  margin-top: 57px;
+}
+
+.newsletter {
+  padding: 58px 20px 18.6062rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: calc(34 / 26);
+  margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+  color: #cec3f9;
+}
+
+form {
+  margin-block: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+form button {
+  padding: 1.125rem 1.5rem;
+  border-radius: .3125rem;
+}
+
+input {
+  background-color: #F3F3F4;
+}
+
+input::placeholder {
+  color: #9F9EA6;
+}
+
+form button {
+  background-color: #cec3f9;
+  color: #4d13d1;
+  text-align: center;
+}
+
+footer {
+  position: relative;
+  margin: 80px 20px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }

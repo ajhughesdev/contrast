@@ -19,7 +19,12 @@ root.render(
           <Route path='/Mockups' element={<Mockups />} />
           <Route path='/Illustrations' element={<Illustrations />} />
           <Route path='/Icons' element={<Icons />} />
-          <Route path='*' element={<div>An error has occurred.</div>} />
+          <Route
+            path='*'
+            element={
+              <div style={{ marginTop: '54px' }}>An error has occurred.</div>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,8 +1,8 @@
-import { getOrder } from '../api/order'
+import { getToc } from '../api/toc'
 import { NavLink } from 'react-router-dom'
 
 const ResourceList = () => {
-  let order = getOrder()
+  let order = getToc()
   return (
     <div className='resource-list'>
       <NavLink

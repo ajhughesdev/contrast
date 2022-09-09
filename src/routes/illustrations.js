@@ -4,19 +4,19 @@ const Illustrations = () => {
   let illustrations = getIllustrations()
 
   return (
-    <>
+    <div className='card_container'>
       {illustrations.map((illustration) => (
-        <article key={illustration.Title}>
+        <article key={illustration.Title} className="card" >
           <img
             src={`/icons/illustrations/${illustration.Icon}`}
             alt={illustration.Title}
           />
           <h2>{illustration.Title}</h2>
           <p>{illustration.Description}</p>
-          <a href={illustration.Link}>Visit Resource →</a>
+          <a className='card_link' href={illustration.Link}>Visit Resource →</a>
         </article>
       ))}
-    </>
+    </div>
   )
 }
 export default Illustrations

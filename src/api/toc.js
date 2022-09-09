@@ -1,4 +1,4 @@
-let order = [
+let toc = [
   {
     category: 'Mockups',
   },
@@ -16,6 +16,6 @@ let order = [
   },
 ]
 
-export const getOrder = () => {
-  return order
+export const getToc = () => {
+  return toc
 }
