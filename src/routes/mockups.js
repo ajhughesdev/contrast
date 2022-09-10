@@ -6,8 +6,12 @@ const Mockups = () => {
   return (
     <div className='card_container'>
       {mockups.map((mockup) => (
-        <article key={mockup.Title} className="card">
-          <img src={`/icons/mockups/${mockup.Icon}`} alt={mockup.Title} />
+        <article key={mockup.Title} className='card'>
+          <img
+            src={`/icons/mockups/${mockup.Icon}`}
+            alt={mockup.Title}
+            loading='lazy'
+          />
           <h2>{mockup.Title}</h2>
           <p>{mockup.Description}</p>
           <a className='card_link' href={mockup.Link}>

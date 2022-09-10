@@ -10,6 +10,7 @@ const Illustrations = () => {
           <img
             src={`/icons/illustrations/${illustration.Icon}`}
             alt={illustration.Title}
+            loading='lazy' 
           />
           <h2>{illustration.Title}</h2>
           <p>{illustration.Description}</p>

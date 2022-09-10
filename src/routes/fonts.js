@@ -18,4 +18,5 @@ const Fonts = () => {
     </div>
   )
 }
+
 export default Fonts

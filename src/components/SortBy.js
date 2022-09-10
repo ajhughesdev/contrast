@@ -1,7 +1,7 @@
 const SortBy = () => {
   return (
     <form id='form-select'>
-      <div class='select-inner'>
+      <div className='select-inner'>
         <select>
           <option value=''>Sort by</option>
           <option value='A-Z'>A-Z</option>

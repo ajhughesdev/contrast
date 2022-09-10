@@ -7,13 +7,20 @@ import Fonts from './routes/fonts'
 import Mockups from './routes/mockups'
 import Illustrations from './routes/illustrations'
 import Icons from './routes/icons'
+import Browse from './routes/browse'
 import './index.css'
+import Sponsor from './routes/sponsor'
+import Templates from './routes/templates'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+      <Route path=''
+        <Route path='/Browse' element={<Browse />} />
+        <Route path='/Sponsor' element={<Sponsor />} />
+        <Route path='/Templates' element={<Templates />} />
         <Route path='/' element={<App />}>
           <Route index element={<Fonts />} />
           <Route path='/Mockups' element={<Mockups />} />

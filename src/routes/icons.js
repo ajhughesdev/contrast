@@ -6,11 +6,17 @@ const Icons = () => {
   return (
     <div className='card_container'>
       {icons.map((icon) => (
-        <article key={icon.Title} className="card" >
-          <img src={`/icons/icons/${icon.Icon}`} alt={icon.Title} />
+        <article key={icon.Title} className='card'>
+          <img
+            src={`/icons/icons/${icon.Icon}`}
+            alt={icon.Title}
+            loading='lazy'
+          />
           <h2>{icon.Title}</h2>
           <p>{icon.Description}</p>
-          <a className='card_link' href={icon.Link}>Visit Resource →</a>
+          <a className='card_link' href={icon.Link}>
+            Visit Resource →
+          </a>
         </article>
       ))}
     </div>

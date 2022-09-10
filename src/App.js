@@ -7,7 +7,7 @@ import SortBy from './components/SortBy'
 import Newsletter from './components/Newsletter'
 import Footer from './components/Footer'
 
-function App() {
+const App = () => {
   return (
     <div className='app'>
       <Header />

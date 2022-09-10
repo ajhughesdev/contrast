@@ -23,7 +23,6 @@ header {
 
 h1 {
   font-size: 2.25rem;
-  font-weight: 700;
   line-height: 1.25;
   color: #1c2321;
   margin-inline: 1.25rem;
@@ -71,11 +70,12 @@ button.cta {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 }
 
 .resource-list {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   gap: 1.5rem;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -85,8 +85,6 @@ button.cta {
   overflow-x: auto;
   font-size: 18px;
   line-height: calc(19.58 / 18);
-  font-weight: 400;
-  color: #595959;
 }
 
 .resource-list::-webkit-scrollbar {
@@ -143,6 +141,8 @@ form button {
 }
 
 h1,
+h2,
+h3,
 .card_link,
 form button {
   font-weight: 700;
@@ -175,13 +175,6 @@ h2 {
   background-repeat: no-repeat;
   background-position: left 50% bottom 0;
   background-size: 279.77px;
-  width: 100vw;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding-inline: 0;
-  margin-inline: 0;
-  position: relative;
   margin-top: 57px;
 }
 
@@ -192,7 +185,6 @@ h2 {
 h3 {
   font-size: 1.625rem;
   color: #fff;
-  font-weight: 700;
   line-height: calc(34 / 26);
   margin-bottom: 0.5rem;
 }
@@ -229,7 +221,6 @@ form button {
 }
 
 footer {
-  position: relative;
   margin: 80px 20px;
 }
 
