@@ -34,7 +34,7 @@
     "not dead"
   ],
   "dependencies": {
-    "css-has-pseudo": "^4.0.1",
+    "css-has-pseudo": "^5.0.0",
     "pantry-node": "^0.1.2",
     "postcss-media-minmax": "^5.0.0"
   }
