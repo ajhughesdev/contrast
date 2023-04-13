@@ -1,5 +1,5 @@
 import { fetchResourceCards, makeActive } from "./fetchResourceCards.js";
-// import { accordionMenu } from "./accordionMenu.js";
+import { accordionMenu } from "./accordionMenu.js";
 import "./dialogModal.js";
 import { retrieveData } from "./dialogModal.js";
 import { mobileNavToggle } from "./mobileNavToggle.js";
@@ -37,7 +37,7 @@ mockupsResults.style.display = "none";
 iconsResults.style.display = "none";
 illustrationsResults.style.display = "none";
 
-// accordionMenu();
+accordionMenu();
 
 document
   .querySelector(".hamburger-menu")
