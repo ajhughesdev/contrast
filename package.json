@@ -14,7 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.4",
     "cssnano": "^6.0.0",
-    "postcss": "^8.4.12",
+    "postcss": "^8.4.24",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-assets": "^6.0.0",
     "postcss-calc": "^8.2.4",
