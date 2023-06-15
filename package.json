@@ -25,7 +25,7 @@
     "postcss-scss": "^4.0.3",
     "postcss-sort-media-queries": "^4.4.1",
     "postcss-svg-slim": "^2.0.4",
-    "the-new-css-reset": "^1.5.1"
+    "the-new-css-reset": "^1.8.5"
   },
   "browserslist": [
     "> 2%",

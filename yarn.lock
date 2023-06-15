@@ -1762,10 +1762,10 @@ tess2@^1.0.0:
   resolved "https://registry.yarnpkg.com/tess2/-/tess2-1.0.0.tgz#2e2eb21822294061b83d46cbaefdd09d86ddf593"
   integrity sha512-iSWBSOUoPn3cCT26L5Wi6mvVgL11RV4kReSnVIIPdMN7qNpkL5SLKen5BJcWj+ZTN7kK6JrHBdqTV7vvL8g+9w==
 
-the-new-css-reset@^1.5.1:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/the-new-css-reset/-/the-new-css-reset-1.8.4.tgz#f503e8eb98746f32175a484f1044ae116bbd6994"
-  integrity sha512-Upmb9XTyk78BmTbMQuAOTlESH9zmwqDAmmYC9MVm7uZLQdvGfxFTMhbpjKMUDwfmXGKnq6nkzISs/ReqHUP5xg==
+the-new-css-reset@^1.8.5:
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/the-new-css-reset/-/the-new-css-reset-1.8.5.tgz#0ea6dae85ea441d4b43fa85e05d5618016ecd550"
+  integrity sha512-33epB0yuGi0dEuynBXF16/K1gJNOi6q0bNXd4fyzve4s5eN9BJSTUliHkj9qSKn4XGQFU6uMQoX4JhPedqOz/w==
 
 thenby@^1.3.4:
   version "1.3.4"
