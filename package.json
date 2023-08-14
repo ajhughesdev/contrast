@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.1",
     "postcss": "^8.4.24",
     "postcss-advanced-variables": "^3.0.1",
